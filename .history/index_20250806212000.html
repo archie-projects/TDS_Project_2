@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Analyst Agent</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .spinner {
+      border-top-color: #3498db;
+      animation: spinner 1.5s linear infinite;
+    }
+
+    @keyframes spinner {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <div class="container mx-auto p-4 md:p-8 max-w-4xl">
+    <header class="text-center mb-8">
+      <h1 class="text-4xl font-bold text-gray-900">Data Analyst Agent</h1>
+      <p class="text-lg text-gray-600 mt-2">Paste your full request, upload files, and get AI-powered analysis.</p>
+    </header>
+
+    <main class="bg-white p-6 rounded-xl shadow-lg">
+      <div class="space-y-6">
+        <!-- Simplified Questions Input -->
+        <div>
+          <label for="questions" class="block text-lg font-semibold text-gray-700 mb-2">1. Enter Your Full
+            Request</label>
+          <textarea id="questions" rows="10"
+            class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+            placeholder="Paste your entire request here, including any URLs or instructions."></textarea>
+        </div>
+
+        <!-- File Upload -->
+        <div>
+          <label for="files" class="block text-lg font-semibold text-gray-700 mb-2">2. Upload Supporting Files
+            (Optional)</label>
+          <div class="mt-2 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+            <div class="space-y-1 text-center">
+              <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48"
+                aria-hidden="true">
+                <path
+                  d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <div class="flex text-sm text-gray-600">
+                <label for="file-upload"
+                  class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500">
+                  <span>Upload files</span>
+                  <input id="file-upload" name="files" type="file" class="sr-only" multiple>
+                </label>
+                <p class="pl-1">or drag and drop</p>
+              </div>
+              <p class="text-xs text-gray-500">CSV, PNG, JPG, etc.</p>
+            </div>
+          </div>
+          <div id="file-list" class="mt-2 text-sm text-gray-600"></div>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+          <button id="submit-btn"
+            class="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-lg font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition">
+            <span id="button-text">Analyze Data</span>
+            <div id="spinner" class="spinner h-5 w-5 rounded-full border-2 border-t-2 border-gray-200 ml-3 hidden">
+            </div>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Results Section -->
+    <section id="results-section" class="mt-8 bg-white p-6 rounded-xl shadow-lg hidden">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Analysis Results</h2>
+      <pre class="bg-gray-900 text-white p-4 rounded-lg overflow-x-auto"><code id="results-output"></code></pre>
+    </section>
+
+  </div>
+
+  <script>
+    const submitBtn = document.getElementById('submit-btn');
+    const buttonText = document.getElementById('button-text');
+    const spinner = document.getElementById('spinner');
+    const questionsInput = document.getElementById('questions');
+    const fileUpload = document.getElementById('file-upload');
+    const fileList = document.getElementById('file-list');
+    const resultsSection = document.getElementById('results-section');
+    const resultsOutput = document.getElementById('results-output');
+
+    fileUpload.addEventListener('change', () => {
+      fileList.innerHTML = '';
+      if (fileUpload.files.length > 0) {
+        const names = Array.from(fileUpload.files).map(f => f.name).join(', ');
+        fileList.textContent = `Selected: ${names}`;
+      }
+    });
+
+    submitBtn.addEventListener('click', async () => {
+      if (questionsInput.value.trim() === '') {
+        alert('Please enter your questions.');
+        return;
+      }
+
+      buttonText.textContent = 'Analyzing...';
+      spinner.classList.remove('hidden');
+      submitBtn.disabled = true;
+      resultsSection.classList.add('hidden');
+
+      const formData = new FormData();
+
+      // --- SIMPLIFIED LOGIC: Use the textarea content directly ---
+      const questionsBlob = new Blob([questionsInput.value], { type: 'text/plain' });
+      formData.append('files', questionsBlob, 'questions.txt');
+
+      for (const file of fileUpload.files) {
+        formData.append('files', file);
+      }
+
+      try {
+        const apiUrl = 'http://127.0.0.1:8000/api/';
+
+        const response = await fetch(apiUrl, {
+          method: 'POST',
+          body: formData,
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.detail || `HTTP error! Status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        resultsOutput.textContent = JSON.stringify(result, null, 2);
+        resultsSection.classList.remove('hidden');
+
+      } catch (error) {
+        resultsOutput.textContent = `An error occurred:\n${error.message}`;
+        resultsSection.classList.remove('hidden');
+        console.error('Error during analysis:', error);
+      } finally {
+        buttonText.textContent = 'Analyze Data';
+        spinner.classList.add('hidden');
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+
+</html>

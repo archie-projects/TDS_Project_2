@@ -1,0 +1,9 @@
+OrderID,Region,Product,Quantity,Price,Discount
+1,North,Widget A,10,15.00,0.1
+2,South,Gadget B,5,120.00,0.2
+3,North,Widget A,8,15.00,0.1
+4,West,Device C,12,75.50,
+5,South,Widget A,20,14.50,0.15
+6,East,Gadget B,7,125.00,0.2
+7,West,Device C,15,75.50,0.05
+8,North,Device C,9,78.00,

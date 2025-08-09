@@ -1,0 +1,72 @@
+fastapi
+uvicorn
+pandas
+numpy
+matplotlib
+seaborn
+requests
+beautifulsoup4
+openai
+PyPDF2
+Pillow
+duckdb
+python-multipart
+aiofiles
+httpx
+# requirements.txt
+fastapi
+uvicorn
+httpx
+pandas
+numpy
+matplotlib
+beautifulsoup4
+lxml
+duckdb
+Pillow
+aiofiles
+torch
+transformers
+accelerate
+# Universal Data Analyst Agent - Requirements
+# Core web framework
+flask==3.0.0
+flask-cors==4.0.0
+
+# Google Gemini AI
+google-generativeai==0.3.2
+
+# Data processing and analysis
+pandas==2.1.4
+numpy==1.24.3
+scipy==1.11.4
+openpyxl==3.1.2
+
+# Visualization
+matplotlib==3.8.2
+seaborn==0.13.0
+
+# Web scraping
+requests==2.31.0
+beautifulsoup4==4.12.2
+selenium==4.16.0
+
+# File processing
+PyPDF2==3.0.1
+Pillow==10.1.0
+python-docx==1.1.0
+
+# Database support
+duckdb==0.9.2
+
+# Configuration
+pyyaml==6.0.1
+toml==0.10.2
+
+# Additional utilities
+python-dotenv==1.0.0
+lxml==4.9.3
+
+# Optional: For better async support
+aiohttp==3.9.1
+aiofiles==23.2.1

@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Data Analyst Agent</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            padding: 40px;
+        }
+
+        .form-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #34495e;
+            font-size: 1.1em;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e3e3e3;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: 'Courier New', monospace;
+            resize: vertical;
+            transition: border-color 0.3s ease;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 15px;
+            border: 2px dashed #e3e3e3;
+            border-radius: 10px;
+            background: #f8f9fa;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        input[type="file"]:hover {
+            border-color: #667eea;
+            background: #f0f2ff;
+        }
+
+        .file-info {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .analyze-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 auto;
+        }
+
+        .analyze-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .analyze-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            display: none;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .result-section {
+            margin-top: 30px;
+            display: none;
+        }
+
+        .result-content {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e3e3e3;
+        }
+
+        .result-data {
+            background: #f8f9fa;
+            border: 1px solid #e3e3e3;
+            border-radius: 10px;
+            padding: 20px;
+            white-space: pre-wrap;
+            font-family: 'Courier New', monospace;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .error {
+            background: #fee;
+            border-left: 4px solid #e74c3c;
+            color: #c0392b;
+        }
+
+        .success {
+            border-left: 4px solid #27ae60;
+        }
+
+        .copy-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background: #2980b9;
+        }
+
+        .examples {
+            background: #f0f2ff;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .examples h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .example-item {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .example-item h4 {
+            color: #34495e;
+            margin-bottom: 8px;
+        }
+
+        .example-item pre {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            overflow-x: auto;
+        }
+
+        .config-info {
+            background: #e8f5e8;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #27ae60;
+        }
+
+        .config-info h3 {
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .status-healthy {
+            background: #27ae60;
+        }
+
+        .status-error {
+            background: #e74c3c;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            .header {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 Universal Data Analyst Agent</h1>
+            <p>Intelligent data analysis powered by AI - supports any question, any format</p>
+        </div>
+
+        <div class="main-content">
+            <!-- Configuration Status -->
+            <div id="configInfo" class="config-info">
+                <h3><span class="status-indicator status-healthy"></span>System Status</h3>
+                <p>Loading configuration...</p>
+            </div>
+
+            <!-- Examples Section -->
+            <div class="examples">
+                <h3>📋 Example Questions</h3>
+                
+                <div class="example-item">
+                    <h4>Data Analysis with Visualization</h4>
+                    <pre>1. How many records are in the dataset?
+2. What is the correlation between sales and profit?
+3. Create a scatter plot of sales vs profit with a regression line.
+Return answers as: [count, correlation_value, "data:image/png;base64,..."]</pre>
+                </div>
+
+                <div class="example-item">
+                    <h4>Web Scraping Example</h4>
+                    <pre>Scrape data from https://example.com/data-table
+1. How many rows are in the main table?
+2. What is the average value in column 'Price'?
+3. Which category has the highest total sales?</pre>
+                </div>
+
+                <div class="example-item">
+                    <h4>Statistical Analysis</h4>
+                    <pre>{
+  "What is the correlation between age and income?": "...",
+  "What is the regression slope?": "...",
+  "Create a histogram of age distribution": "data:image/png;base64,..."
+}</pre>
+                </div>
+            </div>
+
+            <!-- Main Form -->
+            <div class="form-section">
+                <h2>🔍 Analysis Request</h2>
+                
+                <form id="analysisForm" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="questions">📝 Questions (Required)</label>
+                        <textarea id="questions" name="questions" rows="8" 
+                                  placeholder="Enter your analysis questions here...
+
+Examples:
+• Simple counting: How many records are there?
+• Correlation: What's the correlation between X and Y?
+• Visualization: Create a scatter plot of A vs B
+• Web scraping: Scrape data from [URL] and analyze...
+• Statistical: Perform regression analysis on...
+
+Specify your desired response format:
+• JSON Array: [value1, value2, ...]
+• JSON Object: {&quot;question1&quot;: &quot;answer1&quot;, ...}
+• Mixed format with visualizations"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="files">📁 Data Files (Optional)</label>
+                        <input type="file" id="files" name="files" multiple 
+                               accept=".csv,.xlsx,.xls,.json,.pdf,.png,.jpg,.jpeg,.txt,.tsv">
+                        <div class="file-info">
+                            <strong>Supported formats:</strong> CSV, Excel (.xlsx/.xls), JSON, PDF, Images (PNG/JPG), Text files<br>
+                            <strong>Max size:</strong> 50MB per file
+                        </div>
+                        <div id="fileList" class="file-info" style="margin-top: 10px;"></div>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <button type="submit" class="analyze-btn" id="analyzeBtn">
+                            <div class="spinner" id="spinner"></div>
+                            <span id="btnText">🚀 Start Analysis</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Results Section -->
+            <div class="result-section" id="resultSection">
+                <div class="result-content">
+                    <div class="result-header">
+                        <h2>📊 Analysis Results</h2>
+                        <button class="copy-btn" id="copyBtn" onclick="copyResults()">📋 Copy Results</button>
+                    </div>
+                    <div id="resultData" class="result-data"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentApiUrl = window.location.origin + '/api/';
+        
+        // Load configuration on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadConfiguration();
+            setupFileInput();
+            setupForm();
+        });
+
+        async function loadConfiguration() {
+            try {
+                const response = await fetch('/config');
+                const config = await response.json();
+                
+                const configDiv = document.getElementById('configInfo');
+                configDiv.innerHTML = `
+                    <h3><span class="status-indicator status-healthy"></span>System Ready</h3>
+                    <p><strong>LLM Provider:</strong> ${config.llm_provider}</p>
+                    <p><strong>Max File Size:</strong> ${config.max_file_size_mb}MB</p>
+                    <p><strong>Timeout:</strong> ${config.request_timeout_seconds}s</p>
+                    <p><strong>Available Keys:</strong> 
+                       ${config.has_gemini_key ? '✅ Gemini' : '❌ Gemini'} |
+                       ${config.has_aipipe_token ? '✅ AIPipe' : '❌ AIPipe'} |
+                       ✅ Ollama (${config.ollama_model})
+                    </p>
+                `;
+            } catch (error) {
+                const configDiv = document.getElementById('configInfo');
+                configDiv.innerHTML = `
+                    <h3><span class="status-indicator status-error"></span>Configuration Error</h3>
+                    <p>Could not load system configuration: ${error.message}</p>
+                `;
+                configDiv.style.background = '#fee';
+                configDiv.style.borderLeftColor = '#e74c3c';
+            }
+        }
+
+        function setupFileInput() {
+            const fileInput = document.getElementById('files');
+            const fileList = document.getElementById('fileList');
+            
+            fileInput.addEventListener('change', function(e) {
+                const files = Array.from(e.target.files);
+                if (files.length > 0) {
+                    const fileNames = files.map(f => `📄 ${f.name} (${(f.size/1024/1024).toFixed(2)}MB)`);
+                    fileList.innerHTML = `<strong>Selected files:</strong><br>${fileNames.join('<br>')}`;
+                } else {
+                    fileList.innerHTML = '';
+                }
+            });
+        }
+
+        function setupForm() {
+            const form = document.getElementById('analysisForm');
+            form.addEventListener('submit', handleSubmit);
+        }
+
+        async function handleSubmit(e) {
+            e.preventDefault();
+            
+            const questionsInput = document.getElementById('questions');
+            const filesInput = document.getElementById('files');
+            const analyzeBtn = document.getElementById('analyzeBtn');
+            const spinner = document.getElementById('spinner');
+            const btnText = document.getElementById('btnText');
+            const resultSection = document.getElementById('resultSection');
+            const resultData = document.getElementById('resultData');
+            
+            // Validation
+            const questions = questionsInput.value.trim();
+            if (!questions) {
+                showError('Please enter some questions to analyze.');
+                return;
+            }
+            
+            // Show loading state
+            analyzeBtn.disabled = true;
+            spinner.style.display = 'block';
+            btnText.textContent = 'Analyzing...';
+            resultSection.style.display = 'none';
+            
+            try {
+                // Prepare form data
+                const formData = new FormData();
+                
+                // Add questions as a file
+                const questionsBlob = new Blob([questions], { type: 'text/plain' });
+                formData.append('files', questionsBlob, 'questions.txt');
+                
+                // Add other files
+                Array.from(filesInput.files).forEach(file => {
+                    formData.append('files', file);
+                });
+                
+                console.log('Sending request to:', currentApiUrl);
+                console.log('Files being sent:', Array.from(formData.keys()));
+                
+                // Make request with timeout
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 300000); // 5 minute timeout
+                
+                const response = await fetch(currentApiUrl, {
+                    method: 'POST',
+                    body: formData,
+                    signal: controller.signal
+                });
+                
+                clearTimeout(timeoutId);
+                
+                if (!response.ok) {
+                    const errorText = await response.text();
+                    throw new Error(`HTTP ${response.status}: ${errorText}`);
+                }
+                
+                const result = await response.json();
+                showResult(result, questions);
+                
+            } catch (error) {
+                console.error('Analysis failed:', error);
+                let errorMessage = 'Analysis failed: ';
+                
+                if (error.name === 'AbortError') {
+                    errorMessage += 'Request timed out. The analysis is taking too long.';
+                } else if (error.message.includes('fetch')) {
+                    errorMessage += 'Could not connect to the server. Please check if the application is running.';
+                } else {
+                    errorMessage += error.message;
+                }
+                
+                showError(errorMessage);
+            } finally {
+                // Reset button state
+                analyzeBtn.disabled = false;
+                spinner.style.display = 'none';
+                btnText.textContent = '🚀 Start Analysis';
+            }
+        }
+
+        function showResult(result, originalQuestions) {
+            const resultSection = document.getElementById('resultSection');
+            const resultData = document.getElementById('resultData');
+            
+            // Format the result for display
+            let displayText;
+            try {
+                if (typeof result === 'object') {
+                    displayText = JSON.stringify(result, null, 2);
+                } else {
+                    displayText = String(result);
+                }
+            } catch (error) {
+                displayText = String(result);
+            }
+            
+            resultData.innerHTML = displayText;
+            resultData.className = 'result-data success';
+            resultSection.style.display = 'block';
+            
+            // Scroll to results
+            resultSection.scrollIntoView({ behavior: 'smooth' });
+            
+            // Store result for copying
+            window.lastResult = result;
+        }
+
+        function showError(message) {
+            const resultSection = document.getElementById('resultSection');
+            const resultData = document.getElementById('resultData');
+            
+            resultData.innerHTML = message;
+            resultData.className = 'result-data error';
+            resultSection.style.display = 'block';
+            
+            // Scroll to error
+            resultSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function copyResults() {
+            if (window.lastResult) {
+                const textToCopy = typeof window.lastResult === 'object' 
+                    ? JSON.stringify(window.lastResult, null, 2)
+                    : String(window.lastResult);
+                
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    const copyBtn = document.getElementById('copyBtn');
+                    const originalText = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '✅ Copied!';
+                    setTimeout(() => {
+                        copyBtn.innerHTML = originalText;
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy:', err);
+                    // Fallback for older browsers
+                    const textArea = document.createElement('textarea');
+                    textArea.value = textToCopy;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    
+                    const copyBtn = document.getElementById('copyBtn');
+                    const originalText = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '✅ Copied!';
+                    setTimeout(() => {
+                        copyBtn.innerHTML = originalText;
+                    }, 2000);
+                });
+            }
+        }
+
+        // Add some example buttons for quick testing
+        function loadExample(exampleNumber) {
+            const questionsTextarea = document.getElementById('questions');
+            
+            const examples = {
+                1: `1. How many records are in the dataset?
+2. What is the average of the first numeric column?
+3. Create a bar chart of the data.
+
+Return as JSON array: [count, average, "data:image/png;base64,..."]`,
+                
+                2: `Analyze the uploaded data and answer:
+{
+    "total_records": "...",
+    "column_count": "...",
+    "summary_statistics": "...",
+    "data_visualization": "data:image/png;base64,..."
+}`,
+                
+                3: `Scrape the list of highest grossing films from Wikipedia:
+https://en.wikipedia.org/wiki/List_of_highest-grossing_films
+
+1. How many $2bn movies were released before 2000?
+2. Which is the earliest film that grossed over $1.5bn?
+3. What's the correlation between Rank and Peak?
+4. Create a scatterplot with regression line.
+
+Return as: [count, "movie_name", correlation, "data:image/png;base64,..."]`
+            };
+            
+            if (examples[exampleNumber]) {
+                questionsTextarea.value = examples[exampleNumber];
+            }
+        }
+
+        // Add keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            // Ctrl+Enter to submit
+            if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+                e.preventDefault();
+                document.getElementById('analysisForm').dispatchEvent(new Event('submit'));
+            }
+            
+            // Escape to clear
+            if (e.key === 'Escape') {
+                document.getElementById('questions').value = '';
+                document.getElementById('files').value = '';
+                document.getElementById('fileList').innerHTML = '';
+                document.getElementById('resultSection').style.display = 'none';
+            }
+        });
+
+        // Add a simple test connection function
+        async function testConnection() {
+            try {
+                const response = await fetch('/health');
+                const health = await response.json();
+                console.log('Health check:', health);
+                return health.status === 'healthy';
+            } catch (error) {
+                console.error('Connection test failed:', error);
+                return false;
+            }
+        }
+
+        // Test connection on load
+        testConnection().then(isHealthy => {
+            if (!isHealthy) {
+                showError('Warning: Could not connect to the analysis service. Please check if the server is running.');
+            }
+        });
+    </script>
+
+    <!-- Quick Example Buttons (Hidden by default, can be shown for testing) -->
+    <div style="position: fixed; top: 10px; right: 10px; z-index: 1000; display: none;" id="quickExamples">
+        <button onclick="loadExample(1)" style="margin: 2px; padding: 5px; font-size: 12px;">Ex1</button>
+        <button onclick="loadExample(2)" style="margin: 2px; padding: 5px; font-size: 12px;">Ex2</button>
+        <button onclick="loadExample(3)" style="margin: 2px; padding: 5px; font-size: 12px;">Ex3</button>
+    </div>
+
+    <!-- Show quick examples in development -->
+    <script>
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            document.getElementById('quickExamples').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

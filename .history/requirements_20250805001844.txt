@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+pandas
+numpy
+matplotlib
+seaborn
+requests
+beautifulsoup4
+openai
+PyPDF2
+Pillow
+sqlite3
+duckdb
+python-multipart
+aiofiles

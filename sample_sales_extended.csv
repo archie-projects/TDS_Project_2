@@ -1,0 +1,1501 @@
+OrderID,OrderDate,Country,Region,Category,Product,UnitsSold,UnitPrice,TotalRevenue
+1001,2025-03-20,Bangladesh,Asia,Apparel,Jacket,46,29.07,1337.22
+1002,2023-09-12,Saudi Arabia,Asia,Home Goods,Bed Frame,32,561.88,17980.16
+1003,2023-08-10,Pakistan,Asia,Electronics,Headphones,20,611.25,12225.0
+1004,2024-04-19,Thailand,Asia,Electronics,Smartphone,45,1000.09,45004.05
+1005,2025-03-04,Turkey,Europe,Books,Fiction Novel,22,19.71,433.62
+1006,2023-02-18,Malaysia,Asia,Electronics,Tablet,42,775.53,32572.26
+1007,2024-12-05,Saudi Arabia,Asia,Books,Cookbook,34,70.52,2397.68
+1008,2023-08-09,Brazil,South America,Books,Biography,34,74.36,2528.24
+1009,2024-06-29,Canada,North America,Apparel,Jeans,3,99.93,299.79
+1010,2023-02-19,Pakistan,Asia,Home Goods,Blender,36,159.46,5740.56
+1011,2024-07-20,South Korea,Asia,Home Goods,Bed Frame,50,322.51,16125.5
+1012,2023-09-11,Canada,North America,Apparel,Jacket,25,224.04,5601.0
+1013,2023-03-30,Philippines,Asia,Apparel,Dress,37,248.51,9194.87
+1014,2023-03-01,Russia,Europe,Home Goods,Bed Frame,3,670.87,2012.61
+1015,2023-02-18,Netherlands,Europe,Electronics,Laptop,46,1259.63,57942.98
+1016,2024-08-20,Vietnam,Asia,Home Goods,Coffee Maker,45,84.59,3806.55
+1017,2023-12-04,India,Asia,Home Goods,Blender,45,195.01,8775.45
+1018,2024-06-15,Nigeria,Africa,Apparel,Sneakers,33,234.68,7744.44
+1019,2023-11-24,Spain,Europe,Home Goods,Bed Frame,30,778.07,23342.1
+1020,2024-06-11,Nigeria,Africa,Books,Cookbook,47,53.08,2494.76
+1021,2023-01-28,Indonesia,Asia,Electronics,Tablet,36,695.16,25025.76
+1022,2025-01-21,South Korea,Asia,Electronics,Smartwatch,46,672.01,30912.46
+1023,2023-05-28,Turkey,Europe,Apparel,T-Shirt,12,85.04,1020.48
+1024,2024-02-20,South Korea,Asia,Apparel,Sneakers,19,147.97,2811.43
+1025,2024-10-02,Canada,North America,Apparel,Jeans,28,42.58,1192.24
+1026,2024-09-29,Nigeria,Africa,Home Goods,Bed Frame,21,451.27,9476.67
+1027,2023-01-03,Germany,Europe,Electronics,Smartphone,40,1042.48,41699.2
+1028,2023-12-23,France,Europe,Home Goods,Blender,48,495.68,23792.64
+1029,2023-08-09,Philippines,Asia,Books,Fiction Novel,25,68.07,1701.75
+1030,2023-03-02,Philippines,Asia,Apparel,T-Shirt,25,215.19,5379.75
+1031,2023-09-14,Egypt,Africa,Books,Biography,42,17.18,721.56
+1032,2023-11-26,Nigeria,Africa,Apparel,T-Shirt,17,93.86,1595.62
+1033,2023-02-20,Malaysia,Asia,Electronics,Headphones,3,1168.45,3505.35
+1034,2025-06-16,Vietnam,Asia,Apparel,Jacket,45,247.73,11147.85
+1035,2025-06-05,Mexico,North America,Books,Science Journal,10,27.23,272.3
+1036,2025-05-07,Egypt,Africa,Apparel,Jacket,45,125.15,5631.75
+1037,2024-10-24,Saudi Arabia,Asia,Books,Cookbook,9,52.05,468.45
+1038,2023-05-04,Thailand,Asia,Apparel,Jacket,35,243.81,8533.35
+1039,2023-01-20,Argentina,South America,Books,Cookbook,13,31.21,405.73
+1040,2023-08-17,Argentina,South America,Home Goods,Vacuum Cleaner,34,407.94,13869.96
+1041,2024-02-23,Japan,Asia,Home Goods,Bed Frame,35,728.76,25506.6
+1042,2025-04-13,Turkey,Europe,Electronics,Laptop,45,1388.02,62460.9
+1043,2023-09-29,Japan,Asia,Books,Fiction Novel,6,30.43,182.58
+1044,2025-02-20,Egypt,Africa,Home Goods,Coffee Maker,36,276.79,9964.44
+1045,2023-02-11,Thailand,Asia,Electronics,Laptop,27,1458.11,39368.97
+1046,2023-09-16,Turkey,Europe,Electronics,Headphones,38,450.2,17107.6
+1047,2024-05-05,Argentina,South America,Books,Fiction Novel,5,64.39,321.95
+1048,2023-06-15,France,Europe,Electronics,Laptop,9,1179.06,10611.54
+1049,2024-10-02,Brazil,South America,Books,History Text,24,72.81,1747.44
+1050,2024-11-23,China,Asia,Home Goods,Blender,23,474.52,10913.96
+1051,2025-01-03,Switzerland,Europe,Home Goods,Blender,4,368.63,1474.52
+1052,2025-05-11,Netherlands,Europe,Home Goods,Bed Frame,49,744.48,36479.52
+1053,2025-06-27,Nigeria,Africa,Books,Fiction Novel,39,20.97,817.83
+1054,2025-06-28,Malaysia,Asia,Apparel,Dress,34,41.77,1420.18
+1055,2024-09-11,Vietnam,Asia,Home Goods,Sofa,20,752.92,15058.4
+1056,2024-06-01,Brazil,South America,Home Goods,Sofa,2,471.69,943.38
+1057,2023-08-24,Egypt,Africa,Home Goods,Blender,5,744.12,3720.6
+1058,2025-05-26,Philippines,Asia,Books,Fiction Novel,36,72.81,2621.16
+1059,2024-07-09,Saudi Arabia,Asia,Books,History Text,42,52.03,2185.26
+1060,2023-09-28,Mexico,North America,Apparel,Jeans,9,109.51,985.59
+1061,2023-05-29,Egypt,Africa,Books,Science Journal,27,19.46,525.42
+1062,2024-02-17,Turkey,Europe,Home Goods,Bed Frame,11,280.78,3088.58
+1063,2023-12-06,Pakistan,Asia,Apparel,T-Shirt,4,106.18,424.72
+1064,2023-09-14,Vietnam,Asia,Apparel,Dress,28,119.71,3351.88
+1065,2024-12-12,Russia,Europe,Electronics,Headphones,29,1279.63,37109.27
+1066,2023-11-23,Saudi Arabia,Asia,Apparel,Sneakers,45,63.81,2871.45
+1067,2024-03-28,Australia,Oceania,Home Goods,Vacuum Cleaner,34,338.64,11513.76
+1068,2024-10-22,United States,North America,Home Goods,Sofa,35,645.67,22598.45
+1069,2023-06-23,Thailand,Asia,Electronics,Tablet,18,1095.59,19720.62
+1070,2023-01-03,Pakistan,Asia,Electronics,Tablet,25,657.4,16435.0
+1071,2023-11-12,Vietnam,Asia,Electronics,Laptop,22,288.29,6342.38
+1072,2024-11-29,Indonesia,Asia,Electronics,Tablet,40,175.12,7004.8
+1073,2025-04-27,Vietnam,Asia,Books,History Text,13,15.64,203.32
+1074,2024-10-21,Malaysia,Asia,Home Goods,Sofa,46,596.03,27417.38
+1075,2023-10-07,Turkey,Europe,Books,Fiction Novel,45,34.04,1531.8
+1076,2025-03-20,Netherlands,Europe,Home Goods,Blender,22,579.08,12739.76
+1077,2023-07-16,Australia,Oceania,Home Goods,Blender,39,62.76,2447.64
+1078,2023-12-28,United States,North America,Apparel,Dress,25,185.06,4626.5
+1079,2024-06-28,Bangladesh,Asia,Home Goods,Coffee Maker,31,395.62,12264.22
+1080,2023-07-07,China,Asia,Apparel,Jacket,20,225.59,4511.8
+1081,2023-06-18,Indonesia,Asia,Electronics,Smartwatch,24,1095.64,26295.36
+1082,2023-04-08,Germany,Europe,Electronics,Smartphone,39,505.51,19714.89
+1083,2024-01-09,Brazil,South America,Apparel,Dress,13,240.54,3127.02
+1084,2024-07-22,Indonesia,Asia,Home Goods,Vacuum Cleaner,48,651.87,31289.76
+1085,2024-08-21,Netherlands,Europe,Home Goods,Vacuum Cleaner,48,83.51,4008.48
+1086,2024-07-29,Russia,Europe,Home Goods,Sofa,3,415.82,1247.46
+1087,2025-07-27,Malaysia,Asia,Apparel,Dress,37,107.46,3976.02
+1088,2024-02-07,United Kingdom,Europe,Electronics,Smartphone,7,993.67,6955.69
+1089,2023-02-16,Mexico,North America,Books,Biography,50,60.77,3038.5
+1090,2023-04-24,France,Europe,Apparel,Sneakers,15,238.32,3574.8
+1091,2023-09-06,China,Asia,Books,Cookbook,32,35.52,1136.64
+1092,2023-07-29,Netherlands,Europe,Electronics,Smartphone,21,537.66,11290.86
+1093,2024-04-29,Australia,Oceania,Books,Fiction Novel,36,25.07,902.52
+1094,2023-06-26,Pakistan,Asia,Electronics,Smartphone,10,1031.87,10318.7
+1095,2024-06-20,Australia,Oceania,Books,Biography,11,21.38,235.18
+1096,2024-08-23,Egypt,Africa,Electronics,Laptop,9,989.82,8908.38
+1097,2024-04-04,United States,North America,Electronics,Headphones,33,223.36,7370.88
+1098,2025-02-22,Egypt,Africa,Home Goods,Coffee Maker,39,394.18,15373.02
+1099,2025-05-10,Netherlands,Europe,Books,Science Journal,3,72.15,216.45
+1100,2023-12-18,France,Europe,Books,History Text,17,14.87,252.79
+1101,2023-03-21,Netherlands,Europe,Home Goods,Blender,50,505.44,25272.0
+1102,2025-01-24,Saudi Arabia,Asia,Apparel,Jacket,8,50.41,403.28
+1103,2023-01-06,South Africa,Africa,Electronics,Tablet,19,839.41,15948.79
+1104,2024-11-27,Pakistan,Asia,Apparel,T-Shirt,37,196.24,7260.88
+1105,2024-07-09,Switzerland,Europe,Home Goods,Blender,13,772.17,10038.21
+1106,2023-10-04,South Korea,Asia,Home Goods,Sofa,26,606.05,15757.3
+1107,2023-01-11,Egypt,Africa,Electronics,Laptop,45,392.41,17658.45
+1108,2023-12-31,Brazil,South America,Apparel,Jacket,40,28.76,1150.4
+1109,2024-08-16,Spain,Europe,Home Goods,Bed Frame,41,365.49,14985.09
+1110,2024-09-30,Indonesia,Asia,Home Goods,Bed Frame,40,430.99,17239.6
+1111,2023-03-30,Malaysia,Asia,Apparel,Dress,33,106.19,3504.27
+1112,2023-06-18,Pakistan,Asia,Apparel,Jacket,11,155.6,1711.6
+1113,2025-07-24,Vietnam,Asia,Electronics,Tablet,17,596.68,10143.56
+1114,2025-04-08,Vietnam,Asia,Apparel,Sneakers,10,141.14,1411.4
+1115,2024-11-21,South Africa,Africa,Books,Science Journal,36,50.3,1810.8
+1116,2025-07-05,India,Asia,Electronics,Laptop,43,545.6,23460.8
+1117,2025-01-03,Pakistan,Asia,Electronics,Headphones,39,120.11,4684.29
+1118,2023-07-12,Netherlands,Europe,Books,Fiction Novel,41,52.9,2168.9
+1119,2025-05-11,Italy,Europe,Electronics,Tablet,26,712.86,18534.36
+1120,2024-04-25,Bangladesh,Asia,Books,History Text,34,51.15,1739.1
+1121,2025-04-30,Australia,Oceania,Books,Biography,24,32.17,772.08
+1122,2024-07-20,Australia,Oceania,Home Goods,Sofa,48,96.95,4653.6
+1123,2025-02-01,Indonesia,Asia,Electronics,Headphones,43,1174.3,50494.9
+1124,2023-10-07,Netherlands,Europe,Electronics,Tablet,39,262.91,10253.49
+1125,2024-03-26,Switzerland,Europe,Apparel,Dress,35,18.04,631.4
+1126,2024-06-27,Spain,Europe,Electronics,Laptop,32,1014.89,32476.48
+1127,2023-09-01,South Africa,Africa,Books,Fiction Novel,49,20.29,994.21
+1128,2024-12-20,South Korea,Asia,Apparel,Sneakers,36,249.79,8992.44
+1129,2023-12-28,United States,North America,Apparel,Dress,38,162.09,6159.42
+1130,2024-01-18,South Africa,Africa,Books,Fiction Novel,1,19.75,19.75
+1131,2024-02-02,Pakistan,Asia,Electronics,Tablet,19,305.75,5809.25
+1132,2024-02-23,Thailand,Asia,Home Goods,Vacuum Cleaner,26,392.53,10205.78
+1133,2024-05-14,Brazil,South America,Books,Fiction Novel,31,34.12,1057.72
+1134,2025-01-22,Bangladesh,Asia,Home Goods,Blender,6,416.67,2500.02
+1135,2025-04-14,Egypt,Africa,Books,Fiction Novel,7,14.63,102.41
+1136,2024-01-19,Mexico,North America,Apparel,Jeans,35,117.01,4095.35
+1137,2023-08-20,Indonesia,Asia,Apparel,Sneakers,7,124.39,870.73
+1138,2023-02-25,Turkey,Europe,Home Goods,Bed Frame,26,504.89,13127.14
+1139,2024-11-11,United States,North America,Apparel,Jacket,7,138.91,972.37
+1140,2024-02-03,Vietnam,Asia,Home Goods,Coffee Maker,16,87.54,1400.64
+1141,2023-04-04,United States,North America,Electronics,Tablet,39,891.62,34773.18
+1142,2025-04-11,India,Asia,Electronics,Headphones,14,763.06,10682.84
+1143,2023-05-19,France,Europe,Books,Science Journal,40,69.93,2797.2
+1144,2023-12-01,South Korea,Asia,Home Goods,Blender,24,473.52,11364.48
+1145,2023-06-03,Italy,Europe,Electronics,Smartwatch,23,581.46,13373.58
+1146,2025-01-16,Bangladesh,Asia,Electronics,Smartwatch,9,907.12,8164.08
+1147,2025-03-20,Japan,Asia,Home Goods,Vacuum Cleaner,41,81.47,3340.27
+1148,2024-12-23,Thailand,Asia,Books,Biography,48,45.19,2169.12
+1149,2023-10-23,Pakistan,Asia,Electronics,Smartphone,14,200.28,2803.92
+1150,2023-10-08,United Kingdom,Europe,Electronics,Tablet,47,432.51,20327.97
+1151,2024-12-27,South Africa,Africa,Apparel,T-Shirt,49,183.26,8979.74
+1152,2024-12-24,Brazil,South America,Electronics,Headphones,38,1033.82,39285.16
+1153,2025-01-30,United Kingdom,Europe,Apparel,Jacket,35,89.13,3119.55
+1154,2024-04-14,Mexico,North America,Apparel,Sneakers,44,88.53,3895.32
+1155,2025-07-04,South Africa,Africa,Books,History Text,5,72.5,362.5
+1156,2023-07-13,Egypt,Africa,Books,Biography,24,50.04,1200.96
+1157,2023-05-20,Mexico,North America,Electronics,Smartphone,21,1375.6,28887.6
+1158,2023-04-11,Canada,North America,Apparel,Jeans,4,124.48,497.92
+1159,2023-02-27,Russia,Europe,Apparel,T-Shirt,50,83.28,4164.0
+1160,2023-12-09,Malaysia,Asia,Home Goods,Bed Frame,16,389.16,6226.56
+1161,2023-04-26,Malaysia,Asia,Books,History Text,34,69.86,2375.24
+1162,2023-09-30,Switzerland,Europe,Home Goods,Bed Frame,37,204.46,7565.02
+1163,2024-03-24,Japan,Asia,Books,Fiction Novel,36,22.8,820.8
+1164,2023-07-29,Vietnam,Asia,Books,Science Journal,4,30.41,121.64
+1165,2025-04-20,Malaysia,Asia,Books,History Text,47,36.57,1718.79
+1166,2025-07-15,Saudi Arabia,Asia,Books,Science Journal,13,69.27,900.51
+1167,2025-01-16,Russia,Europe,Home Goods,Bed Frame,27,601.98,16253.46
+1168,2023-10-16,Turkey,Europe,Apparel,Dress,6,180.32,1081.92
+1169,2024-12-12,Brazil,South America,Electronics,Laptop,2,535.12,1070.24
+1170,2025-02-11,Philippines,Asia,Books,Biography,11,17.81,195.91
+1171,2024-05-11,Indonesia,Asia,Books,Science Journal,41,44.58,1827.78
+1172,2023-10-08,Indonesia,Asia,Apparel,T-Shirt,19,24.47,464.93
+1173,2023-11-26,Switzerland,Europe,Apparel,T-Shirt,37,141.8,5246.6
+1174,2025-07-10,Brazil,South America,Home Goods,Coffee Maker,41,144.22,5913.02
+1175,2024-02-28,Indonesia,Asia,Electronics,Smartwatch,26,111.1,2888.6
+1176,2025-02-02,Egypt,Africa,Home Goods,Coffee Maker,8,320.92,2567.36
+1177,2025-02-05,Canada,North America,Electronics,Laptop,15,1034.43,15516.45
+1178,2025-05-02,Germany,Europe,Electronics,Smartwatch,31,463.17,14358.27
+1179,2023-08-09,Pakistan,Asia,Electronics,Headphones,38,735.37,27944.06
+1180,2024-05-17,Netherlands,Europe,Books,Cookbook,50,34.82,1741.0
+1181,2023-02-04,Brazil,South America,Apparel,Dress,36,176.36,6348.96
+1182,2023-01-04,Netherlands,Europe,Home Goods,Sofa,18,248.14,4466.52
+1183,2023-10-20,United States,North America,Books,Fiction Novel,29,73.78,2139.62
+1184,2023-08-21,United Kingdom,Europe,Home Goods,Sofa,41,576.26,23626.66
+1185,2024-11-17,Japan,Asia,Home Goods,Vacuum Cleaner,29,761.54,22084.66
+1186,2023-02-08,Germany,Europe,Apparel,Sneakers,10,160.39,1603.9
+1187,2023-10-24,Malaysia,Asia,Electronics,Smartwatch,10,216.25,2162.5
+1188,2024-02-02,Pakistan,Asia,Home Goods,Blender,45,588.97,26503.65
+1189,2024-01-08,Switzerland,Europe,Electronics,Smartwatch,4,1112.6,4450.4
+1190,2024-01-08,Canada,North America,Apparel,T-Shirt,26,106.32,2764.32
+1191,2025-02-07,Bangladesh,Asia,Apparel,Jacket,30,242.54,7276.2
+1192,2023-04-18,Bangladesh,Asia,Electronics,Tablet,50,859.08,42954.0
+1193,2024-08-17,Indonesia,Asia,Electronics,Headphones,2,659.1,1318.2
+1194,2024-11-08,Switzerland,Europe,Electronics,Smartwatch,48,580.53,27865.44
+1195,2024-04-13,Egypt,Africa,Apparel,T-Shirt,13,29.59,384.67
+1196,2024-07-27,Russia,Europe,Apparel,Sneakers,27,194.14,5241.78
+1197,2024-05-17,United States,North America,Books,Science Journal,3,28.37,85.11
+1198,2025-03-24,Russia,Europe,Books,History Text,15,70.32,1054.8
+1199,2023-09-10,Nigeria,Africa,Home Goods,Sofa,10,427.79,4277.9
+1200,2025-05-01,Vietnam,Asia,Home Goods,Vacuum Cleaner,30,186.4,5592.0
+1201,2024-06-11,United States,North America,Apparel,Jeans,23,93.03,2139.69
+1202,2025-04-04,Brazil,South America,Apparel,Dress,34,185.82,6317.88
+1203,2023-03-08,Turkey,Europe,Apparel,Jeans,2,201.65,403.3
+1204,2024-09-09,China,Asia,Electronics,Laptop,30,812.16,24364.8
+1205,2024-05-08,Brazil,South America,Home Goods,Coffee Maker,48,101.83,4887.84
+1206,2024-07-31,Switzerland,Europe,Books,Cookbook,30,38.31,1149.3
+1207,2025-07-03,India,Asia,Books,Fiction Novel,31,48.64,1507.84
+1208,2023-09-25,Russia,Europe,Home Goods,Coffee Maker,33,738.59,24373.47
+1209,2025-06-30,Brazil,South America,Apparel,Jeans,49,206.56,10121.44
+1210,2023-03-16,Spain,Europe,Books,Fiction Novel,26,44.08,1146.08
+1211,2025-01-21,Switzerland,Europe,Electronics,Laptop,11,144.5,1589.5
+1212,2025-02-11,Netherlands,Europe,Home Goods,Bed Frame,15,422.13,6331.95
+1213,2023-08-01,South Korea,Asia,Books,Biography,26,18.95,492.7
+1214,2024-01-24,South Korea,Asia,Home Goods,Vacuum Cleaner,25,655.09,16377.25
+1215,2023-04-08,Argentina,South America,Electronics,Smartphone,11,826.41,9090.51
+1216,2024-07-11,Malaysia,Asia,Electronics,Tablet,37,1443.17,53397.29
+1217,2024-09-11,Switzerland,Europe,Electronics,Headphones,34,1105.18,37576.12
+1218,2025-07-25,Nigeria,Africa,Electronics,Headphones,5,461.95,2309.75
+1219,2023-01-17,Philippines,Asia,Books,Cookbook,43,76.41,3285.63
+1220,2023-12-20,South Africa,Africa,Electronics,Headphones,26,1055.07,27431.82
+1221,2023-03-13,Germany,Europe,Books,Biography,33,35.52,1172.16
+1222,2025-03-27,Spain,Europe,Electronics,Tablet,12,1123.98,13487.76
+1223,2023-11-16,France,Europe,Apparel,T-Shirt,38,76.4,2903.2
+1224,2024-02-17,Pakistan,Asia,Apparel,Jacket,1,213.83,213.83
+1225,2023-07-22,Indonesia,Asia,Apparel,T-Shirt,45,122.34,5505.3
+1226,2024-03-22,Russia,Europe,Apparel,Jeans,37,107.42,3974.54
+1227,2025-06-17,Malaysia,Asia,Home Goods,Coffee Maker,8,423.92,3391.36
+1228,2025-06-08,Australia,Oceania,Books,Biography,25,17.27,431.75
+1229,2023-07-27,South Africa,Africa,Home Goods,Coffee Maker,19,624.9,11873.1
+1230,2023-10-18,Switzerland,Europe,Apparel,T-Shirt,2,246.47,492.94
+1231,2023-02-11,China,Asia,Books,Biography,33,11.89,392.37
+1232,2025-07-15,Germany,Europe,Apparel,T-Shirt,12,78.02,936.24
+1233,2023-08-26,Pakistan,Asia,Home Goods,Blender,40,300.76,12030.4
+1234,2023-07-08,Spain,Europe,Apparel,T-Shirt,5,177.51,887.55
+1235,2024-03-26,South Africa,Africa,Electronics,Headphones,48,795.89,38202.72
+1236,2025-03-14,France,Europe,Home Goods,Vacuum Cleaner,38,568.8,21614.4
+1237,2024-12-17,China,Asia,Apparel,Jeans,21,132.07,2773.47
+1238,2023-06-30,Pakistan,Asia,Home Goods,Sofa,12,435.06,5220.72
+1239,2023-04-28,Australia,Oceania,Home Goods,Coffee Maker,29,444.95,12903.55
+1240,2023-01-08,Bangladesh,Asia,Books,Science Journal,41,71.2,2919.2
+1241,2023-02-09,South Africa,Africa,Electronics,Tablet,45,311.17,14002.65
+1242,2025-04-24,Russia,Europe,Electronics,Laptop,1,1106.6,1106.6
+1243,2023-02-10,France,Europe,Home Goods,Sofa,1,633.42,633.42
+1244,2025-07-27,Malaysia,Asia,Apparel,Sneakers,18,144.09,2593.62
+1245,2023-03-27,Nigeria,Africa,Electronics,Laptop,41,1181.55,48443.55
+1246,2023-12-01,China,Asia,Books,History Text,7,36.29,254.03
+1247,2023-10-17,Indonesia,Asia,Electronics,Tablet,30,342.27,10268.1
+1248,2024-05-16,South Africa,Africa,Electronics,Smartwatch,39,662.52,25838.28
+1249,2023-09-23,United States,North America,Books,Science Journal,25,45.73,1143.25
+1250,2024-04-14,Philippines,Asia,Home Goods,Bed Frame,48,318.84,15304.32
+1251,2024-10-14,Netherlands,Europe,Books,Science Journal,22,51.56,1134.32
+1252,2024-09-18,Bangladesh,Asia,Apparel,Dress,27,180.09,4862.43
+1253,2025-01-27,Pakistan,Asia,Home Goods,Bed Frame,33,53.29,1758.57
+1254,2023-11-21,Saudi Arabia,Asia,Home Goods,Blender,9,130.99,1178.91
+1255,2024-01-24,South Korea,Asia,Apparel,Jeans,18,216.37,3894.66
+1256,2024-06-12,Spain,Europe,Electronics,Smartwatch,9,1178.99,10610.91
+1257,2025-05-10,Bangladesh,Asia,Home Goods,Bed Frame,27,191.67,5175.09
+1258,2024-03-28,United States,North America,Home Goods,Coffee Maker,21,386.12,8108.52
+1259,2023-11-27,Philippines,Asia,Electronics,Headphones,33,1185.52,39122.16
+1260,2024-02-14,Switzerland,Europe,Books,Science Journal,26,37.22,967.72
+1261,2025-07-06,Nigeria,Africa,Electronics,Laptop,1,633.94,633.94
+1262,2023-03-30,South Africa,Africa,Home Goods,Coffee Maker,11,753.74,8291.14
+1263,2024-12-17,Spain,Europe,Home Goods,Vacuum Cleaner,36,56.47,2032.92
+1264,2023-04-12,Bangladesh,Asia,Books,Fiction Novel,30,54.03,1620.9
+1265,2024-07-23,South Africa,Africa,Electronics,Tablet,17,219.69,3734.73
+1266,2025-06-04,Switzerland,Europe,Apparel,Jacket,44,22.31,981.64
+1267,2024-06-02,Australia,Oceania,Electronics,Smartwatch,9,118.57,1067.13
+1268,2023-07-19,Netherlands,Europe,Apparel,Jeans,41,225.06,9227.46
+1269,2025-06-11,South Korea,Asia,Books,Biography,30,14.1,423.0
+1270,2024-04-11,Switzerland,Europe,Home Goods,Blender,4,82.35,329.4
+1271,2023-09-26,South Africa,Africa,Apparel,T-Shirt,9,53.19,478.71
+1272,2023-02-11,Germany,Europe,Books,History Text,47,60.34,2835.98
+1273,2024-03-22,Mexico,North America,Home Goods,Sofa,25,733.39,18334.75
+1274,2023-11-17,China,Asia,Apparel,T-Shirt,35,164.38,5753.3
+1275,2024-02-12,Indonesia,Asia,Books,Fiction Novel,7,66.67,466.69
+1276,2023-05-23,Russia,Europe,Books,Fiction Novel,41,64.23,2633.43
+1277,2023-12-01,France,Europe,Apparel,Dress,35,86.43,3025.05
+1278,2023-12-04,France,Europe,Electronics,Laptop,3,574.81,1724.43
+1279,2024-07-11,Nigeria,Africa,Electronics,Headphones,14,1093.39,15307.46
+1280,2023-06-25,Philippines,Asia,Electronics,Tablet,3,958.93,2876.79
+1281,2024-07-18,Argentina,South America,Books,History Text,50,63.41,3170.5
+1282,2025-07-13,South Africa,Africa,Apparel,Jeans,7,126.06,882.42
+1283,2025-04-04,Germany,Europe,Apparel,Dress,16,68.11,1089.76
+1284,2023-05-16,Philippines,Asia,Books,Science Journal,38,73.94,2809.72
+1285,2024-07-01,Turkey,Europe,Apparel,Jeans,10,145.53,1455.3
+1286,2023-09-13,India,Asia,Apparel,Jacket,48,168.55,8090.4
+1287,2024-10-18,Thailand,Asia,Electronics,Laptop,6,637.91,3827.46
+1288,2023-05-29,Canada,North America,Apparel,Sneakers,40,36.84,1473.6
+1289,2024-12-08,Spain,Europe,Apparel,Dress,38,103.26,3923.88
+1290,2024-05-31,Thailand,Asia,Apparel,Jacket,33,128.04,4225.32
+1291,2023-10-19,Netherlands,Europe,Apparel,Jacket,34,246.79,8390.86
+1292,2025-06-17,Egypt,Africa,Books,Fiction Novel,40,45.61,1824.4
+1293,2025-07-07,Japan,Asia,Home Goods,Vacuum Cleaner,36,54.13,1948.68
+1294,2023-02-03,Germany,Europe,Apparel,Dress,7,48.73,341.11
+1295,2024-07-06,Egypt,Africa,Home Goods,Blender,38,712.86,27088.68
+1296,2023-07-21,Indonesia,Asia,Home Goods,Vacuum Cleaner,30,266.05,7981.5
+1297,2024-11-19,Russia,Europe,Apparel,T-Shirt,5,248.2,1241.0
+1298,2024-07-20,Nigeria,Africa,Apparel,Jacket,35,180.53,6318.55
+1299,2024-04-02,Saudi Arabia,Asia,Apparel,Dress,8,247.69,1981.52
+1300,2025-04-13,Russia,Europe,Books,Cookbook,15,70.57,1058.55
+1301,2023-08-19,South Africa,Africa,Apparel,Jeans,38,78.01,2964.38
+1302,2025-01-31,China,Asia,Books,Biography,35,53.43,1870.05
+1303,2023-07-09,Malaysia,Asia,Books,Science Journal,16,51.66,826.56
+1304,2024-05-09,France,Europe,Apparel,Jeans,48,63.0,3024.0
+1305,2025-06-30,Brazil,South America,Apparel,T-Shirt,20,174.92,3498.4
+1306,2023-03-29,Indonesia,Asia,Books,Biography,26,76.04,1977.04
+1307,2023-10-25,South Africa,Africa,Home Goods,Sofa,33,594.25,19610.25
+1308,2025-06-10,Spain,Europe,Books,History Text,23,10.78,247.94
+1309,2023-05-12,Vietnam,Asia,Books,Fiction Novel,10,73.05,730.5
+1310,2024-06-04,Australia,Oceania,Apparel,Jeans,6,245.44,1472.64
+1311,2023-04-29,Bangladesh,Asia,Electronics,Tablet,43,1063.34,45723.62
+1312,2024-06-16,India,Asia,Electronics,Smartphone,6,931.2,5587.2
+1313,2024-04-18,Canada,North America,Apparel,T-Shirt,4,224.25,897.0
+1314,2024-07-12,Brazil,South America,Books,Cookbook,39,20.77,810.03
+1315,2023-06-15,Malaysia,Asia,Apparel,Sneakers,42,222.2,9332.4
+1316,2023-01-09,United Kingdom,Europe,Books,Cookbook,26,32.78,852.28
+1317,2024-06-12,Nigeria,Africa,Home Goods,Sofa,1,567.23,567.23
+1318,2025-03-03,Nigeria,Africa,Apparel,T-Shirt,44,60.74,2672.56
+1319,2024-06-28,Mexico,North America,Electronics,Smartwatch,11,200.03,2200.33
+1320,2023-12-19,Switzerland,Europe,Apparel,T-Shirt,35,91.58,3205.3
+1321,2023-09-04,Russia,Europe,Home Goods,Vacuum Cleaner,30,605.42,18162.6
+1322,2023-09-26,Nigeria,Africa,Home Goods,Sofa,32,290.44,9294.08
+1323,2023-04-04,Nigeria,Africa,Books,Fiction Novel,31,74.09,2296.79
+1324,2023-10-09,Indonesia,Asia,Apparel,Jeans,8,162.68,1301.44
+1325,2025-02-26,Mexico,North America,Books,Science Journal,38,78.48,2982.24
+1326,2025-03-03,Switzerland,Europe,Apparel,Sneakers,7,107.03,749.21
+1327,2024-01-19,Philippines,Asia,Books,Fiction Novel,30,27.02,810.6
+1328,2023-12-18,Saudi Arabia,Asia,Electronics,Tablet,48,378.49,18167.52
+1329,2023-05-15,Saudi Arabia,Asia,Home Goods,Coffee Maker,29,767.14,22247.06
+1330,2024-01-16,China,Asia,Electronics,Smartwatch,16,248.51,3976.16
+1331,2024-05-22,Switzerland,Europe,Home Goods,Sofa,1,654.94,654.94
+1332,2024-09-06,United States,North America,Books,Fiction Novel,16,28.61,457.76
+1333,2025-01-03,United States,North America,Electronics,Headphones,26,916.26,23822.76
+1334,2024-11-18,Switzerland,Europe,Home Goods,Blender,28,653.48,18297.44
+1335,2023-02-10,Turkey,Europe,Electronics,Laptop,42,461.06,19364.52
+1336,2024-11-14,South Korea,Asia,Books,History Text,8,64.87,518.96
+1337,2024-11-06,Nigeria,Africa,Books,Cookbook,32,65.14,2084.48
+1338,2025-01-02,Canada,North America,Apparel,Dress,29,142.38,4129.02
+1339,2024-06-28,Germany,Europe,Home Goods,Blender,28,537.94,15062.32
+1340,2024-10-10,Mexico,North America,Home Goods,Sofa,47,87.51,4112.97
+1341,2024-09-07,Turkey,Europe,Home Goods,Blender,16,442.16,7074.56
+1342,2024-02-17,Turkey,Europe,Electronics,Laptop,5,506.09,2530.45
+1343,2023-02-01,Japan,Asia,Home Goods,Blender,26,471.01,12246.26
+1344,2023-04-19,South Africa,Africa,Apparel,Dress,2,32.84,65.68
+1345,2024-05-21,Saudi Arabia,Asia,Electronics,Laptop,17,1057.98,17985.66
+1346,2024-10-20,Russia,Europe,Home Goods,Blender,39,408.35,15925.65
+1347,2023-05-24,Netherlands,Europe,Home Goods,Blender,4,611.73,2446.92
+1348,2025-05-08,India,Asia,Books,History Text,10,45.14,451.4
+1349,2023-06-22,Switzerland,Europe,Books,Fiction Novel,42,33.74,1417.08
+1350,2023-01-09,Mexico,North America,Home Goods,Vacuum Cleaner,28,213.28,5971.84
+1351,2023-04-14,Vietnam,Asia,Electronics,Smartwatch,43,785.38,33771.34
+1352,2024-02-28,Japan,Asia,Books,Fiction Novel,18,31.42,565.56
+1353,2024-06-21,France,Europe,Books,Fiction Novel,19,55.91,1062.29
+1354,2024-11-16,Egypt,Africa,Apparel,Dress,42,188.34,7910.28
+1355,2023-08-07,France,Europe,Home Goods,Bed Frame,25,656.05,16401.25
+1356,2024-05-22,Nigeria,Africa,Books,Science Journal,24,55.51,1332.24
+1357,2025-03-04,Turkey,Europe,Books,History Text,6,64.98,389.88
+1358,2024-10-22,United Kingdom,Europe,Apparel,Jeans,8,129.69,1037.52
+1359,2025-01-23,Australia,Oceania,Home Goods,Sofa,41,361.79,14833.39
+1360,2023-06-27,Bangladesh,Asia,Electronics,Tablet,23,1466.2,33722.6
+1361,2023-12-09,South Africa,Africa,Electronics,Smartphone,50,982.98,49149.0
+1362,2023-11-07,South Korea,Asia,Electronics,Smartphone,5,296.87,1484.35
+1363,2023-02-26,Indonesia,Asia,Home Goods,Sofa,42,161.28,6773.76
+1364,2024-09-08,Canada,North America,Books,Fiction Novel,36,28.98,1043.28
+1365,2024-10-27,Turkey,Europe,Apparel,Jacket,28,186.41,5219.48
+1366,2025-01-02,France,Europe,Home Goods,Bed Frame,21,66.04,1386.84
+1367,2024-02-14,Mexico,North America,Home Goods,Blender,32,153.8,4921.6
+1368,2024-06-14,Thailand,Asia,Home Goods,Bed Frame,23,53.46,1229.58
+1369,2024-12-04,Egypt,Africa,Home Goods,Vacuum Cleaner,13,798.14,10375.82
+1370,2024-10-28,Switzerland,Europe,Apparel,Dress,18,117.74,2119.32
+1371,2023-07-12,China,Asia,Electronics,Laptop,30,148.18,4445.4
+1372,2025-02-16,Japan,Asia,Books,Cookbook,3,27.78,83.34
+1373,2023-04-23,Bangladesh,Asia,Books,Fiction Novel,24,18.64,447.36
+1374,2023-01-22,Italy,Europe,Home Goods,Sofa,27,398.11,10748.97
+1375,2023-08-08,Indonesia,Asia,Books,Science Journal,44,79.55,3500.2
+1376,2024-10-29,Vietnam,Asia,Books,Science Journal,8,75.44,603.52
+1377,2023-01-08,Indonesia,Asia,Apparel,T-Shirt,43,188.76,8116.68
+1378,2023-11-11,Brazil,South America,Electronics,Headphones,38,1465.49,55688.62
+1379,2024-11-13,Egypt,Africa,Books,History Text,50,57.16,2858.0
+1380,2023-10-06,Netherlands,Europe,Apparel,T-Shirt,18,146.53,2637.54
+1381,2025-02-01,Italy,Europe,Electronics,Smartphone,44,897.67,39497.48
+1382,2025-04-28,Switzerland,Europe,Books,Science Journal,5,25.53,127.65
+1383,2023-05-08,Spain,Europe,Apparel,Jacket,37,145.49,5383.13
+1384,2025-03-29,Argentina,South America,Home Goods,Sofa,33,747.1,24654.3
+1385,2023-05-20,Philippines,Asia,Home Goods,Vacuum Cleaner,32,203.02,6496.64
+1386,2024-02-02,South Korea,Asia,Home Goods,Blender,22,487.03,10714.66
+1387,2024-12-24,Germany,Europe,Apparel,Sneakers,16,57.95,927.2
+1388,2023-02-09,Japan,Asia,Apparel,T-Shirt,23,161.77,3720.71
+1389,2024-07-03,Indonesia,Asia,Electronics,Smartphone,26,101.97,2651.22
+1390,2023-07-17,Mexico,North America,Apparel,T-Shirt,8,35.44,283.52
+1391,2023-04-19,United Kingdom,Europe,Home Goods,Coffee Maker,39,783.6,30560.4
+1392,2023-02-18,Italy,Europe,Electronics,Smartphone,27,850.25,22956.75
+1393,2023-11-09,Spain,Europe,Home Goods,Sofa,11,382.17,4203.87
+1394,2025-07-29,Mexico,North America,Home Goods,Vacuum Cleaner,10,57.16,571.6
+1395,2025-07-05,Nigeria,Africa,Electronics,Smartwatch,6,909.5,5457.0
+1396,2024-03-08,Pakistan,Asia,Books,Cookbook,50,78.46,3923.0
+1397,2025-06-03,Philippines,Asia,Books,History Text,46,26.84,1234.64
+1398,2023-11-12,Argentina,South America,Home Goods,Coffee Maker,18,621.2,11181.6
+1399,2024-11-18,Saudi Arabia,Asia,Apparel,Sneakers,34,94.76,3221.84
+1400,2024-11-11,South Africa,Africa,Home Goods,Sofa,45,123.63,5563.35
+1401,2024-01-05,Argentina,South America,Home Goods,Vacuum Cleaner,5,721.63,3608.15
+1402,2024-04-18,Spain,Europe,Home Goods,Sofa,33,515.86,17023.38
+1403,2024-03-06,Pakistan,Asia,Apparel,Jacket,29,182.7,5298.3
+1404,2023-12-22,South Korea,Asia,Electronics,Headphones,36,229.93,8277.48
+1405,2024-08-20,South Africa,Africa,Books,Biography,3,78.06,234.18
+1406,2023-10-13,Australia,Oceania,Home Goods,Coffee Maker,48,518.78,24901.44
+1407,2024-05-18,Spain,Europe,Apparel,Jacket,29,26.41,765.89
+1408,2023-09-03,Saudi Arabia,Asia,Electronics,Smartphone,22,885.54,19481.88
+1409,2025-05-20,Brazil,South America,Apparel,Jacket,8,198.7,1589.6
+1410,2023-11-19,Japan,Asia,Books,Fiction Novel,46,56.19,2584.74
+1411,2024-12-12,Argentina,South America,Home Goods,Sofa,31,56.95,1765.45
+1412,2025-02-14,China,Asia,Electronics,Laptop,46,280.41,12898.86
+1413,2024-08-23,Mexico,North America,Electronics,Smartwatch,3,960.58,2881.74
+1414,2024-06-29,South Korea,Asia,Books,Biography,10,30.78,307.8
+1415,2023-12-12,Turkey,Europe,Electronics,Headphones,12,268.82,3225.84
+1416,2023-10-05,France,Europe,Electronics,Smartphone,25,104.46,2611.5
+1417,2025-07-01,Bangladesh,Asia,Books,Biography,25,58.02,1450.5
+1418,2024-11-21,Malaysia,Asia,Apparel,Sneakers,9,84.04,756.36
+1419,2023-06-26,France,Europe,Books,Science Journal,7,28.3,198.1
+1420,2025-02-05,Russia,Europe,Electronics,Tablet,26,529.89,13777.14
+1421,2023-04-27,France,Europe,Home Goods,Vacuum Cleaner,20,703.77,14075.4
+1422,2023-10-24,Malaysia,Asia,Books,Science Journal,38,73.39,2788.82
+1423,2023-01-12,Thailand,Asia,Apparel,T-Shirt,25,140.71,3517.75
+1424,2025-04-24,Netherlands,Europe,Home Goods,Blender,3,189.41,568.23
+1425,2023-06-27,Brazil,South America,Home Goods,Coffee Maker,27,333.53,9005.31
+1426,2025-04-26,Mexico,North America,Apparel,Jeans,43,197.4,8488.2
+1427,2023-12-16,Philippines,Asia,Electronics,Headphones,42,142.79,5997.18
+1428,2025-06-11,Italy,Europe,Electronics,Smartwatch,48,182.18,8744.64
+1429,2024-09-06,Germany,Europe,Apparel,Dress,6,74.94,449.64
+1430,2024-04-03,Malaysia,Asia,Apparel,Jacket,42,44.95,1887.9
+1431,2023-10-12,Netherlands,Europe,Electronics,Laptop,45,1379.35,62070.75
+1432,2024-08-13,Switzerland,Europe,Electronics,Tablet,42,816.96,34312.32
+1433,2023-07-19,Italy,Europe,Home Goods,Bed Frame,1,103.64,103.64
+1434,2023-07-24,Japan,Asia,Apparel,Jeans,2,240.18,480.36
+1435,2024-01-30,Australia,Oceania,Electronics,Tablet,38,851.01,32338.38
+1436,2024-08-10,Malaysia,Asia,Home Goods,Bed Frame,40,353.97,14158.8
+1437,2024-09-21,Italy,Europe,Home Goods,Bed Frame,6,731.08,4386.48
+1438,2024-03-01,India,Asia,Apparel,T-Shirt,31,97.42,3020.02
+1439,2023-08-04,Canada,North America,Home Goods,Coffee Maker,9,460.32,4142.88
+1440,2024-11-06,Netherlands,Europe,Books,Cookbook,28,77.03,2156.84
+1441,2023-10-28,Netherlands,Europe,Home Goods,Vacuum Cleaner,50,446.36,22318.0
+1442,2024-12-11,Malaysia,Asia,Home Goods,Sofa,47,413.83,19450.01
+1443,2024-07-10,Spain,Europe,Home Goods,Sofa,41,215.3,8827.3
+1444,2024-05-18,Australia,Oceania,Apparel,Jacket,47,186.38,8759.86
+1445,2025-01-04,Philippines,Asia,Electronics,Headphones,32,372.57,11922.24
+1446,2024-05-09,Canada,North America,Electronics,Smartphone,3,1385.65,4156.95
+1447,2025-04-06,Indonesia,Asia,Books,Biography,9,36.09,324.81
+1448,2023-05-20,United Kingdom,Europe,Home Goods,Blender,21,677.29,14223.09
+1449,2023-12-13,Philippines,Asia,Apparel,T-Shirt,43,73.88,3176.84
+1450,2023-05-12,Australia,Oceania,Apparel,Jeans,36,137.02,4932.72
+1451,2025-02-07,Russia,Europe,Electronics,Headphones,44,621.5,27346.0
+1452,2023-05-09,Italy,Europe,Home Goods,Bed Frame,28,749.05,20973.4
+1453,2023-07-07,Malaysia,Asia,Books,Cookbook,8,77.44,619.52
+1454,2023-03-31,China,Asia,Books,Fiction Novel,40,10.46,418.4
+1455,2023-03-06,United States,North America,Electronics,Laptop,21,329.14,6911.94
+1456,2024-02-03,Germany,Europe,Electronics,Headphones,48,260.17,12488.16
+1457,2024-02-10,Egypt,Africa,Books,History Text,5,33.28,166.4
+1458,2024-10-17,Indonesia,Asia,Electronics,Smartphone,36,900.81,32429.16
+1459,2024-03-21,Turkey,Europe,Electronics,Smartwatch,18,111.32,2003.76
+1460,2025-05-28,China,Asia,Books,Biography,14,14.68,205.52
+1461,2025-07-16,Nigeria,Africa,Electronics,Headphones,6,779.18,4675.08
+1462,2023-07-03,United States,North America,Books,Cookbook,35,57.84,2024.4
+1463,2024-11-02,Canada,North America,Electronics,Headphones,46,650.54,29924.84
+1464,2023-08-14,United States,North America,Books,Cookbook,28,37.49,1049.72
+1465,2024-02-27,United States,North America,Home Goods,Bed Frame,37,231.72,8573.64
+1466,2023-09-03,China,Asia,Apparel,Sneakers,19,124.97,2374.43
+1467,2023-11-08,Spain,Europe,Books,History Text,16,36.19,579.04
+1468,2024-10-12,Brazil,South America,Home Goods,Vacuum Cleaner,35,420.59,14720.65
+1469,2024-01-06,Thailand,Asia,Apparel,Jacket,37,126.43,4677.91
+1470,2023-05-01,Argentina,South America,Apparel,Sneakers,5,219.95,1099.75
+1471,2023-06-21,Bangladesh,Asia,Home Goods,Blender,13,406.29,5281.77
+1472,2023-07-05,Bangladesh,Asia,Apparel,T-Shirt,29,30.46,883.34
+1473,2023-10-05,Egypt,Africa,Electronics,Smartwatch,49,907.29,44457.21
+1474,2024-06-21,Mexico,North America,Apparel,T-Shirt,9,138.55,1246.95
+1475,2023-01-20,United Kingdom,Europe,Books,Biography,39,24.27,946.53
+1476,2024-03-11,United Kingdom,Europe,Books,Biography,20,35.58,711.6
+1477,2023-01-11,Argentina,South America,Apparel,Sneakers,6,158.96,953.76
+1478,2023-12-10,Switzerland,Europe,Electronics,Laptop,34,302.55,10286.7
+1479,2024-08-01,Argentina,South America,Electronics,Laptop,46,1228.66,56518.36
+1480,2024-06-02,Germany,Europe,Electronics,Smartwatch,48,395.32,18975.36
+1481,2023-02-21,Nigeria,Africa,Electronics,Smartwatch,23,735.4,16914.2
+1482,2023-09-16,Saudi Arabia,Asia,Books,Fiction Novel,37,26.99,998.63
+1483,2024-10-10,Spain,Europe,Apparel,Dress,47,201.44,9467.68
+1484,2023-03-20,Russia,Europe,Apparel,Dress,49,109.03,5342.47
+1485,2025-02-01,Argentina,South America,Home Goods,Blender,2,273.65,547.3
+1486,2024-05-31,Vietnam,Asia,Apparel,T-Shirt,6,79.44,476.64
+1487,2024-06-16,France,Europe,Home Goods,Sofa,28,353.11,9887.08
+1488,2025-04-29,United States,North America,Books,History Text,48,39.47,1894.56
+1489,2024-03-19,Switzerland,Europe,Apparel,Dress,49,67.76,3320.24
+1490,2023-02-17,South Africa,Africa,Home Goods,Vacuum Cleaner,44,209.05,9198.2
+1491,2023-03-27,Vietnam,Asia,Home Goods,Bed Frame,1,265.96,265.96
+1492,2025-06-07,Switzerland,Europe,Apparel,Sneakers,37,139.58,5164.46
+1493,2023-03-20,United States,North America,Electronics,Headphones,5,1127.4,5637.0
+1494,2023-09-23,South Africa,Africa,Books,Fiction Novel,33,20.99,692.67
+1495,2024-12-03,Bangladesh,Asia,Home Goods,Vacuum Cleaner,27,40.02,1080.54
+1496,2024-02-09,Nigeria,Africa,Electronics,Laptop,44,851.27,37455.88
+1497,2025-02-09,Indonesia,Asia,Apparel,Sneakers,9,147.62,1328.58
+1498,2023-08-28,Mexico,North America,Apparel,T-Shirt,33,60.69,2002.77
+1499,2024-07-09,Pakistan,Asia,Electronics,Tablet,37,1085.26,40154.62
+1500,2024-09-13,South Africa,Africa,Books,Fiction Novel,2,22.43,44.86
+1501,2023-11-01,Mexico,North America,Home Goods,Vacuum Cleaner,14,334.93,4689.02
+1502,2023-12-02,Thailand,Asia,Apparel,Jacket,1,240.04,240.04
+1503,2023-12-22,Japan,Asia,Home Goods,Coffee Maker,49,92.33,4524.17
+1504,2023-01-05,Thailand,Asia,Books,Fiction Novel,12,72.49,869.88
+1505,2024-11-08,Mexico,North America,Home Goods,Coffee Maker,24,142.18,3412.32
+1506,2025-02-16,Canada,North America,Home Goods,Blender,12,487.29,5847.48
+1507,2024-02-16,United Kingdom,Europe,Electronics,Smartwatch,35,1318.07,46132.45
+1508,2025-06-11,Malaysia,Asia,Home Goods,Blender,17,344.06,5849.02
+1509,2024-01-24,Spain,Europe,Electronics,Smartphone,4,1287.71,5150.84
+1510,2023-10-28,South Korea,Asia,Books,Biography,38,62.66,2381.08
+1511,2024-06-02,Vietnam,Asia,Apparel,Dress,46,211.1,9710.6
+1512,2025-07-27,South Africa,Africa,Home Goods,Bed Frame,36,782.41,28166.76
+1513,2023-04-07,Indonesia,Asia,Apparel,Jeans,14,51.26,717.64
+1514,2024-05-03,South Korea,Asia,Apparel,Jacket,7,240.6,1684.2
+1515,2024-04-07,South Korea,Asia,Electronics,Laptop,20,1349.04,26980.8
+1516,2024-03-17,China,Asia,Apparel,Dress,34,168.43,5726.62
+1517,2023-09-23,Canada,North America,Electronics,Smartwatch,4,154.6,618.4
+1518,2024-02-11,Mexico,North America,Books,Biography,17,30.52,518.84
+1519,2024-01-10,France,Europe,Electronics,Smartwatch,7,1464.85,10253.95
+1520,2023-02-08,Brazil,South America,Apparel,Jacket,34,99.24,3374.16
+1521,2025-05-11,United Kingdom,Europe,Home Goods,Vacuum Cleaner,30,793.68,23810.4
+1522,2023-01-26,South Korea,Asia,Electronics,Smartphone,14,1130.96,15833.44
+1523,2024-04-20,Egypt,Africa,Books,Biography,1,60.75,60.75
+1524,2023-08-24,Brazil,South America,Electronics,Headphones,37,595.36,22028.32
+1525,2025-05-02,Nigeria,Africa,Home Goods,Sofa,24,521.74,12521.76
+1526,2023-10-15,Nigeria,Africa,Apparel,Sneakers,7,237.28,1660.96
+1527,2025-03-15,Russia,Europe,Apparel,Jacket,1,107.22,107.22
+1528,2023-07-23,Nigeria,Africa,Books,Biography,22,20.9,459.8
+1529,2023-04-08,Philippines,Asia,Home Goods,Sofa,31,313.57,9720.67
+1530,2023-01-01,Italy,Europe,Apparel,Jeans,25,184.38,4609.5
+1531,2023-07-24,Japan,Asia,Electronics,Laptop,42,847.81,35608.02
+1532,2025-02-25,Bangladesh,Asia,Books,Biography,48,67.15,3223.2
+1533,2024-07-31,Thailand,Asia,Apparel,Dress,36,169.75,6111.0
+1534,2023-04-23,United States,North America,Books,Cookbook,33,45.7,1508.1
+1535,2023-11-22,Nigeria,Africa,Apparel,Dress,45,215.78,9710.1
+1536,2025-01-21,Mexico,North America,Apparel,T-Shirt,37,244.51,9046.87
+1537,2024-06-02,Argentina,South America,Apparel,Dress,48,36.86,1769.28
+1538,2023-10-23,South Africa,Africa,Home Goods,Blender,42,342.33,14377.86
+1539,2024-09-05,Australia,Oceania,Apparel,Jeans,44,35.46,1560.24
+1540,2024-09-27,Germany,Europe,Books,Biography,35,13.53,473.55
+1541,2023-02-07,India,Asia,Electronics,Headphones,37,1399.89,51795.93
+1542,2023-12-12,Canada,North America,Electronics,Tablet,1,379.3,379.3
+1543,2024-03-11,Netherlands,Europe,Apparel,Jeans,43,19.36,832.48
+1544,2025-06-05,Netherlands,Europe,Electronics,Headphones,21,1289.71,27083.91
+1545,2025-04-18,Argentina,South America,Electronics,Smartphone,3,280.13,840.39
+1546,2024-05-22,Saudi Arabia,Asia,Books,Cookbook,44,14.5,638.0
+1547,2024-07-09,Saudi Arabia,Asia,Electronics,Laptop,16,392.84,6285.44
+1548,2025-07-20,Malaysia,Asia,Apparel,Jeans,11,107.75,1185.25
+1549,2025-01-22,Malaysia,Asia,Books,Fiction Novel,7,76.77,537.39
+1550,2024-01-13,Nigeria,Africa,Electronics,Smartwatch,21,159.61,3351.81
+1551,2024-05-13,United States,North America,Books,Science Journal,7,51.76,362.32
+1552,2024-10-17,Italy,Europe,Books,Biography,28,63.18,1769.04
+1553,2024-08-07,United Kingdom,Europe,Apparel,Jeans,35,112.91,3951.85
+1554,2024-10-31,Pakistan,Asia,Apparel,T-Shirt,23,139.12,3199.76
+1555,2025-03-27,United Kingdom,Europe,Apparel,Sneakers,2,216.78,433.56
+1556,2025-07-02,Malaysia,Asia,Apparel,Jeans,43,183.59,7894.37
+1557,2023-10-04,Pakistan,Asia,Home Goods,Bed Frame,34,485.41,16503.94
+1558,2024-08-27,Switzerland,Europe,Books,Cookbook,6,78.19,469.14
+1559,2025-03-06,Italy,Europe,Home Goods,Blender,26,228.23,5933.98
+1560,2023-02-03,Japan,Asia,Apparel,Sneakers,39,169.25,6600.75
+1561,2024-05-07,Japan,Asia,Apparel,Jeans,6,117.22,703.32
+1562,2025-03-10,Vietnam,Asia,Electronics,Smartwatch,5,242.45,1212.25
+1563,2023-07-24,Russia,Europe,Home Goods,Coffee Maker,41,272.39,11167.99
+1564,2024-03-09,United Kingdom,Europe,Books,Fiction Novel,42,32.56,1367.52
+1565,2025-02-12,Bangladesh,Asia,Home Goods,Vacuum Cleaner,7,263.68,1845.76
+1566,2024-03-06,Egypt,Africa,Electronics,Headphones,23,193.12,4441.76
+1567,2025-05-26,Italy,Europe,Apparel,T-Shirt,23,33.1,761.3
+1568,2024-02-29,Spain,Europe,Home Goods,Coffee Maker,29,792.92,22994.68
+1569,2023-07-19,Netherlands,Europe,Home Goods,Coffee Maker,34,728.6,24772.4
+1570,2024-11-24,Germany,Europe,Apparel,Dress,23,107.0,2461.0
+1571,2024-09-09,Philippines,Asia,Home Goods,Bed Frame,11,323.28,3556.08
+1572,2025-02-20,Indonesia,Asia,Books,Science Journal,21,36.7,770.7
+1573,2024-02-21,France,Europe,Home Goods,Blender,1,49.5,49.5
+1574,2024-09-18,Malaysia,Asia,Books,Fiction Novel,27,62.7,1692.9
+1575,2024-12-11,Nigeria,Africa,Books,Cookbook,38,23.27,884.26
+1576,2024-01-15,United Kingdom,Europe,Electronics,Headphones,38,1082.56,41137.28
+1577,2025-05-06,Brazil,South America,Apparel,Sneakers,25,24.83,620.75
+1578,2024-05-15,Spain,Europe,Books,Fiction Novel,11,26.57,292.27
+1579,2024-03-04,South Korea,Asia,Electronics,Tablet,47,711.2,33426.4
+1580,2024-11-15,Italy,Europe,Books,Fiction Novel,2,59.25,118.5
+1581,2024-07-21,Turkey,Europe,Electronics,Laptop,20,1204.6,24092.0
+1582,2023-09-26,Netherlands,Europe,Electronics,Smartwatch,12,1076.56,12918.72
+1583,2023-10-08,United Kingdom,Europe,Apparel,Jeans,28,231.69,6487.32
+1584,2023-10-08,United Kingdom,Europe,Apparel,Jacket,35,148.92,5212.2
+1585,2024-01-05,Bangladesh,Asia,Books,History Text,36,58.88,2119.68
+1586,2024-11-03,Turkey,Europe,Electronics,Smartphone,6,1317.81,7906.86
+1587,2023-08-04,Spain,Europe,Electronics,Smartwatch,34,909.48,30922.32
+1588,2024-08-27,Italy,Europe,Apparel,Dress,19,92.51,1757.69
+1589,2025-02-13,India,Asia,Books,Cookbook,26,68.94,1792.44
+1590,2024-01-15,Philippines,Asia,Electronics,Smartphone,32,1065.15,34084.8
+1591,2023-06-06,Philippines,Asia,Books,Fiction Novel,22,18.44,405.68
+1592,2024-08-07,United Kingdom,Europe,Apparel,Jacket,43,94.54,4065.22
+1593,2025-03-31,South Korea,Asia,Apparel,Jacket,7,72.77,509.39
+1594,2024-08-17,India,Asia,Home Goods,Sofa,34,214.39,7289.26
+1595,2025-03-31,South Africa,Africa,Electronics,Tablet,23,1157.84,26630.32
+1596,2023-08-28,Turkey,Europe,Books,Cookbook,28,68.62,1921.36
+1597,2024-12-06,Thailand,Asia,Books,Fiction Novel,11,51.64,568.04
+1598,2024-01-23,Argentina,South America,Books,History Text,45,71.09,3199.05
+1599,2025-05-25,South Korea,Asia,Books,Science Journal,9,16.14,145.26
+1600,2024-12-12,South Africa,Africa,Apparel,Sneakers,39,123.08,4800.12
+1601,2024-03-17,Bangladesh,Asia,Books,Biography,11,18.71,205.81
+1602,2023-04-06,China,Asia,Apparel,Dress,4,105.66,422.64
+1603,2024-02-01,Thailand,Asia,Electronics,Smartwatch,49,1091.1,53463.9
+1604,2024-05-18,South Korea,Asia,Electronics,Laptop,44,1393.96,61334.24
+1605,2024-10-02,Egypt,Africa,Apparel,Jeans,20,143.81,2876.2
+1606,2023-04-06,Mexico,North America,Apparel,Jacket,40,83.81,3352.4
+1607,2024-10-29,Pakistan,Asia,Books,Cookbook,31,32.75,1015.25
+1608,2023-07-19,India,Asia,Home Goods,Coffee Maker,20,33.85,677.0
+1609,2024-06-15,Saudi Arabia,Asia,Home Goods,Sofa,38,309.06,11744.28
+1610,2024-02-27,Malaysia,Asia,Home Goods,Coffee Maker,16,212.43,3398.88
+1611,2024-03-27,Russia,Europe,Electronics,Headphones,17,543.07,9232.19
+1612,2023-08-10,Nigeria,Africa,Books,History Text,2,50.88,101.76
+1613,2023-12-17,United Kingdom,Europe,Books,Science Journal,39,48.7,1899.3
+1614,2023-10-05,Pakistan,Asia,Apparel,Sneakers,39,61.87,2412.93
+1615,2024-05-25,Nigeria,Africa,Books,Biography,40,66.9,2676.0
+1616,2025-04-28,Canada,North America,Home Goods,Coffee Maker,29,489.79,14203.91
+1617,2025-03-13,United States,North America,Apparel,T-Shirt,6,32.12,192.72
+1618,2025-04-02,Germany,Europe,Electronics,Headphones,22,895.29,19696.38
+1619,2023-03-03,India,Asia,Electronics,Smartphone,46,1093.58,50304.68
+1620,2024-09-10,Egypt,Africa,Books,Fiction Novel,6,12.93,77.58
+1621,2024-02-25,South Korea,Asia,Electronics,Laptop,22,783.93,17246.46
+1622,2023-03-30,Australia,Oceania,Books,Biography,47,17.37,816.39
+1623,2024-01-27,Philippines,Asia,Books,Science Journal,43,25.98,1117.14
+1624,2025-04-02,Canada,North America,Apparel,Dress,45,151.26,6806.7
+1625,2024-07-28,Egypt,Africa,Apparel,Jeans,41,48.02,1968.82
+1626,2024-12-21,Switzerland,Europe,Electronics,Tablet,35,1142.81,39998.35
+1627,2023-11-29,Vietnam,Asia,Apparel,Jeans,29,216.97,6292.13
+1628,2023-12-21,Vietnam,Asia,Electronics,Smartphone,50,694.89,34744.5
+1629,2023-10-05,Japan,Asia,Books,Science Journal,10,36.96,369.6
+1630,2024-05-22,India,Asia,Home Goods,Coffee Maker,9,356.97,3212.73
+1631,2023-09-11,Germany,Europe,Apparel,Dress,6,55.61,333.66
+1632,2023-06-10,Indonesia,Asia,Electronics,Tablet,47,1325.77,62311.19
+1633,2025-03-22,Canada,North America,Electronics,Smartphone,37,354.63,13121.31
+1634,2023-08-23,Mexico,North America,Apparel,Sneakers,21,59.54,1250.34
+1635,2025-03-06,Nigeria,Africa,Books,Science Journal,41,18.55,760.55
+1636,2024-06-08,Brazil,South America,Books,History Text,37,28.26,1045.62
+1637,2024-10-21,Egypt,Africa,Apparel,Jeans,45,229.49,10327.05
+1638,2025-05-25,Philippines,Asia,Electronics,Laptop,31,231.32,7170.92
+1639,2024-08-25,South Korea,Asia,Electronics,Tablet,19,985.19,18718.61
+1640,2023-06-17,Egypt,Africa,Books,History Text,27,48.52,1310.04
+1641,2023-07-16,Egypt,Africa,Apparel,Dress,7,141.89,993.23
+1642,2025-04-05,Spain,Europe,Apparel,Sneakers,44,41.57,1829.08
+1643,2024-03-30,Canada,North America,Apparel,Jeans,37,44.02,1628.74
+1644,2023-01-17,India,Asia,Books,Science Journal,25,77.16,1929.0
+1645,2025-06-26,Switzerland,Europe,Books,Cookbook,48,46.06,2210.88
+1646,2023-08-09,Vietnam,Asia,Books,Cookbook,32,60.86,1947.52
+1647,2025-02-01,Australia,Oceania,Books,Science Journal,20,78.84,1576.8
+1648,2024-05-09,United Kingdom,Europe,Home Goods,Coffee Maker,6,630.28,3781.68
+1649,2023-11-14,Canada,North America,Home Goods,Blender,40,474.0,18960.0
+1650,2024-07-03,India,Asia,Books,Fiction Novel,43,16.74,719.82
+1651,2024-07-05,India,Asia,Books,Science Journal,36,60.13,2164.68
+1652,2025-05-27,Saudi Arabia,Asia,Books,Cookbook,20,53.57,1071.4
+1653,2023-08-31,India,Asia,Home Goods,Vacuum Cleaner,37,114.41,4233.17
+1654,2024-08-09,Thailand,Asia,Electronics,Headphones,29,403.58,11703.82
+1655,2024-09-23,South Korea,Asia,Apparel,Dress,42,38.1,1600.2
+1656,2023-08-24,Canada,North America,Books,Fiction Novel,32,77.77,2488.64
+1657,2024-12-28,Spain,Europe,Books,Cookbook,11,29.02,319.22
+1658,2023-08-09,Nigeria,Africa,Home Goods,Sofa,41,224.0,9184.0
+1659,2024-04-20,Thailand,Asia,Apparel,Dress,36,145.22,5227.92
+1660,2025-05-28,Italy,Europe,Apparel,T-Shirt,40,153.73,6149.2
+1661,2025-01-21,Saudi Arabia,Asia,Books,Cookbook,21,55.89,1173.69
+1662,2025-04-25,Turkey,Europe,Apparel,Sneakers,25,35.2,880.0
+1663,2023-10-06,Canada,North America,Electronics,Laptop,7,554.29,3880.03
+1664,2024-08-29,China,Asia,Apparel,Jacket,32,35.34,1130.88
+1665,2024-08-05,United Kingdom,Europe,Electronics,Smartwatch,42,730.66,30687.72
+1666,2023-09-25,France,Europe,Electronics,Laptop,40,986.45,39458.0
+1667,2023-12-06,China,Asia,Home Goods,Coffee Maker,7,684.0,4788.0
+1668,2023-10-11,China,Asia,Books,Fiction Novel,33,75.21,2481.93
+1669,2023-04-08,Egypt,Africa,Electronics,Smartwatch,31,689.63,21378.53
+1670,2023-03-08,Bangladesh,Asia,Apparel,Jeans,28,213.57,5979.96
+1671,2024-12-18,Pakistan,Asia,Electronics,Smartwatch,31,1128.21,34974.51
+1672,2024-01-31,Egypt,Africa,Books,Cookbook,44,28.6,1258.4
+1673,2025-06-10,Switzerland,Europe,Electronics,Headphones,15,508.04,7620.6
+1674,2023-12-21,Philippines,Asia,Home Goods,Bed Frame,31,72.15,2236.65
+1675,2025-05-09,France,Europe,Apparel,Jacket,18,78.2,1407.6
+1676,2025-05-15,Italy,Europe,Apparel,Jeans,29,146.85,4258.65
+1677,2024-09-29,Saudi Arabia,Asia,Home Goods,Vacuum Cleaner,43,737.1,31695.3
+1678,2023-02-10,Bangladesh,Asia,Books,Fiction Novel,20,61.93,1238.6
+1679,2024-12-29,Germany,Europe,Apparel,Dress,22,34.26,753.72
+1680,2023-11-23,Thailand,Asia,Electronics,Smartwatch,16,121.28,1940.48
+1681,2024-06-03,United States,North America,Electronics,Laptop,10,593.49,5934.9
+1682,2024-12-20,Malaysia,Asia,Apparel,Dress,8,200.22,1601.76
+1683,2025-07-23,Argentina,South America,Books,Science Journal,36,31.35,1128.6
+1684,2024-08-10,Canada,North America,Home Goods,Bed Frame,14,780.86,10932.04
+1685,2025-01-13,South Africa,Africa,Home Goods,Coffee Maker,17,483.42,8218.14
+1686,2023-08-05,Spain,Europe,Apparel,Jeans,4,82.9,331.6
+1687,2023-11-25,Germany,Europe,Apparel,Sneakers,1,186.84,186.84
+1688,2023-11-23,South Korea,Asia,Electronics,Tablet,20,352.65,7053.0
+1689,2025-04-07,Spain,Europe,Home Goods,Vacuum Cleaner,8,429.55,3436.4
+1690,2024-03-19,Mexico,North America,Books,Cookbook,49,60.99,2988.51
+1691,2023-01-12,Netherlands,Europe,Books,Fiction Novel,17,38.29,650.93
+1692,2023-07-10,Nigeria,Africa,Apparel,Dress,40,194.89,7795.6
+1693,2023-05-20,Japan,Asia,Home Goods,Blender,29,218.53,6337.37
+1694,2024-02-12,Saudi Arabia,Asia,Books,Science Journal,49,72.63,3558.87
+1695,2024-11-24,Russia,Europe,Apparel,Dress,8,116.65,933.2
+1696,2025-01-20,Japan,Asia,Books,Cookbook,40,69.95,2798.0
+1697,2023-08-14,Saudi Arabia,Asia,Electronics,Tablet,5,156.96,784.8
+1698,2024-08-14,Canada,North America,Books,Fiction Novel,50,63.34,3167.0
+1699,2025-06-17,Brazil,South America,Electronics,Laptop,15,1282.91,19243.65
+1700,2025-06-12,Vietnam,Asia,Apparel,Sneakers,30,208.61,6258.3
+1701,2024-03-14,South Korea,Asia,Electronics,Smartwatch,2,175.1,350.2
+1702,2025-01-27,Japan,Asia,Home Goods,Vacuum Cleaner,45,429.5,19327.5
+1703,2024-08-23,Vietnam,Asia,Electronics,Headphones,30,1318.12,39543.6
+1704,2024-01-08,Vietnam,Asia,Books,History Text,28,69.82,1954.96
+1705,2023-06-18,South Africa,Africa,Electronics,Tablet,12,1436.69,17240.28
+1706,2023-02-02,Spain,Europe,Home Goods,Bed Frame,28,103.05,2885.4
+1707,2025-05-08,Malaysia,Asia,Home Goods,Bed Frame,13,581.84,7563.92
+1708,2024-04-11,United Kingdom,Europe,Apparel,T-Shirt,22,28.27,621.94
+1709,2025-06-26,South Africa,Africa,Books,Fiction Novel,44,74.28,3268.32
+1710,2025-02-28,Vietnam,Asia,Home Goods,Vacuum Cleaner,32,702.17,22469.44
+1711,2023-08-18,Canada,North America,Books,Fiction Novel,44,19.17,843.48
+1712,2023-05-13,Australia,Oceania,Electronics,Headphones,12,1312.59,15751.08
+1713,2025-01-06,Switzerland,Europe,Electronics,Laptop,48,542.6,26044.8
+1714,2024-09-07,Spain,Europe,Electronics,Tablet,47,1031.26,48469.22
+1715,2023-01-08,Argentina,South America,Apparel,T-Shirt,47,199.52,9377.44
+1716,2024-05-23,Egypt,Africa,Books,History Text,30,69.64,2089.2
+1717,2023-02-09,Germany,Europe,Electronics,Headphones,19,773.74,14701.06
+1718,2024-11-06,Spain,Europe,Apparel,Jacket,47,215.73,10139.31
+1719,2024-12-29,Vietnam,Asia,Books,Science Journal,49,58.4,2861.6
+1720,2024-11-07,Canada,North America,Apparel,Sneakers,46,249.84,11492.64
+1721,2025-07-06,Spain,Europe,Home Goods,Coffee Maker,1,646.23,646.23
+1722,2024-05-29,Philippines,Asia,Home Goods,Sofa,46,182.21,8381.66
+1723,2024-08-13,Canada,North America,Electronics,Tablet,19,352.22,6692.18
+1724,2023-08-23,United States,North America,Home Goods,Vacuum Cleaner,33,650.36,21461.88
+1725,2023-11-17,Mexico,North America,Electronics,Smartphone,22,1278.91,28136.02
+1726,2025-07-25,Bangladesh,Asia,Books,Fiction Novel,6,40.07,240.42
+1727,2025-03-29,Thailand,Asia,Electronics,Headphones,2,1265.16,2530.32
+1728,2023-01-07,Thailand,Asia,Books,Science Journal,14,70.83,991.62
+1729,2023-09-04,Egypt,Africa,Electronics,Smartphone,47,1373.56,64557.32
+1730,2023-02-01,Bangladesh,Asia,Books,Fiction Novel,9,62.96,566.64
+1731,2025-05-04,United Kingdom,Europe,Electronics,Laptop,40,711.55,28462.0
+1732,2023-09-28,South Africa,Africa,Books,History Text,3,62.44,187.32
+1733,2024-01-19,France,Europe,Books,History Text,26,26.02,676.52
+1734,2023-07-16,Netherlands,Europe,Apparel,Dress,18,69.02,1242.36
+1735,2024-11-05,Russia,Europe,Books,Biography,18,41.03,738.54
+1736,2024-06-09,Mexico,North America,Books,Science Journal,33,48.16,1589.28
+1737,2024-08-02,Italy,Europe,Books,Fiction Novel,22,68.76,1512.72
+1738,2023-07-21,Bangladesh,Asia,Apparel,T-Shirt,4,233.29,933.16
+1739,2024-09-07,Thailand,Asia,Apparel,Jeans,6,42.63,255.78
+1740,2023-03-10,South Africa,Africa,Home Goods,Blender,47,37.73,1773.31
+1741,2024-07-13,Brazil,South America,Apparel,Dress,15,202.05,3030.75
+1742,2024-12-12,Pakistan,Asia,Home Goods,Bed Frame,1,387.13,387.13
+1743,2023-07-13,China,Asia,Apparel,T-Shirt,42,107.41,4511.22
+1744,2023-04-28,Philippines,Asia,Apparel,Jacket,9,91.01,819.09
+1745,2025-07-25,China,Asia,Electronics,Smartphone,24,446.63,10719.12
+1746,2025-02-13,China,Asia,Apparel,T-Shirt,6,212.0,1272.0
+1747,2024-12-14,Bangladesh,Asia,Books,History Text,18,14.18,255.24
+1748,2024-08-11,Brazil,South America,Electronics,Headphones,26,1315.84,34211.84
+1749,2025-03-30,China,Asia,Home Goods,Sofa,39,603.95,23554.05
+1750,2023-05-23,Nigeria,Africa,Electronics,Tablet,46,883.86,40657.56
+1751,2025-02-17,China,Asia,Apparel,Jeans,45,231.24,10405.8
+1752,2025-05-04,South Africa,Africa,Electronics,Tablet,36,1293.99,46583.64
+1753,2023-02-10,Netherlands,Europe,Electronics,Smartwatch,44,930.37,40936.28
+1754,2025-02-20,Brazil,South America,Electronics,Smartwatch,37,981.03,36298.11
+1755,2025-02-14,Mexico,North America,Electronics,Smartphone,32,1209.01,38688.32
+1756,2023-05-01,Canada,North America,Electronics,Smartphone,39,304.5,11875.5
+1757,2024-02-04,Bangladesh,Asia,Electronics,Tablet,13,709.46,9222.98
+1758,2023-08-24,Saudi Arabia,Asia,Books,History Text,35,70.43,2465.05
+1759,2025-01-26,Vietnam,Asia,Books,Science Journal,2,56.48,112.96
+1760,2024-05-04,Australia,Oceania,Electronics,Tablet,7,1412.89,9890.23
+1761,2025-04-17,South Korea,Asia,Home Goods,Blender,39,230.16,8976.24
+1762,2023-06-23,Indonesia,Asia,Home Goods,Coffee Maker,8,508.91,4071.28
+1763,2024-04-20,France,Europe,Electronics,Tablet,25,1418.99,35474.75
+1764,2023-06-27,Vietnam,Asia,Books,Science Journal,36,69.95,2518.2
+1765,2023-09-20,Indonesia,Asia,Books,Fiction Novel,28,24.57,687.96
+1766,2023-06-19,Nigeria,Africa,Home Goods,Coffee Maker,4,699.08,2796.32
+1767,2025-06-18,Brazil,South America,Electronics,Smartwatch,47,1374.84,64617.48
+1768,2023-04-14,Switzerland,Europe,Books,Science Journal,9,72.61,653.49
+1769,2024-05-16,South Korea,Asia,Electronics,Laptop,34,1179.65,40108.1
+1770,2025-07-27,Japan,Asia,Books,History Text,5,60.61,303.05
+1771,2023-09-28,Russia,Europe,Electronics,Tablet,17,119.57,2032.69
+1772,2025-04-27,Pakistan,Asia,Books,Cookbook,4,21.34,85.36
+1773,2025-06-01,Philippines,Asia,Home Goods,Blender,20,269.63,5392.6
+1774,2025-05-03,United States,North America,Books,Biography,47,44.8,2105.6
+1775,2024-03-09,Bangladesh,Asia,Home Goods,Bed Frame,26,744.58,19359.08
+1776,2023-01-10,Australia,Oceania,Home Goods,Bed Frame,19,794.46,15094.74
+1777,2023-07-11,Egypt,Africa,Books,History Text,37,14.85,549.45
+1778,2024-01-02,South Africa,Africa,Books,Cookbook,29,33.87,982.23
+1779,2023-04-11,Vietnam,Asia,Apparel,Sneakers,46,204.23,9394.58
+1780,2024-10-30,Philippines,Asia,Home Goods,Coffee Maker,36,167.54,6031.44
+1781,2023-10-18,Netherlands,Europe,Electronics,Smartphone,7,121.49,850.43
+1782,2023-11-07,Japan,Asia,Apparel,Jacket,3,82.49,247.47
+1783,2025-03-31,Turkey,Europe,Electronics,Headphones,7,853.35,5973.45
+1784,2023-09-15,Indonesia,Asia,Electronics,Smartwatch,47,536.69,25224.43
+1785,2024-02-02,Russia,Europe,Books,Science Journal,21,56.21,1180.41
+1786,2023-08-27,United States,North America,Books,Fiction Novel,47,56.29,2645.63
+1787,2024-04-12,Vietnam,Asia,Books,History Text,2,28.95,57.9
+1788,2025-04-27,Switzerland,Europe,Home Goods,Vacuum Cleaner,2,208.47,416.94
+1789,2025-01-24,Mexico,North America,Electronics,Headphones,18,1213.66,21845.88
+1790,2024-10-27,Spain,Europe,Electronics,Smartphone,39,1049.5,40930.5
+1791,2024-07-20,Pakistan,Asia,Electronics,Smartwatch,42,375.42,15767.64
+1792,2025-01-22,China,Asia,Apparel,Jeans,2,211.68,423.36
+1793,2024-05-25,Russia,Europe,Books,History Text,31,38.19,1183.89
+1794,2023-04-12,Indonesia,Asia,Home Goods,Bed Frame,13,54.69,710.97
+1795,2024-09-24,Saudi Arabia,Asia,Books,Cookbook,6,68.53,411.18
+1796,2025-01-13,Netherlands,Europe,Home Goods,Blender,16,638.76,10220.16
+1797,2024-10-20,Australia,Oceania,Electronics,Tablet,17,1075.01,18275.17
+1798,2024-05-13,United States,North America,Electronics,Headphones,33,331.48,10938.84
+1799,2023-03-20,Indonesia,Asia,Books,Cookbook,1,67.34,67.34
+1800,2025-06-16,Netherlands,Europe,Home Goods,Bed Frame,42,71.05,2984.1
+1801,2024-06-05,United Kingdom,Europe,Home Goods,Coffee Maker,41,569.54,23351.14
+1802,2023-08-15,Nigeria,Africa,Apparel,T-Shirt,50,147.94,7397.0
+1803,2024-01-04,China,Asia,Electronics,Smartwatch,36,854.76,30771.36
+1804,2025-05-14,Mexico,North America,Apparel,Jeans,23,106.85,2457.55
+1805,2023-08-19,Saudi Arabia,Asia,Books,Fiction Novel,3,39.64,118.92
+1806,2023-07-24,Egypt,Africa,Books,History Text,25,77.09,1927.25
+1807,2025-04-12,Philippines,Asia,Books,Biography,40,65.08,2603.2
+1808,2025-02-25,Turkey,Europe,Electronics,Smartwatch,39,825.56,32196.84
+1809,2024-01-05,India,Asia,Books,Cookbook,29,40.63,1178.27
+1810,2025-06-20,India,Asia,Home Goods,Bed Frame,23,505.91,11635.93
+1811,2023-08-11,United Kingdom,Europe,Apparel,T-Shirt,10,38.26,382.6
+1812,2025-03-30,Bangladesh,Asia,Apparel,Jeans,38,246.82,9379.16
+1813,2023-07-10,United Kingdom,Europe,Home Goods,Bed Frame,30,417.45,12523.5
+1814,2023-01-18,Thailand,Asia,Apparel,Sneakers,7,25.27,176.89
+1815,2025-02-15,Australia,Oceania,Home Goods,Blender,1,47.11,47.11
+1816,2024-02-02,Spain,Europe,Home Goods,Blender,27,74.12,2001.24
+1817,2024-03-12,Philippines,Asia,Apparel,T-Shirt,47,228.06,10718.82
+1818,2023-05-12,Indonesia,Asia,Books,Science Journal,40,35.64,1425.6
+1819,2024-12-06,Switzerland,Europe,Home Goods,Vacuum Cleaner,39,66.58,2596.62
+1820,2023-03-06,Bangladesh,Asia,Apparel,Jeans,10,84.01,840.1
+1821,2024-05-30,Philippines,Asia,Electronics,Smartwatch,22,907.7,19969.4
+1822,2023-03-30,Spain,Europe,Home Goods,Sofa,41,718.09,29441.69
+1823,2025-01-29,Brazil,South America,Apparel,T-Shirt,18,198.91,3580.38
+1824,2025-01-07,Turkey,Europe,Electronics,Headphones,28,222.31,6224.68
+1825,2023-01-01,Canada,North America,Electronics,Smartwatch,18,591.54,10647.72
+1826,2023-11-02,Saudi Arabia,Asia,Books,Fiction Novel,41,13.84,567.44
+1827,2024-08-08,Argentina,South America,Apparel,Sneakers,26,87.96,2286.96
+1828,2024-05-21,Thailand,Asia,Electronics,Smartwatch,31,348.32,10797.92
+1829,2025-02-15,Australia,Oceania,Electronics,Laptop,20,1462.26,29245.2
+1830,2024-11-05,Switzerland,Europe,Electronics,Smartphone,3,569.94,1709.82
+1831,2025-01-22,India,Asia,Electronics,Headphones,29,593.96,17224.84
+1832,2025-01-12,Vietnam,Asia,Home Goods,Sofa,48,604.42,29012.16
+1833,2023-02-18,Netherlands,Europe,Electronics,Laptop,50,452.42,22621.0
+1834,2025-05-22,Canada,North America,Home Goods,Coffee Maker,4,229.27,917.08
+1835,2024-11-28,South Korea,Asia,Electronics,Headphones,50,1389.16,69458.0
+1836,2023-07-04,Netherlands,Europe,Electronics,Laptop,25,1219.73,30493.25
+1837,2024-08-09,Mexico,North America,Apparel,Jacket,18,107.98,1943.64
+1838,2023-06-11,Saudi Arabia,Asia,Home Goods,Blender,43,656.49,28229.07
+1839,2023-04-28,South Korea,Asia,Apparel,Sneakers,18,141.44,2545.92
+1840,2023-11-01,Spain,Europe,Books,Cookbook,26,78.21,2033.46
+1841,2025-02-18,United Kingdom,Europe,Books,Fiction Novel,42,26.86,1128.12
+1842,2023-10-12,Vietnam,Asia,Apparel,Sneakers,13,122.78,1596.14
+1843,2025-04-28,Vietnam,Asia,Electronics,Laptop,47,1468.96,69041.12
+1844,2024-05-08,Australia,Oceania,Electronics,Laptop,21,283.08,5944.68
+1845,2024-01-08,United States,North America,Electronics,Tablet,1,148.05,148.05
+1846,2023-06-12,Turkey,Europe,Apparel,Dress,12,162.29,1947.48
+1847,2024-09-22,France,Europe,Apparel,Sneakers,25,219.27,5481.75
+1848,2025-06-12,Nigeria,Africa,Books,History Text,7,20.44,143.08
+1849,2023-12-28,Philippines,Asia,Books,Biography,47,16.91,794.77
+1850,2024-09-15,India,Asia,Apparel,Jacket,41,22.21,910.61
+1851,2024-04-19,United States,North America,Apparel,Dress,18,160.18,2883.24
+1852,2023-07-06,China,Asia,Electronics,Smartwatch,30,373.29,11198.7
+1853,2023-09-30,Brazil,South America,Books,Cookbook,13,32.59,423.67
+1854,2024-07-10,Turkey,Europe,Books,Cookbook,6,70.83,424.98
+1855,2025-02-23,Pakistan,Asia,Books,Cookbook,10,79.98,799.8
+1856,2024-05-20,United Kingdom,Europe,Electronics,Smartphone,21,1464.96,30764.16
+1857,2024-08-11,Russia,Europe,Electronics,Smartwatch,49,822.47,40301.03
+1858,2025-04-04,Spain,Europe,Electronics,Tablet,2,1208.75,2417.5
+1859,2025-01-06,United States,North America,Books,Science Journal,37,24.68,913.16
+1860,2024-07-24,Argentina,South America,Electronics,Headphones,29,1386.22,40200.38
+1861,2023-01-01,Egypt,Africa,Books,Fiction Novel,21,75.56,1586.76
+1862,2025-06-14,Germany,Europe,Home Goods,Vacuum Cleaner,17,63.58,1080.86
+1863,2024-09-27,Thailand,Asia,Books,Cookbook,45,19.12,860.4
+1864,2025-06-26,Japan,Asia,Apparel,Dress,39,40.35,1573.65
+1865,2024-08-09,China,Asia,Home Goods,Sofa,9,261.96,2357.64
+1866,2025-02-25,Switzerland,Europe,Apparel,Jeans,38,141.72,5385.36
+1867,2023-10-08,India,Asia,Home Goods,Vacuum Cleaner,21,516.76,10851.96
+1868,2024-10-05,India,Asia,Apparel,Jeans,31,21.39,663.09
+1869,2023-10-18,Netherlands,Europe,Apparel,Sneakers,36,29.66,1067.76
+1870,2024-06-15,Philippines,Asia,Apparel,Dress,7,116.21,813.47
+1871,2024-03-28,Turkey,Europe,Electronics,Smartwatch,47,1275.03,59926.41
+1872,2024-06-04,Turkey,Europe,Electronics,Laptop,22,933.37,20534.14
+1873,2025-01-09,Australia,Oceania,Books,Fiction Novel,41,31.52,1292.32
+1874,2024-11-19,Nigeria,Africa,Apparel,Jeans,39,22.17,864.63
+1875,2024-05-30,South Korea,Asia,Apparel,T-Shirt,8,49.75,398.0
+1876,2023-09-21,Italy,Europe,Home Goods,Blender,8,105.11,840.88
+1877,2024-06-13,Germany,Europe,Books,Science Journal,17,13.68,232.56
+1878,2024-07-27,Egypt,Africa,Home Goods,Coffee Maker,50,747.64,37382.0
+1879,2023-11-30,Mexico,North America,Books,Fiction Novel,17,22.27,378.59
+1880,2023-05-22,Turkey,Europe,Books,Fiction Novel,24,77.62,1862.88
+1881,2025-04-16,Russia,Europe,Books,Science Journal,7,28.3,198.1
+1882,2023-12-16,Mexico,North America,Books,Science Journal,30,38.75,1162.5
+1883,2024-04-05,Brazil,South America,Apparel,Jeans,33,240.56,7938.48
+1884,2024-02-09,Russia,Europe,Electronics,Smartphone,4,1266.67,5066.68
+1885,2023-09-11,Italy,Europe,Electronics,Laptop,40,1306.62,52264.8
+1886,2025-04-09,France,Europe,Electronics,Smartwatch,2,1257.3,2514.6
+1887,2023-01-15,South Korea,Asia,Apparel,Jacket,49,130.94,6416.06
+1888,2024-07-10,Vietnam,Asia,Apparel,T-Shirt,49,39.43,1932.07
+1889,2024-11-27,South Africa,Africa,Apparel,Sneakers,24,205.38,4929.12
+1890,2024-01-04,Nigeria,Africa,Apparel,Sneakers,21,172.81,3629.01
+1891,2023-02-11,Canada,North America,Electronics,Smartwatch,19,1320.39,25087.41
+1892,2024-08-04,South Korea,Asia,Electronics,Smartwatch,3,441.66,1324.98
+1893,2024-02-12,Switzerland,Europe,Apparel,Dress,33,223.37,7371.21
+1894,2023-01-12,France,Europe,Books,Science Journal,30,70.4,2112.0
+1895,2025-07-04,Nigeria,Africa,Books,Fiction Novel,39,27.51,1072.89
+1896,2023-02-09,Nigeria,Africa,Home Goods,Blender,50,795.54,39777.0
+1897,2024-03-01,Turkey,Europe,Home Goods,Coffee Maker,34,584.66,19878.44
+1898,2023-03-21,Brazil,South America,Apparel,Dress,29,105.63,3063.27
+1899,2024-01-05,United Kingdom,Europe,Books,Science Journal,33,11.79,389.07
+1900,2025-06-26,Pakistan,Asia,Books,Fiction Novel,30,68.39,2051.7
+1901,2023-03-01,Thailand,Asia,Apparel,Dress,1,109.49,109.49
+1902,2024-06-07,Brazil,South America,Books,Science Journal,21,40.5,850.5
+1903,2023-01-19,Italy,Europe,Electronics,Laptop,37,165.19,6112.03
+1904,2024-06-26,Russia,Europe,Home Goods,Bed Frame,33,83.79,2765.07
+1905,2023-02-21,France,Europe,Books,Fiction Novel,16,79.41,1270.56
+1906,2023-07-24,Mexico,North America,Apparel,T-Shirt,47,227.66,10700.02
+1907,2023-07-07,Nigeria,Africa,Electronics,Headphones,8,952.26,7618.08
+1908,2024-06-27,Mexico,North America,Home Goods,Sofa,19,180.56,3430.64
+1909,2024-02-22,Indonesia,Asia,Electronics,Tablet,35,1428.43,49995.05
+1910,2023-03-16,Vietnam,Asia,Books,Biography,26,31.97,831.22
+1911,2023-08-18,South Korea,Asia,Electronics,Smartphone,41,369.46,15147.86
+1912,2025-02-01,Vietnam,Asia,Apparel,Dress,11,25.08,275.88
+1913,2024-11-28,Spain,Europe,Electronics,Smartphone,3,230.2,690.6
+1914,2024-05-19,China,Asia,Apparel,T-Shirt,35,134.67,4713.45
+1915,2025-01-23,Switzerland,Europe,Home Goods,Bed Frame,9,253.12,2278.08
+1916,2023-05-02,Bangladesh,Asia,Apparel,Dress,41,169.88,6965.08
+1917,2023-02-12,Indonesia,Asia,Books,Science Journal,13,51.29,666.77
+1918,2023-05-09,India,Asia,Electronics,Smartphone,21,783.8,16459.8
+1919,2024-12-20,Bangladesh,Asia,Home Goods,Blender,21,733.23,15397.83
+1920,2024-07-21,Brazil,South America,Home Goods,Vacuum Cleaner,10,656.81,6568.1
+1921,2024-10-22,Saudi Arabia,Asia,Books,History Text,43,62.81,2700.83
+1922,2024-06-19,Bangladesh,Asia,Apparel,Jeans,3,230.39,691.17
+1923,2023-10-16,Switzerland,Europe,Electronics,Laptop,10,904.75,9047.5
+1924,2025-07-26,United States,North America,Electronics,Laptop,50,1112.31,55615.5
+1925,2024-10-16,Spain,Europe,Apparel,Sneakers,4,37.82,151.28
+1926,2023-10-08,Egypt,Africa,Books,History Text,32,22.26,712.32
+1927,2023-10-22,United Kingdom,Europe,Apparel,Sneakers,7,219.96,1539.72
+1928,2025-01-29,Bangladesh,Asia,Apparel,Sneakers,38,218.75,8312.5
+1929,2024-11-15,United Kingdom,Europe,Electronics,Headphones,6,799.42,4796.52
+1930,2025-04-19,Saudi Arabia,Asia,Apparel,Jacket,35,78.63,2752.05
+1931,2023-09-15,China,Asia,Electronics,Tablet,19,596.46,11332.74
+1932,2023-07-08,Japan,Asia,Books,History Text,47,79.63,3742.61
+1933,2024-05-14,India,Asia,Electronics,Headphones,15,492.93,7393.95
+1934,2024-03-25,Brazil,South America,Books,History Text,47,49.25,2314.75
+1935,2023-02-12,Australia,Oceania,Books,History Text,17,65.84,1119.28
+1936,2024-02-14,United Kingdom,Europe,Apparel,Sneakers,29,28.09,814.61
+1937,2023-07-11,Italy,Europe,Electronics,Laptop,8,1416.75,11334.0
+1938,2023-07-31,Turkey,Europe,Electronics,Laptop,21,1472.87,30930.27
+1939,2023-08-23,Italy,Europe,Books,History Text,47,69.7,3275.9
+1940,2024-12-24,United States,North America,Apparel,Jacket,18,74.83,1346.94
+1941,2024-11-16,South Korea,Asia,Books,Science Journal,36,73.7,2653.2
+1942,2024-08-28,Malaysia,Asia,Electronics,Smartwatch,3,1047.63,3142.89
+1943,2023-04-03,Malaysia,Asia,Apparel,Jacket,9,161.11,1449.99
+1944,2025-01-14,Russia,Europe,Apparel,Dress,6,201.17,1207.02
+1945,2023-11-05,Turkey,Europe,Books,Biography,31,31.35,971.85
+1946,2024-01-30,Mexico,North America,Apparel,Dress,20,189.64,3792.8
+1947,2025-07-03,Indonesia,Asia,Apparel,Jeans,38,106.08,4031.04
+1948,2025-04-21,United Kingdom,Europe,Books,Fiction Novel,50,76.17,3808.5
+1949,2024-05-23,Spain,Europe,Electronics,Smartphone,28,1481.62,41485.36
+1950,2024-11-23,Egypt,Africa,Books,Science Journal,48,13.15,631.2
+1951,2025-03-13,Turkey,Europe,Home Goods,Blender,36,88.76,3195.36
+1952,2025-01-29,Pakistan,Asia,Books,Fiction Novel,17,12.63,214.71
+1953,2024-05-07,France,Europe,Home Goods,Sofa,25,534.97,13374.25
+1954,2023-08-17,Bangladesh,Asia,Home Goods,Vacuum Cleaner,39,48.28,1882.92
+1955,2023-07-22,Philippines,Asia,Electronics,Smartphone,48,698.33,33519.84
+1956,2024-05-02,Malaysia,Asia,Electronics,Smartwatch,11,115.22,1267.42
+1957,2024-05-06,Russia,Europe,Books,History Text,25,45.42,1135.5
+1958,2023-11-24,Bangladesh,Asia,Books,Fiction Novel,23,44.73,1028.79
+1959,2024-06-17,Nigeria,Africa,Electronics,Headphones,28,459.08,12854.24
+1960,2025-02-24,Saudi Arabia,Asia,Home Goods,Sofa,27,582.98,15740.46
+1961,2024-08-24,Switzerland,Europe,Home Goods,Sofa,46,100.09,4604.14
+1962,2024-03-12,Argentina,South America,Books,Science Journal,18,75.41,1357.38
+1963,2024-08-27,Philippines,Asia,Books,Fiction Novel,26,19.93,518.18
+1964,2024-01-03,Philippines,Asia,Electronics,Tablet,44,1184.11,52100.84
+1965,2024-08-03,Pakistan,Asia,Apparel,T-Shirt,15,36.45,546.75
+1966,2025-01-09,Canada,North America,Home Goods,Blender,7,293.08,2051.56
+1967,2025-07-06,China,Asia,Electronics,Tablet,28,970.79,27182.12
+1968,2025-04-14,Canada,North America,Apparel,Sneakers,29,65.27,1892.83
+1969,2024-05-10,Malaysia,Asia,Apparel,Jacket,48,124.75,5988.0
+1970,2023-12-05,South Africa,Africa,Electronics,Smartphone,32,1349.29,43177.28
+1971,2024-12-28,Indonesia,Asia,Home Goods,Sofa,46,337.65,15531.9
+1972,2023-11-07,Canada,North America,Apparel,Sneakers,22,223.12,4908.64
+1973,2024-07-02,South Africa,Africa,Books,Fiction Novel,6,60.67,364.02
+1974,2024-09-19,France,Europe,Home Goods,Bed Frame,8,757.77,6062.16
+1975,2024-04-02,Germany,Europe,Electronics,Smartphone,20,1199.72,23994.4
+1976,2023-01-14,India,Asia,Electronics,Tablet,43,645.87,27772.41
+1977,2024-04-27,United States,North America,Electronics,Smartwatch,21,1469.84,30866.64
+1978,2024-07-27,Philippines,Asia,Books,History Text,47,48.43,2276.21
+1979,2024-12-08,France,Europe,Home Goods,Vacuum Cleaner,1,76.31,76.31
+1980,2024-01-11,China,Asia,Books,History Text,39,10.18,397.02
+1981,2023-03-30,Malaysia,Asia,Books,Science Journal,24,54.0,1296.0
+1982,2024-06-19,South Africa,Africa,Electronics,Tablet,43,533.65,22946.95
+1983,2023-08-16,Turkey,Europe,Apparel,Jeans,47,158.97,7471.59
+1984,2023-07-20,India,Asia,Apparel,Dress,29,161.41,4680.89
+1985,2025-01-01,Nigeria,Africa,Electronics,Headphones,46,962.97,44296.62
+1986,2023-12-29,Indonesia,Asia,Home Goods,Bed Frame,13,400.49,5206.37
+1987,2023-02-23,Bangladesh,Asia,Electronics,Laptop,37,1487.35,55031.95
+1988,2024-03-13,Turkey,Europe,Electronics,Tablet,49,1362.9,66782.1
+1989,2023-05-24,Spain,Europe,Electronics,Laptop,24,415.23,9965.52
+1990,2025-07-25,Vietnam,Asia,Books,History Text,29,12.97,376.13
+1991,2025-04-19,United Kingdom,Europe,Home Goods,Sofa,50,651.95,32597.5
+1992,2024-10-24,South Korea,Asia,Apparel,Jacket,38,201.03,7639.14
+1993,2023-01-08,Bangladesh,Asia,Apparel,T-Shirt,38,94.33,3584.54
+1994,2025-03-13,Saudi Arabia,Asia,Electronics,Smartwatch,50,1012.84,50642.0
+1995,2023-05-09,Netherlands,Europe,Books,Fiction Novel,35,13.81,483.35
+1996,2023-04-26,Germany,Europe,Electronics,Headphones,40,300.72,12028.8
+1997,2023-12-20,Bangladesh,Asia,Apparel,T-Shirt,35,221.64,7757.4
+1998,2024-01-28,Russia,Europe,Books,Science Journal,32,59.27,1896.64
+1999,2024-12-06,Switzerland,Europe,Books,Cookbook,43,40.05,1722.15
+2000,2023-01-24,Thailand,Asia,Apparel,T-Shirt,10,137.5,1375.0
+2001,2025-01-01,Indonesia,Asia,Electronics,Tablet,45,1441.11,64849.95
+2002,2024-03-21,Spain,Europe,Home Goods,Coffee Maker,34,709.54,24124.36
+2003,2024-12-02,Egypt,Africa,Books,History Text,20,75.04,1500.8
+2004,2023-01-04,Netherlands,Europe,Home Goods,Bed Frame,18,749.02,13482.36
+2005,2025-07-18,Australia,Oceania,Books,Fiction Novel,24,49.28,1182.72
+2006,2024-02-18,Turkey,Europe,Electronics,Headphones,13,952.55,12383.15
+2007,2024-01-10,South Korea,Asia,Electronics,Smartwatch,29,485.62,14082.98
+2008,2024-11-25,Canada,North America,Books,Cookbook,37,15.17,561.29
+2009,2025-04-27,Russia,Europe,Electronics,Laptop,20,899.47,17989.4
+2010,2023-06-29,Turkey,Europe,Electronics,Smartwatch,38,698.06,26526.28
+2011,2025-02-03,Brazil,South America,Home Goods,Sofa,11,595.21,6547.31
+2012,2023-07-12,China,Asia,Apparel,Jacket,13,94.66,1230.58
+2013,2023-01-08,United States,North America,Home Goods,Bed Frame,11,495.21,5447.31
+2014,2023-02-19,Canada,North America,Apparel,Jeans,34,132.72,4512.48
+2015,2025-07-15,Philippines,Asia,Books,Fiction Novel,2,32.59,65.18
+2016,2025-03-17,Mexico,North America,Apparel,Jacket,4,24.03,96.12
+2017,2023-05-07,China,Asia,Electronics,Smartwatch,21,1359.5,28549.5
+2018,2024-10-27,Brazil,South America,Books,Cookbook,22,52.27,1149.94
+2019,2025-06-28,Nigeria,Africa,Books,Fiction Novel,44,68.81,3027.64
+2020,2025-01-22,Malaysia,Asia,Books,Biography,30,19.41,582.3
+2021,2023-01-07,Nigeria,Africa,Home Goods,Coffee Maker,45,338.91,15250.95
+2022,2024-02-29,Netherlands,Europe,Home Goods,Bed Frame,50,572.41,28620.5
+2023,2025-05-14,Russia,Europe,Apparel,Jacket,24,35.72,857.28
+2024,2024-12-25,Thailand,Asia,Home Goods,Bed Frame,16,504.48,8071.68
+2025,2023-12-24,Italy,Europe,Home Goods,Bed Frame,7,108.34,758.38
+2026,2023-07-09,Thailand,Asia,Books,Science Journal,18,23.71,426.78
+2027,2025-04-25,Russia,Europe,Home Goods,Vacuum Cleaner,19,669.93,12728.67
+2028,2023-11-04,Australia,Oceania,Electronics,Smartphone,26,850.78,22120.28
+2029,2024-06-03,India,Asia,Apparel,Sneakers,26,188.72,4906.72
+2030,2024-06-09,France,Europe,Home Goods,Coffee Maker,42,131.24,5512.08
+2031,2024-07-22,South Korea,Asia,Home Goods,Vacuum Cleaner,32,192.97,6175.04
+2032,2023-02-18,Australia,Oceania,Books,Biography,43,21.72,933.96
+2033,2024-12-26,Australia,Oceania,Home Goods,Bed Frame,25,598.09,14952.25
+2034,2025-04-01,Australia,Oceania,Books,Science Journal,42,22.21,932.82
+2035,2024-02-08,Russia,Europe,Electronics,Headphones,35,923.19,32311.65
+2036,2023-12-22,Egypt,Africa,Electronics,Laptop,43,239.59,10302.37
+2037,2023-03-13,United Kingdom,Europe,Apparel,Sneakers,32,61.49,1967.68
+2038,2023-10-25,Turkey,Europe,Apparel,Jeans,50,175.77,8788.5
+2039,2025-01-03,Netherlands,Europe,Apparel,Dress,30,234.51,7035.3
+2040,2024-06-24,Malaysia,Asia,Apparel,Sneakers,40,231.01,9240.4
+2041,2023-12-15,Turkey,Europe,Apparel,T-Shirt,43,216.36,9303.48
+2042,2025-07-03,United Kingdom,Europe,Books,Biography,15,19.15,287.25
+2043,2024-12-31,India,Asia,Electronics,Headphones,37,1126.68,41687.16
+2044,2024-12-16,Germany,Europe,Electronics,Tablet,12,916.2,10994.4
+2045,2024-03-24,France,Europe,Electronics,Headphones,11,474.57,5220.27
+2046,2023-05-25,Nigeria,Africa,Home Goods,Sofa,10,78.03,780.3
+2047,2023-02-25,Indonesia,Asia,Electronics,Smartwatch,47,1463.77,68797.19
+2048,2024-08-13,Bangladesh,Asia,Apparel,Sneakers,2,235.7,471.4
+2049,2023-04-15,Japan,Asia,Home Goods,Bed Frame,32,583.81,18681.92
+2050,2023-06-16,Switzerland,Europe,Home Goods,Bed Frame,21,666.49,13996.29
+2051,2025-04-20,France,Europe,Electronics,Laptop,5,865.53,4327.65
+2052,2023-04-13,Philippines,Asia,Electronics,Headphones,11,544.81,5992.91
+2053,2023-07-21,Russia,Europe,Home Goods,Vacuum Cleaner,47,128.48,6038.56
+2054,2023-06-05,Thailand,Asia,Apparel,Sneakers,43,178.89,7692.27
+2055,2025-07-05,Philippines,Asia,Books,Fiction Novel,15,42.22,633.3
+2056,2023-11-11,Indonesia,Asia,Apparel,Sneakers,37,194.94,7212.78
+2057,2023-02-23,South Africa,Africa,Books,Fiction Novel,18,70.79,1274.22
+2058,2024-08-01,Pakistan,Asia,Home Goods,Vacuum Cleaner,28,787.41,22047.48
+2059,2025-07-10,Bangladesh,Asia,Home Goods,Vacuum Cleaner,46,73.21,3367.66
+2060,2025-02-27,Mexico,North America,Apparel,Jacket,4,16.85,67.4
+2061,2024-02-16,Japan,Asia,Home Goods,Bed Frame,40,464.62,18584.8
+2062,2024-04-03,China,Asia,Apparel,T-Shirt,45,108.0,4860.0
+2063,2024-10-24,Australia,Oceania,Apparel,Jeans,2,62.35,124.7
+2064,2023-06-17,Argentina,South America,Apparel,Dress,24,121.31,2911.44
+2065,2024-03-19,Canada,North America,Home Goods,Vacuum Cleaner,2,31.45,62.9
+2066,2025-01-18,Mexico,North America,Books,Cookbook,45,61.6,2772.0
+2067,2025-06-27,China,Asia,Home Goods,Vacuum Cleaner,37,147.92,5473.04
+2068,2023-04-10,Spain,Europe,Electronics,Laptop,50,637.01,31850.5
+2069,2024-03-01,France,Europe,Electronics,Laptop,12,464.18,5570.16
+2070,2024-06-22,India,Asia,Apparel,Jacket,42,67.29,2826.18
+2071,2024-12-06,Egypt,Africa,Apparel,Sneakers,46,154.97,7128.62
+2072,2023-03-20,Canada,North America,Electronics,Tablet,4,1388.74,5554.96
+2073,2024-02-05,Germany,Europe,Apparel,Jacket,8,185.95,1487.6
+2074,2024-09-15,South Korea,Asia,Books,Fiction Novel,50,26.46,1323.0
+2075,2025-04-20,Netherlands,Europe,Apparel,Jacket,5,211.46,1057.3
+2076,2023-02-28,Nigeria,Africa,Electronics,Smartphone,17,1481.45,25184.65
+2077,2023-01-19,Spain,Europe,Books,Fiction Novel,6,38.98,233.88
+2078,2023-02-09,Malaysia,Asia,Electronics,Laptop,5,890.7,4453.5
+2079,2025-02-13,Thailand,Asia,Apparel,Jacket,8,15.67,125.36
+2080,2023-06-11,Philippines,Asia,Books,Biography,35,63.6,2226.0
+2081,2023-03-02,Netherlands,Europe,Home Goods,Sofa,20,311.51,6230.2
+2082,2025-06-06,South Africa,Africa,Electronics,Smartwatch,9,936.34,8427.06
+2083,2024-04-09,Bangladesh,Asia,Apparel,Jacket,32,209.53,6704.96
+2084,2023-12-27,Australia,Oceania,Home Goods,Sofa,50,118.58,5929.0
+2085,2025-01-20,Turkey,Europe,Apparel,Sneakers,24,204.78,4914.72
+2086,2024-08-21,United Kingdom,Europe,Books,Science Journal,16,61.84,989.44
+2087,2023-09-04,Russia,Europe,Books,Cookbook,46,34.54,1588.84
+2088,2023-10-16,Australia,Oceania,Home Goods,Bed Frame,36,89.62,3226.32
+2089,2023-07-19,Turkey,Europe,Electronics,Headphones,32,536.34,17162.88
+2090,2023-04-16,Germany,Europe,Home Goods,Sofa,34,621.63,21135.42
+2091,2023-03-29,China,Asia,Apparel,Dress,12,15.85,190.2
+2092,2025-03-17,Canada,North America,Books,Biography,49,58.01,2842.49
+2093,2023-11-18,Mexico,North America,Electronics,Tablet,42,425.73,17880.66
+2094,2023-07-05,Malaysia,Asia,Electronics,Smartwatch,42,748.97,31456.74
+2095,2025-04-24,South Africa,Africa,Apparel,Sneakers,36,206.22,7423.92
+2096,2023-02-06,Italy,Europe,Books,Biography,47,41.09,1931.23
+2097,2024-11-19,Canada,North America,Apparel,Sneakers,42,154.2,6476.4
+2098,2024-12-06,Turkey,Europe,Home Goods,Sofa,41,405.01,16605.41
+2099,2025-07-24,Canada,North America,Books,Science Journal,11,27.53,302.83
+2100,2023-06-15,Saudi Arabia,Asia,Home Goods,Blender,32,439.73,14071.36
+2101,2024-10-15,Malaysia,Asia,Electronics,Laptop,36,243.25,8757.0
+2102,2023-08-23,Switzerland,Europe,Home Goods,Blender,40,204.95,8198.0
+2103,2025-05-19,South Korea,Asia,Electronics,Headphones,17,955.41,16241.97
+2104,2023-01-19,Turkey,Europe,Books,Fiction Novel,1,49.42,49.42
+2105,2025-04-04,Indonesia,Asia,Apparel,Dress,6,246.73,1480.38
+2106,2024-10-21,Australia,Oceania,Books,Science Journal,39,57.27,2233.53
+2107,2023-04-12,Canada,North America,Home Goods,Bed Frame,30,639.63,19188.9
+2108,2025-05-08,Saudi Arabia,Asia,Books,Cookbook,29,48.1,1394.9
+2109,2024-01-13,Netherlands,Europe,Electronics,Laptop,19,1351.86,25685.34
+2110,2023-10-28,Japan,Asia,Books,Fiction Novel,4,22.14,88.56
+2111,2023-02-21,Malaysia,Asia,Apparel,Sneakers,46,68.84,3166.64
+2112,2024-09-13,United Kingdom,Europe,Books,Cookbook,12,22.85,274.2
+2113,2023-02-20,South Korea,Asia,Books,Cookbook,8,76.19,609.52
+2114,2024-09-26,United States,North America,Apparel,Dress,42,61.89,2599.38
+2115,2024-02-11,Russia,Europe,Electronics,Headphones,27,613.9,16575.3
+2116,2024-04-20,Thailand,Asia,Home Goods,Coffee Maker,29,317.6,9210.4
+2117,2023-01-08,United States,North America,Home Goods,Bed Frame,20,256.88,5137.6
+2118,2025-01-30,United Kingdom,Europe,Books,Cookbook,28,14.0,392.0
+2119,2023-02-11,Brazil,South America,Home Goods,Coffee Maker,47,364.23,17118.81
+2120,2024-07-20,Philippines,Asia,Electronics,Smartwatch,46,442.26,20343.96
+2121,2023-05-27,United Kingdom,Europe,Electronics,Smartwatch,1,601.37,601.37
+2122,2023-10-27,Egypt,Africa,Home Goods,Coffee Maker,42,56.28,2363.76
+2123,2023-08-20,Brazil,South America,Electronics,Laptop,24,1374.83,32995.92
+2124,2024-09-22,Pakistan,Asia,Apparel,Jacket,19,209.07,3972.33
+2125,2025-03-24,South Korea,Asia,Home Goods,Bed Frame,4,457.04,1828.16
+2126,2024-08-13,Italy,Europe,Home Goods,Vacuum Cleaner,42,587.82,24688.44
+2127,2023-03-23,France,Europe,Electronics,Headphones,31,756.2,23442.2
+2128,2024-03-01,Mexico,North America,Electronics,Headphones,19,1348.47,25620.93
+2129,2023-07-31,South Africa,Africa,Electronics,Headphones,16,409.09,6545.44
+2130,2024-06-12,France,Europe,Apparel,T-Shirt,22,92.85,2042.7
+2131,2023-02-14,Netherlands,Europe,Books,Cookbook,30,33.79,1013.7
+2132,2025-06-30,Brazil,South America,Apparel,Jacket,40,226.61,9064.4
+2133,2024-05-24,Malaysia,Asia,Home Goods,Vacuum Cleaner,21,223.17,4686.57
+2134,2024-12-28,Philippines,Asia,Electronics,Smartphone,28,279.48,7825.44
+2135,2023-04-23,Bangladesh,Asia,Books,Science Journal,37,78.83,2916.71
+2136,2023-10-11,Spain,Europe,Books,Biography,1,11.1,11.1
+2137,2023-12-30,India,Asia,Books,History Text,22,53.13,1168.86
+2138,2023-01-30,Australia,Oceania,Electronics,Smartwatch,47,1317.56,61925.32
+2139,2024-05-25,Vietnam,Asia,Apparel,Sneakers,15,69.96,1049.4
+2140,2023-05-31,Bangladesh,Asia,Books,Fiction Novel,16,62.74,1003.84
+2141,2023-11-28,Malaysia,Asia,Home Goods,Vacuum Cleaner,31,638.54,19794.74
+2142,2024-10-04,Indonesia,Asia,Electronics,Smartphone,44,134.43,5914.92
+2143,2024-01-17,Australia,Oceania,Electronics,Smartphone,31,1123.47,34827.57
+2144,2025-02-06,Japan,Asia,Electronics,Headphones,5,1240.62,6203.1
+2145,2023-04-06,Germany,Europe,Books,Biography,29,26.89,779.81
+2146,2023-01-10,Thailand,Asia,Electronics,Tablet,5,735.68,3678.4
+2147,2024-06-21,Mexico,North America,Apparel,Sneakers,21,77.32,1623.72
+2148,2023-12-18,Philippines,Asia,Books,History Text,29,24.98,724.42
+2149,2024-06-15,Italy,Europe,Electronics,Headphones,22,1446.0,31812.0
+2150,2024-12-08,United Kingdom,Europe,Electronics,Smartwatch,17,1386.74,23574.58
+2151,2025-04-25,Turkey,Europe,Books,Cookbook,18,62.0,1116.0
+2152,2024-06-08,Egypt,Africa,Books,Biography,18,67.31,1211.58
+2153,2024-02-12,Thailand,Asia,Books,Biography,10,25.14,251.4
+2154,2024-04-10,Netherlands,Europe,Electronics,Laptop,32,1111.64,35572.48
+2155,2025-07-30,Italy,Europe,Books,Biography,30,62.4,1872.0
+2156,2025-04-01,India,Asia,Books,History Text,46,75.92,3492.32
+2157,2023-07-05,Vietnam,Asia,Books,History Text,20,69.85,1397.0
+2158,2024-05-31,France,Europe,Apparel,Dress,38,141.2,5365.6
+2159,2023-05-01,Philippines,Asia,Home Goods,Coffee Maker,29,340.68,9879.72
+2160,2025-07-18,Vietnam,Asia,Apparel,Jacket,18,131.51,2367.18
+2161,2023-05-12,Russia,Europe,Electronics,Headphones,34,1072.52,36465.68
+2162,2023-01-18,Egypt,Africa,Home Goods,Coffee Maker,49,673.82,33017.18
+2163,2023-12-06,China,Asia,Apparel,Jeans,23,51.69,1188.87
+2164,2024-07-31,United States,North America,Electronics,Headphones,48,1088.32,52239.36
+2165,2023-10-04,Saudi Arabia,Asia,Apparel,Jeans,28,84.19,2357.32
+2166,2023-08-08,Bangladesh,Asia,Electronics,Smartwatch,17,535.68,9106.56
+2167,2024-10-09,Saudi Arabia,Asia,Electronics,Headphones,34,1448.92,49263.28
+2168,2023-10-03,Saudi Arabia,Asia,Apparel,Dress,3,133.36,400.08
+2169,2025-04-22,France,Europe,Apparel,Jacket,27,150.89,4074.03
+2170,2023-09-26,Italy,Europe,Apparel,T-Shirt,8,116.77,934.16
+2171,2025-02-04,United Kingdom,Europe,Apparel,Jeans,7,37.21,260.47
+2172,2023-02-25,Nigeria,Africa,Home Goods,Bed Frame,33,172.64,5697.12
+2173,2025-07-01,Malaysia,Asia,Electronics,Smartphone,44,314.61,13842.84
+2174,2023-01-25,Australia,Oceania,Apparel,Sneakers,9,158.87,1429.83
+2175,2023-07-14,Indonesia,Asia,Home Goods,Coffee Maker,3,59.29,177.87
+2176,2024-02-01,Pakistan,Asia,Books,Science Journal,25,51.56,1289.0
+2177,2025-01-03,South Korea,Asia,Apparel,Sneakers,14,240.61,3368.54
+2178,2024-01-03,Philippines,Asia,Home Goods,Coffee Maker,40,741.99,29679.6
+2179,2024-07-03,United Kingdom,Europe,Electronics,Smartphone,26,470.51,12233.26
+2180,2023-03-20,Egypt,Africa,Books,Biography,27,53.76,1451.52
+2181,2024-07-11,United Kingdom,Europe,Books,Cookbook,43,72.09,3099.87
+2182,2024-02-11,India,Asia,Electronics,Tablet,10,945.6,9456.0
+2183,2024-05-25,Turkey,Europe,Home Goods,Sofa,4,532.28,2129.12
+2184,2024-12-03,Brazil,South America,Books,Fiction Novel,35,79.99,2799.65
+2185,2024-01-30,Indonesia,Asia,Home Goods,Vacuum Cleaner,13,251.54,3270.02
+2186,2023-01-09,Japan,Asia,Home Goods,Vacuum Cleaner,18,491.8,8852.4
+2187,2023-11-05,South Korea,Asia,Books,Biography,26,63.6,1653.6
+2188,2025-06-19,South Africa,Africa,Electronics,Headphones,8,1462.46,11699.68
+2189,2024-08-16,Saudi Arabia,Asia,Apparel,Dress,25,118.39,2959.75
+2190,2023-01-06,Germany,Europe,Books,Fiction Novel,37,15.84,586.08
+2191,2023-05-18,France,Europe,Home Goods,Sofa,12,541.12,6493.44
+2192,2023-06-07,Spain,Europe,Apparel,Dress,47,98.96,4651.12
+2193,2023-10-17,South Africa,Africa,Books,Science Journal,4,21.32,85.28
+2194,2025-04-03,Italy,Europe,Apparel,Sneakers,27,121.15,3271.05
+2195,2023-08-24,United Kingdom,Europe,Home Goods,Blender,11,747.37,8221.07
+2196,2025-02-05,Netherlands,Europe,Apparel,Dress,36,88.39,3182.04
+2197,2024-01-16,United States,North America,Apparel,Sneakers,14,173.21,2424.94
+2198,2024-05-26,Malaysia,Asia,Books,Cookbook,3,40.6,121.8
+2199,2023-08-12,Japan,Asia,Books,Biography,42,24.43,1026.06
+2200,2023-07-19,Bangladesh,Asia,Electronics,Smartwatch,9,805.58,7250.22
+2201,2023-03-04,Italy,Europe,Apparel,Jeans,20,93.77,1875.4
+2202,2023-09-09,Nigeria,Africa,Books,Science Journal,13,72.36,940.68
+2203,2023-07-19,South Korea,Asia,Home Goods,Bed Frame,23,123.29,2835.67
+2204,2023-11-16,Saudi Arabia,Asia,Apparel,Jacket,48,116.93,5612.64
+2205,2023-07-29,Australia,Oceania,Apparel,Sneakers,19,108.93,2069.67
+2206,2023-03-05,China,Asia,Apparel,Jeans,3,244.7,734.1
+2207,2025-07-15,South Korea,Asia,Books,Fiction Novel,2,13.52,27.04
+2208,2024-01-02,Switzerland,Europe,Books,History Text,2,75.3,150.6
+2209,2023-01-20,South Korea,Asia,Apparel,Sneakers,43,126.24,5428.32
+2210,2023-05-23,Japan,Asia,Electronics,Headphones,49,481.8,23608.2
+2211,2023-10-28,Italy,Europe,Home Goods,Coffee Maker,50,178.46,8923.0
+2212,2025-01-02,Russia,Europe,Home Goods,Vacuum Cleaner,27,449.78,12144.06
+2213,2024-12-10,Indonesia,Asia,Apparel,Jacket,33,191.26,6311.58
+2214,2025-01-19,South Korea,Asia,Books,Fiction Novel,29,26.01,754.29
+2215,2024-08-31,Vietnam,Asia,Books,History Text,8,11.15,89.2
+2216,2023-09-26,Mexico,North America,Electronics,Smartphone,33,375.87,12403.71
+2217,2025-01-14,China,Asia,Home Goods,Vacuum Cleaner,39,422.33,16470.87
+2218,2024-06-08,Spain,Europe,Books,Science Journal,20,63.79,1275.8
+2219,2023-02-08,Nigeria,Africa,Books,Cookbook,15,38.9,583.5
+2220,2024-05-24,United States,North America,Home Goods,Blender,23,653.87,15039.01
+2221,2024-08-23,Pakistan,Asia,Home Goods,Vacuum Cleaner,40,750.17,30006.8
+2222,2023-09-21,Indonesia,Asia,Electronics,Smartwatch,3,1326.97,3980.91
+2223,2024-08-19,Pakistan,Asia,Books,History Text,26,53.06,1379.56
+2224,2025-02-17,Bangladesh,Asia,Apparel,Dress,2,143.86,287.72
+2225,2024-12-30,Thailand,Asia,Books,Cookbook,39,49.77,1941.03
+2226,2023-08-09,Netherlands,Europe,Electronics,Laptop,23,725.76,16692.48
+2227,2025-03-22,Malaysia,Asia,Books,Cookbook,42,40.47,1699.74
+2228,2023-10-17,Egypt,Africa,Books,History Text,13,35.64,463.32
+2229,2024-02-23,Egypt,Africa,Home Goods,Vacuum Cleaner,27,306.33,8270.91
+2230,2025-02-15,Argentina,South America,Apparel,T-Shirt,27,70.98,1916.46
+2231,2025-07-11,South Korea,Asia,Books,Cookbook,1,79.67,79.67
+2232,2024-10-24,India,Asia,Electronics,Laptop,41,680.43,27897.63
+2233,2025-07-02,Indonesia,Asia,Electronics,Tablet,16,894.28,14308.48
+2234,2025-05-24,Thailand,Asia,Books,Fiction Novel,31,28.42,881.02
+2235,2025-06-30,South Africa,Africa,Home Goods,Bed Frame,22,517.97,11395.34
+2236,2023-07-27,Pakistan,Asia,Electronics,Tablet,24,1392.41,33417.84
+2237,2023-11-05,Bangladesh,Asia,Apparel,Jeans,26,220.67,5737.42
+2238,2023-04-01,Switzerland,Europe,Home Goods,Bed Frame,39,286.95,11191.05
+2239,2025-05-21,Bangladesh,Asia,Books,History Text,3,50.74,152.22
+2240,2025-05-04,Spain,Europe,Apparel,Sneakers,5,235.3,1176.5
+2241,2024-09-14,Switzerland,Europe,Books,Science Journal,20,56.93,1138.6
+2242,2025-03-12,Egypt,Africa,Home Goods,Coffee Maker,29,303.25,8794.25
+2243,2024-08-25,South Korea,Asia,Electronics,Laptop,36,945.74,34046.64
+2244,2023-12-06,France,Europe,Home Goods,Coffee Maker,46,332.71,15304.66
+2245,2024-10-15,Mexico,North America,Home Goods,Vacuum Cleaner,23,395.11,9087.53
+2246,2024-04-21,Italy,Europe,Apparel,Jeans,18,200.07,3601.26
+2247,2024-05-09,Netherlands,Europe,Books,Cookbook,8,59.91,479.28
+2248,2023-09-15,Germany,Europe,Books,Fiction Novel,29,71.6,2076.4
+2249,2023-07-25,Netherlands,Europe,Home Goods,Bed Frame,35,512.88,17950.8
+2250,2025-03-31,United States,North America,Books,History Text,3,64.21,192.63
+2251,2025-05-07,United States,North America,Apparel,Sneakers,45,98.34,4425.3
+2252,2024-04-28,South Africa,Africa,Home Goods,Blender,1,481.23,481.23
+2253,2025-06-10,Malaysia,Asia,Apparel,Dress,2,17.16,34.32
+2254,2024-03-08,Japan,Asia,Books,Science Journal,2,34.07,68.14
+2255,2024-11-20,South Africa,Africa,Electronics,Smartphone,38,1385.94,52665.72
+2256,2023-06-04,Egypt,Africa,Electronics,Smartwatch,23,181.79,4181.17
+2257,2023-06-04,Japan,Asia,Apparel,Dress,8,111.33,890.64
+2258,2025-05-02,Italy,Europe,Electronics,Smartphone,8,177.04,1416.32
+2259,2024-06-23,Canada,North America,Books,Biography,28,41.7,1167.6
+2260,2025-01-14,Turkey,Europe,Electronics,Laptop,11,349.8,3847.8
+2261,2025-06-28,Pakistan,Asia,Books,Science Journal,35,12.98,454.3
+2262,2024-05-07,United Kingdom,Europe,Apparel,Jeans,29,213.5,6191.5
+2263,2023-08-03,Pakistan,Asia,Home Goods,Coffee Maker,25,638.14,15953.5
+2264,2023-10-17,Australia,Oceania,Apparel,Jacket,12,82.64,991.68
+2265,2023-12-11,Japan,Asia,Books,Science Journal,42,19.4,814.8
+2266,2024-02-18,Switzerland,Europe,Home Goods,Coffee Maker,21,681.3,14307.3
+2267,2025-04-14,Saudi Arabia,Asia,Apparel,Jeans,41,111.18,4558.38
+2268,2024-08-31,India,Asia,Home Goods,Bed Frame,33,391.26,12911.58
+2269,2024-06-09,Russia,Europe,Home Goods,Sofa,23,74.21,1706.83
+2270,2024-03-24,Vietnam,Asia,Electronics,Smartphone,34,204.53,6954.02
+2271,2023-07-23,Egypt,Africa,Home Goods,Blender,20,60.1,1202.0
+2272,2025-04-30,Turkey,Europe,Electronics,Laptop,47,924.67,43459.49
+2273,2024-04-01,Russia,Europe,Electronics,Headphones,37,1165.27,43114.99
+2274,2023-09-23,South Africa,Africa,Electronics,Smartphone,33,550.68,18172.44
+2275,2023-09-02,Italy,Europe,Apparel,Dress,46,201.27,9258.42
+2276,2025-03-31,Bangladesh,Asia,Apparel,Dress,3,101.43,304.29
+2277,2025-06-28,South Korea,Asia,Books,Cookbook,14,68.08,953.12
+2278,2025-03-13,Indonesia,Asia,Apparel,Sneakers,7,174.43,1221.01
+2279,2024-08-27,South Korea,Asia,Apparel,Dress,20,197.26,3945.2
+2280,2023-07-19,Philippines,Asia,Electronics,Headphones,1,1036.47,1036.47
+2281,2025-04-29,Bangladesh,Asia,Books,Fiction Novel,44,78.5,3454.0
+2282,2024-05-03,Germany,Europe,Books,History Text,23,19.8,455.4
+2283,2023-01-14,Brazil,South America,Apparel,Dress,2,220.19,440.38
+2284,2023-04-23,Turkey,Europe,Books,Biography,4,32.16,128.64
+2285,2023-05-16,Thailand,Asia,Electronics,Headphones,11,731.35,8044.85
+2286,2023-05-29,Canada,North America,Books,History Text,8,75.36,602.88
+2287,2024-01-03,Philippines,Asia,Electronics,Smartwatch,11,300.59,3306.49
+2288,2024-10-11,Indonesia,Asia,Apparel,T-Shirt,39,65.51,2554.89
+2289,2025-01-19,China,Asia,Books,Fiction Novel,34,27.61,938.74
+2290,2025-03-19,India,Asia,Apparel,Jeans,48,31.87,1529.76
+2291,2024-10-05,Canada,North America,Home Goods,Bed Frame,3,124.84,374.52
+2292,2024-11-22,Japan,Asia,Home Goods,Coffee Maker,29,51.64,1497.56
+2293,2025-02-03,United States,North America,Electronics,Tablet,28,1452.65,40674.2
+2294,2023-07-14,Bangladesh,Asia,Electronics,Tablet,48,306.89,14730.72
+2295,2024-09-22,United States,North America,Apparel,Jacket,18,174.79,3146.22
+2296,2025-03-31,Thailand,Asia,Home Goods,Sofa,14,504.68,7065.52
+2297,2023-05-04,Switzerland,Europe,Home Goods,Sofa,23,111.92,2574.16
+2298,2025-01-07,Thailand,Asia,Electronics,Laptop,14,1240.0,17360.0
+2299,2024-07-02,Japan,Asia,Electronics,Smartwatch,21,279.2,5863.2
+2300,2024-04-14,Thailand,Asia,Home Goods,Sofa,37,419.12,15507.44
+2301,2023-04-11,Russia,Europe,Electronics,Laptop,14,670.4,9385.6
+2302,2025-06-18,Philippines,Asia,Home Goods,Coffee Maker,46,397.88,18302.48
+2303,2023-11-12,Nigeria,Africa,Apparel,Sneakers,23,226.85,5217.55
+2304,2025-05-17,Canada,North America,Books,History Text,26,21.48,558.48
+2305,2025-06-17,Mexico,North America,Home Goods,Bed Frame,5,266.0,1330.0
+2306,2024-05-03,Germany,Europe,Electronics,Headphones,2,624.1,1248.2
+2307,2023-06-06,Philippines,Asia,Apparel,Dress,42,208.7,8765.4
+2308,2023-03-08,Argentina,South America,Books,Cookbook,48,16.02,768.96
+2309,2024-12-04,South Africa,Africa,Books,Biography,24,44.28,1062.72
+2310,2024-04-10,India,Asia,Books,Biography,38,68.4,2599.2
+2311,2024-03-08,Indonesia,Asia,Apparel,Jacket,34,30.2,1026.8
+2312,2023-02-22,Switzerland,Europe,Electronics,Headphones,31,1202.13,37266.03
+2313,2023-03-16,Netherlands,Europe,Apparel,T-Shirt,13,104.32,1356.16
+2314,2024-09-21,France,Europe,Books,History Text,26,36.35,945.1
+2315,2024-07-30,Argentina,South America,Home Goods,Vacuum Cleaner,42,189.59,7962.78
+2316,2024-04-23,Germany,Europe,Home Goods,Coffee Maker,13,659.19,8569.47
+2317,2024-06-15,Saudi Arabia,Asia,Books,History Text,31,58.09,1800.79
+2318,2024-03-19,Netherlands,Europe,Electronics,Tablet,49,1380.06,67622.94
+2319,2025-01-08,China,Asia,Electronics,Smartwatch,7,930.66,6514.62
+2320,2023-08-31,Germany,Europe,Apparel,Dress,22,132.43,2913.46
+2321,2025-06-20,Pakistan,Asia,Home Goods,Sofa,9,290.49,2614.41
+2322,2024-09-13,United States,North America,Books,History Text,49,65.05,3187.45
+2323,2024-07-14,Switzerland,Europe,Apparel,T-Shirt,4,172.74,690.96
+2324,2024-06-30,United States,North America,Electronics,Laptop,12,413.66,4963.92
+2325,2023-10-10,Japan,Asia,Electronics,Smartphone,41,1077.32,44170.12
+2326,2023-04-01,Thailand,Asia,Electronics,Laptop,36,1020.67,36744.12
+2327,2024-12-30,Turkey,Europe,Apparel,Jeans,43,248.06,10666.58
+2328,2023-07-10,Italy,Europe,Electronics,Tablet,24,1219.23,29261.52
+2329,2024-04-22,United Kingdom,Europe,Electronics,Smartwatch,46,718.64,33057.44
+2330,2024-09-03,Vietnam,Asia,Electronics,Laptop,24,935.34,22448.16
+2331,2025-07-04,Bangladesh,Asia,Apparel,Sneakers,46,191.09,8790.14
+2332,2025-06-01,United Kingdom,Europe,Apparel,Sneakers,14,200.31,2804.34
+2333,2024-04-20,United Kingdom,Europe,Apparel,Sneakers,45,39.85,1793.25
+2334,2023-05-04,Spain,Europe,Books,Fiction Novel,45,75.49,3397.05
+2335,2025-03-22,Australia,Oceania,Apparel,Dress,15,191.73,2875.95
+2336,2023-02-20,Vietnam,Asia,Books,Biography,4,56.7,226.8
+2337,2024-08-24,Vietnam,Asia,Electronics,Laptop,10,1285.11,12851.1
+2338,2024-02-27,Saudi Arabia,Asia,Electronics,Smartwatch,44,699.86,30793.84
+2339,2025-05-20,Nigeria,Africa,Apparel,Jacket,10,207.16,2071.6
+2340,2025-04-04,Thailand,Asia,Electronics,Tablet,12,395.86,4750.32
+2341,2024-02-07,South Korea,Asia,Books,Biography,27,31.0,837.0
+2342,2023-07-16,Saudi Arabia,Asia,Apparel,Jacket,2,224.58,449.16
+2343,2023-01-21,Egypt,Africa,Electronics,Tablet,46,892.26,41043.96
+2344,2024-05-25,Australia,Oceania,Books,Fiction Novel,17,71.52,1215.84
+2345,2023-11-15,Brazil,South America,Home Goods,Coffee Maker,3,86.97,260.91
+2346,2025-07-26,Netherlands,Europe,Books,Fiction Novel,48,48.71,2338.08
+2347,2023-11-26,Brazil,South America,Books,Science Journal,46,79.28,3646.88
+2348,2024-06-17,Egypt,Africa,Apparel,T-Shirt,15,143.95,2159.25
+2349,2025-06-15,Saudi Arabia,Asia,Apparel,Jeans,42,218.98,9197.16
+2350,2023-09-01,France,Europe,Electronics,Headphones,5,286.31,1431.55
+2351,2024-12-11,Netherlands,Europe,Electronics,Tablet,29,855.01,24795.29
+2352,2023-06-22,Russia,Europe,Apparel,Sneakers,32,95.89,3068.48
+2353,2023-05-29,Malaysia,Asia,Home Goods,Coffee Maker,39,786.86,30687.54
+2354,2023-12-07,Vietnam,Asia,Books,Science Journal,49,41.46,2031.54
+2355,2023-12-16,United Kingdom,Europe,Home Goods,Bed Frame,14,246.92,3456.88
+2356,2024-01-02,South Korea,Asia,Electronics,Smartwatch,21,626.69,13160.49
+2357,2023-05-31,Philippines,Asia,Home Goods,Vacuum Cleaner,28,249.58,6988.24
+2358,2023-02-28,United States,North America,Apparel,Dress,41,141.37,5796.17
+2359,2024-12-27,Canada,North America,Books,Fiction Novel,36,50.85,1830.6
+2360,2023-03-13,Saudi Arabia,Asia,Electronics,Smartphone,45,1490.73,67082.85
+2361,2023-05-01,Spain,Europe,Books,History Text,27,33.79,912.33
+2362,2024-04-25,Brazil,South America,Books,History Text,30,25.76,772.8
+2363,2025-01-05,Netherlands,Europe,Apparel,Sneakers,14,159.06,2226.84
+2364,2023-05-28,Argentina,South America,Books,Biography,15,56.78,851.7
+2365,2024-07-08,South Korea,Asia,Home Goods,Blender,49,621.02,30429.98
+2366,2023-08-27,Canada,North America,Electronics,Smartphone,23,1409.18,32411.14
+2367,2024-05-21,Philippines,Asia,Books,Cookbook,2,51.49,102.98
+2368,2023-02-05,Philippines,Asia,Apparel,T-Shirt,5,137.41,687.05
+2369,2023-07-14,Egypt,Africa,Electronics,Smartwatch,13,736.67,9576.71
+2370,2024-04-04,Canada,North America,Apparel,T-Shirt,8,21.93,175.44
+2371,2023-12-16,Egypt,Africa,Books,Biography,6,53.65,321.9
+2372,2023-04-24,Switzerland,Europe,Books,Fiction Novel,26,54.2,1409.2
+2373,2024-03-24,Australia,Oceania,Home Goods,Coffee Maker,10,230.39,2303.9
+2374,2023-10-25,Saudi Arabia,Asia,Apparel,T-Shirt,25,167.32,4183.0
+2375,2025-02-11,South Africa,Africa,Books,Cookbook,14,17.38,243.32
+2376,2024-06-30,United States,North America,Electronics,Smartphone,39,262.33,10230.87
+2377,2023-11-20,South Africa,Africa,Books,Cookbook,35,29.54,1033.9
+2378,2025-07-14,Philippines,Asia,Books,Fiction Novel,20,65.86,1317.2
+2379,2025-05-22,Mexico,North America,Apparel,Jacket,11,242.41,2666.51
+2380,2025-04-11,Nigeria,Africa,Apparel,Dress,6,23.36,140.16
+2381,2023-09-17,Argentina,South America,Electronics,Laptop,37,853.97,31596.89
+2382,2025-01-29,France,Europe,Electronics,Tablet,4,1165.74,4662.96
+2383,2025-06-20,France,Europe,Electronics,Smartwatch,14,1103.43,15448.02
+2384,2023-02-06,Switzerland,Europe,Electronics,Smartphone,27,1030.64,27827.28
+2385,2023-12-04,Turkey,Europe,Apparel,Jacket,38,21.8,828.4
+2386,2023-06-28,China,Asia,Apparel,Jacket,34,76.29,2593.86
+2387,2023-03-27,Egypt,Africa,Books,Biography,48,17.97,862.56
+2388,2023-07-29,Bangladesh,Asia,Electronics,Smartwatch,38,1075.69,40876.22
+2389,2025-03-02,Saudi Arabia,Asia,Apparel,T-Shirt,44,93.69,4122.36
+2390,2024-08-04,Switzerland,Europe,Books,History Text,7,31.96,223.72
+2391,2025-03-29,Germany,Europe,Electronics,Headphones,46,1381.1,63530.6
+2392,2025-06-21,Philippines,Asia,Electronics,Smartwatch,28,1153.98,32311.44
+2393,2025-05-22,Spain,Europe,Apparel,Sneakers,38,107.44,4082.72
+2394,2025-03-03,Argentina,South America,Apparel,Sneakers,27,108.83,2938.41
+2395,2024-02-27,Spain,Europe,Apparel,Jacket,50,93.25,4662.5
+2396,2024-03-31,Philippines,Asia,Books,Science Journal,7,46.18,323.26
+2397,2025-03-24,Russia,Europe,Apparel,Jacket,11,146.49,1611.39
+2398,2023-06-20,Pakistan,Asia,Books,Science Journal,12,49.96,599.52
+2399,2024-09-12,Vietnam,Asia,Books,History Text,34,62.45,2123.3
+2400,2023-07-29,Indonesia,Asia,Electronics,Smartphone,38,445.06,16912.28
+2401,2023-02-15,Saudi Arabia,Asia,Books,Biography,6,54.31,325.86
+2402,2023-08-01,Indonesia,Asia,Home Goods,Coffee Maker,10,740.19,7401.9
+2403,2025-04-10,Germany,Europe,Home Goods,Bed Frame,11,786.91,8656.01
+2404,2023-06-21,Canada,North America,Books,Biography,25,57.65,1441.25
+2405,2024-03-11,China,Asia,Electronics,Tablet,41,1414.48,57993.68
+2406,2025-06-06,Spain,Europe,Books,Fiction Novel,15,14.34,215.1
+2407,2024-11-08,United States,North America,Home Goods,Vacuum Cleaner,28,214.15,5996.2
+2408,2025-01-31,South Korea,Asia,Electronics,Laptop,29,258.11,7485.19
+2409,2024-09-15,France,Europe,Apparel,Jacket,43,33.24,1429.32
+2410,2023-07-26,Pakistan,Asia,Apparel,Jacket,21,53.96,1133.16
+2411,2024-06-12,France,Europe,Books,Fiction Novel,23,65.31,1502.13
+2412,2024-08-15,Indonesia,Asia,Electronics,Laptop,15,1096.1,16441.5
+2413,2023-03-03,Saudi Arabia,Asia,Home Goods,Sofa,35,139.77,4891.95
+2414,2025-07-05,Spain,Europe,Books,History Text,4,44.17,176.68
+2415,2024-03-22,Russia,Europe,Electronics,Smartphone,11,870.59,9576.49
+2416,2024-08-13,Bangladesh,Asia,Apparel,T-Shirt,8,220.35,1762.8
+2417,2023-01-07,United Kingdom,Europe,Books,History Text,4,59.05,236.2
+2418,2024-05-16,South Africa,Africa,Home Goods,Sofa,7,329.37,2305.59
+2419,2023-02-08,United Kingdom,Europe,Apparel,Jacket,17,93.59,1591.03
+2420,2023-03-17,Italy,Europe,Electronics,Laptop,48,1177.88,56538.24
+2421,2025-03-08,South Africa,Africa,Electronics,Laptop,26,957.49,24894.74
+2422,2025-07-27,Switzerland,Europe,Books,Fiction Novel,42,53.37,2241.54
+2423,2024-05-18,Nigeria,Africa,Electronics,Headphones,2,191.75,383.5
+2424,2024-03-31,Turkey,Europe,Apparel,Jeans,4,24.44,97.76
+2425,2023-05-16,Pakistan,Asia,Apparel,Jeans,40,64.53,2581.2
+2426,2023-10-08,Turkey,Europe,Home Goods,Bed Frame,43,110.77,4763.11
+2427,2024-12-17,Pakistan,Asia,Electronics,Laptop,31,1301.78,40355.18
+2428,2025-03-16,Brazil,South America,Books,Science Journal,23,18.51,425.73
+2429,2023-08-23,France,Europe,Home Goods,Blender,23,186.79,4296.17
+2430,2025-01-07,Philippines,Asia,Apparel,T-Shirt,41,244.36,10018.76
+2431,2024-02-24,South Korea,Asia,Apparel,T-Shirt,46,186.22,8566.12
+2432,2024-10-14,Egypt,Africa,Books,History Text,40,71.35,2854.0
+2433,2023-06-09,Saudi Arabia,Asia,Apparel,Jacket,36,63.96,2302.56
+2434,2024-03-18,Nigeria,Africa,Electronics,Headphones,18,237.66,4277.88
+2435,2024-04-29,Argentina,South America,Home Goods,Blender,11,303.97,3343.67
+2436,2023-07-30,United Kingdom,Europe,Books,Fiction Novel,38,36.04,1369.52
+2437,2023-08-08,Russia,Europe,Books,Fiction Novel,44,32.05,1410.2
+2438,2023-02-22,Argentina,South America,Electronics,Smartphone,14,281.08,3935.12
+2439,2025-03-29,Vietnam,Asia,Home Goods,Sofa,11,225.86,2484.46
+2440,2025-02-16,France,Europe,Home Goods,Coffee Maker,9,467.67,4209.03
+2441,2024-11-20,Turkey,Europe,Electronics,Tablet,45,936.97,42163.65
+2442,2023-12-06,Japan,Asia,Home Goods,Sofa,22,65.57,1442.54
+2443,2024-02-17,Nigeria,Africa,Home Goods,Vacuum Cleaner,48,696.24,33419.52
+2444,2023-10-21,India,Asia,Home Goods,Sofa,43,549.34,23621.62
+2445,2025-03-17,Nigeria,Africa,Electronics,Smartphone,33,834.71,27545.43
+2446,2024-08-28,Germany,Europe,Electronics,Laptop,6,558.48,3350.88
+2447,2024-11-24,Egypt,Africa,Books,Biography,18,32.35,582.3
+2448,2024-08-19,Nigeria,Africa,Apparel,Jeans,36,87.04,3133.44
+2449,2024-02-24,China,Asia,Home Goods,Bed Frame,4,186.08,744.32
+2450,2024-06-30,United States,North America,Electronics,Headphones,15,287.33,4309.95
+2451,2024-06-01,Australia,Oceania,Electronics,Headphones,27,1245.24,33621.48
+2452,2023-12-13,Egypt,Africa,Electronics,Smartwatch,44,278.47,12252.68
+2453,2024-10-28,Italy,Europe,Electronics,Tablet,5,1229.1,6145.5
+2454,2025-01-01,Russia,Europe,Electronics,Laptop,5,1057.41,5287.05
+2455,2023-01-13,Brazil,South America,Electronics,Laptop,42,401.36,16857.12
+2456,2025-06-14,Mexico,North America,Electronics,Smartwatch,46,995.97,45814.62
+2457,2023-10-03,Netherlands,Europe,Electronics,Tablet,35,1471.98,51519.3
+2458,2024-01-19,Pakistan,Asia,Home Goods,Sofa,15,104.95,1574.25
+2459,2024-05-21,Egypt,Africa,Books,Science Journal,49,61.5,3013.5
+2460,2024-05-06,Argentina,South America,Apparel,Dress,36,33.81,1217.16
+2461,2024-07-21,Canada,North America,Electronics,Laptop,43,724.71,31162.53
+2462,2024-09-24,Indonesia,Asia,Apparel,Dress,2,140.51,281.02
+2463,2024-03-05,Brazil,South America,Home Goods,Sofa,50,51.6,2580.0
+2464,2024-09-11,Nigeria,Africa,Electronics,Tablet,10,620.74,6207.4
+2465,2024-05-15,Argentina,South America,Books,History Text,4,27.56,110.24
+2466,2024-01-29,Mexico,North America,Books,Fiction Novel,49,60.3,2954.7
+2467,2025-04-10,Spain,Europe,Books,History Text,31,35.85,1111.35
+2468,2023-03-04,Thailand,Asia,Books,History Text,10,23.9,239.0
+2469,2023-04-22,Nigeria,Africa,Electronics,Smartphone,35,273.15,9560.25
+2470,2024-11-02,Thailand,Asia,Books,Biography,42,34.81,1462.02
+2471,2023-08-24,Thailand,Asia,Electronics,Smartwatch,37,1289.97,47728.89
+2472,2025-03-19,Philippines,Asia,Electronics,Headphones,8,1229.64,9837.12
+2473,2023-12-27,Japan,Asia,Electronics,Smartphone,41,212.05,8694.05
+2474,2023-09-04,Indonesia,Asia,Electronics,Headphones,5,1019.8,5099.0
+2475,2025-04-08,China,Asia,Books,History Text,31,13.53,419.43
+2476,2024-08-10,China,Asia,Home Goods,Vacuum Cleaner,28,274.07,7673.96
+2477,2023-04-04,Spain,Europe,Home Goods,Coffee Maker,29,535.18,15520.22
+2478,2024-09-15,Brazil,South America,Electronics,Tablet,23,263.49,6060.27
+2479,2023-04-17,Germany,Europe,Books,Fiction Novel,16,56.84,909.44
+2480,2023-07-08,India,Asia,Home Goods,Blender,47,126.62,5951.14
+2481,2023-04-15,Argentina,South America,Books,Biography,31,44.67,1384.77
+2482,2024-06-09,Argentina,South America,Books,Biography,26,15.63,406.38
+2483,2025-07-07,Italy,Europe,Electronics,Laptop,17,1337.27,22733.59
+2484,2023-03-18,Netherlands,Europe,Electronics,Headphones,24,213.3,5119.2
+2485,2024-08-07,Switzerland,Europe,Electronics,Laptop,4,388.55,1554.2
+2486,2023-08-25,United Kingdom,Europe,Electronics,Smartphone,19,190.13,3612.47
+2487,2025-05-24,Switzerland,Europe,Electronics,Headphones,26,448.66,11665.16
+2488,2024-12-14,Mexico,North America,Books,Science Journal,33,70.78,2335.74
+2489,2025-03-11,Saudi Arabia,Asia,Electronics,Smartphone,39,496.14,19349.46
+2490,2023-06-27,Italy,Europe,Electronics,Tablet,48,275.98,13247.04
+2491,2023-03-05,Spain,Europe,Home Goods,Blender,38,365.14,13875.32
+2492,2025-06-04,Australia,Oceania,Home Goods,Sofa,34,656.65,22326.1
+2493,2025-07-28,Nigeria,Africa,Books,Biography,14,74.88,1048.32
+2494,2023-03-02,Argentina,South America,Apparel,T-Shirt,21,72.08,1513.68
+2495,2023-12-15,Saudi Arabia,Asia,Electronics,Smartphone,4,106.62,426.48
+2496,2025-07-17,Saudi Arabia,Asia,Electronics,Headphones,12,1285.74,15428.88
+2497,2023-01-02,Turkey,Europe,Home Goods,Bed Frame,49,578.71,28356.79
+2498,2023-03-04,United States,North America,Home Goods,Vacuum Cleaner,39,187.4,7308.6
+2499,2023-07-18,Argentina,South America,Apparel,Dress,3,246.82,740.46
+2500,2023-04-26,South Africa,Africa,Home Goods,Coffee Maker,2,751.31,1502.62

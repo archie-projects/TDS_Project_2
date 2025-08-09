@@ -1,0 +1,52 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.pdb
+*.log
+*.sqlite3
+*.db
+
+# Virtualenv
+venv/
+env/
+*.env
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# MacOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+Desktop.ini
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Node.js (if you're working with JS/React)
+node_modules/
+
+# Python bytecode
+*.py[cod]
+
+# Coverage reports
+.coverage
+*.cover
+*.py,cover
+
+# build directories
+build/
+dist/
+
+# Environment configuration
+.env
+
+# Other IDEs
+*.swp
+*.swo
+*.sublime-workspace
