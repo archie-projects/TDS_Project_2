@@ -16,3 +16,4 @@ google-generativeai
 duckdb
 networkx
 python-dotenv
+gunicorn
