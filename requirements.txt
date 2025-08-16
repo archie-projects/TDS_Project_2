@@ -8,10 +8,10 @@ openpyxl
 matplotlib
 seaborn
 PyPDF2
-pillow
+Pillow
 python-docx
 duckdb
 google-generativeai
 tavily-python
+networkx
 gunicorn
-
