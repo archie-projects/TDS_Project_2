@@ -70,3 +70,4 @@ lxml
 # Optional: For better async support
 aiohttp
 aiofiles
+gunicorn
