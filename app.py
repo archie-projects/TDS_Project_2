@@ -345,6 +345,121 @@ class UniversalDataAnalyst:
                 processed_data[filename] = {'type': 'error', 'error': str(e)}
         return processed_data
 
+    def is_visualization_key(self, key: str) -> bool:
+        """Detect if a JSON key should contain a visualization."""
+        viz_patterns = [
+            'graph', 'chart', 'plot', 'histogram', 'heatmap', 'visualization', 
+            'network', 'scatter', 'bar', 'line', 'pie', 'box', 'distribution'
+        ]
+        return any(pattern in key.lower() for pattern in viz_patterns)
+
+    def infer_visualization_from_key_and_data(self, key: str, data_context: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+        """Infer what type of visualization should be created based on the key name and available data."""
+        key_lower = key.lower()
+        
+        # Get the primary dataframe
+        df = self.get_primary_dataframe(data_context)
+        if df is None or df.empty:
+            return None
+            
+        # Network/Graph visualizations
+        if any(term in key_lower for term in ['network', 'graph']) and not any(term in key_lower for term in ['histogram', 'bar']):
+            # Check if data has network structure (source, target columns or similar)
+            network_cols = self.detect_network_columns(df)
+            if network_cols:
+                return {
+                    'type': 'network',
+                    'source_col': network_cols[0],
+                    'target_col': network_cols[1],
+                    'title': f'Network Graph'
+                }
+        
+        # Histogram/Distribution
+        if any(term in key_lower for term in ['histogram', 'distribution']):
+            # Look for degree-related columns or numeric columns
+            numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+            if 'degree' in key_lower and any('degree' in col.lower() for col in df.columns):
+                degree_col = next((col for col in df.columns if 'degree' in col.lower()), None)
+                if degree_col:
+                    return {
+                        'type': 'histogram',
+                        'column': degree_col,
+                        'title': 'Degree Distribution',
+                        'color': 'green'
+                    }
+            elif numeric_cols:
+                return {
+                    'type': 'histogram',
+                    'column': numeric_cols[0],
+                    'title': f'Distribution of {numeric_cols[0]}',
+                    'color': 'green' if 'degree' in key_lower else 'blue'
+                }
+        
+        # Scatter plot
+        if 'scatter' in key_lower:
+            numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
+            if len(numeric_cols) >= 2:
+                return {
+                    'type': 'scatter',
+                    'x': numeric_cols[0],
+                    'y': numeric_cols[1],
+                    'title': f'{numeric_cols[0]} vs {numeric_cols[1]}'
+                }
+        
+        # Bar chart
+        if 'bar' in key_lower:
+            if len(df.columns) >= 2:
+                return {
+                    'type': 'bar',
+                    'x': df.columns[0],
+                    'y': df.columns[1],
+                    'title': f'{df.columns[1]} by {df.columns[0]}'
+                }
+        
+        return None
+
+    def detect_network_columns(self, df: pd.DataFrame) -> Optional[List[str]]:
+        """Detect if dataframe has network/edge structure (source, target columns)."""
+        common_network_patterns = [
+            ['source', 'target'],
+            ['from', 'to'],
+            ['node1', 'node2'],
+            ['start', 'end'],
+            ['src', 'dst']
+        ]
+        
+        cols_lower = [col.lower() for col in df.columns]
+        
+        for pattern in common_network_patterns:
+            if all(p in cols_lower for p in pattern):
+                source_col = df.columns[cols_lower.index(pattern[0])]
+                target_col = df.columns[cols_lower.index(pattern[1])]
+                return [source_col, target_col]
+        
+        # If we have exactly 2 columns and they seem like they could be edges
+        if len(df.columns) == 2:
+            return df.columns.tolist()
+            
+        return None
+
+    def get_primary_dataframe(self, context: Dict[str, Any]) -> Optional[pd.DataFrame]:
+        """Get the primary dataframe from the analysis context."""
+        # Priority: DuckDB result > File data > Scraped data
+        if context.get('duckdb_query_result'):
+            return pd.DataFrame(context['duckdb_query_result']['data'])
+        
+        if context.get('file_data'):
+            for file_info in context['file_data'].values():
+                if file_info['type'] == 'dataframe':
+                    return pd.DataFrame(file_info['data'])
+        
+        if context.get('scraped_data'):
+            for url_data in context['scraped_data'].values():
+                if url_data.get('tables') and url_data['tables']:
+                    return pd.DataFrame(url_data['tables'][0])
+        
+        return None
+
     def generate_analysis_response(self, questions: str, context: Dict[str, Any]) -> Any:
       """Generates the main analysis response using the Gemini model."""
       if not self.gemini_model:
@@ -363,204 +478,274 @@ class UniversalDataAnalyst:
           except json.JSONDecodeError:
               return {"analysis_text": cleaned_text}
           
-          def process_visuals(obj, parent_key=None):
-              """Recursively find and replace visualization requests with base64 strings."""
-              if isinstance(obj, dict):
-                  processed_dict = {}
-                  for k, v in obj.items():
-                      # Check if this key suggests it's a visualization request
-                      is_viz_key = any(viz_word in k.lower() for viz_word in [
-                          'chart', 'plot', 'graph', 'histogram', 'scatter', 'bar', 'line', 
-                          'pie', 'visualization', 'visual'
-                      ])
-                      
-                      if is_viz_key:
-                          if isinstance(v, dict) and "type" in v:
-                              # Direct visualization request object
-                              processed_dict[k] = self.create_visualization(v, context)
-                          elif isinstance(v, dict) and "visualization_request" in v:
-                              # Nested visualization request
-                              processed_dict[k] = self.create_visualization(v["visualization_request"], context)
-                          elif v is None or v == "visualization_request":
-                            # If Gemini didn't provide details, skip visualization
-                            processed_dict[k] = None
-
-                          else:
-                              processed_dict[k] = process_visuals(v, k)
-                      else:
-                          # Handle nested visualization_request objects
-                          if k == "visualization_request" and isinstance(v, dict):
-                              return self.create_visualization(v, context)
-                          elif isinstance(v, dict) and "type" in v and any(chart_type in str(v.get("type", "")).lower() for chart_type in ["scatter", "bar", "line", "pie", "histogram"]):
-                              processed_dict[k] = self.create_visualization(v, context)
-                          else:
-                              processed_dict[k] = process_visuals(v, k)
-                  
-                  return processed_dict
-              elif isinstance(obj, list):
-                  return [process_visuals(i, parent_key) for i in obj]
-              else:
-                  return obj
-
-          result = process_visuals(result)
+          # Process visualizations - both explicit requests and null values
+          result = self.process_and_fill_visualizations(result, context)
+          
           return result
 
       except Exception as e:
           logger.error(f"Gemini analysis failed: {e}")
           return {"error": f"An error occurred with the Gemini API: {e}"}
-      
+
+    def process_and_fill_visualizations(self, result: Dict[str, Any], context: Dict[str, Any]) -> Dict[str, Any]:
+        """Process visualization requests and fill in null visualization values."""
+        
+        def process_item(obj, parent_key=None):
+            if isinstance(obj, dict):
+                processed_dict = {}
+                for k, v in obj.items():
+                    # Check for explicit visualization requests
+                    if isinstance(v, dict) and "type" in v and any(chart_type in str(v.get("type", "")).lower() 
+                                                                  for chart_type in ["scatter", "bar", "line", "pie", "histogram", "network"]):
+                        processed_dict[k] = self.create_visualization(v, context)
+                    
+                    # Check for visualization request objects
+                    elif k == "visualization_request" and isinstance(v, dict):
+                        return self.create_visualization(v, context)
+                    
+                    # Check for null values in visualization keys
+                    elif (v is None or v == "null" or v == "visualization_request") and self.is_visualization_key(k):
+                        inferred_viz = self.infer_visualization_from_key_and_data(k, context)
+                        if inferred_viz:
+                            processed_dict[k] = self.create_visualization(inferred_viz, context)
+                        else:
+                            processed_dict[k] = None
+                    
+                    # Handle nested objects
+                    else:
+                        processed_dict[k] = process_item(v, k)
+                
+                return processed_dict
+            
+            elif isinstance(obj, list):
+                return [process_item(item, parent_key) for item in obj]
+            else:
+                return obj
+        
+        return process_item(result)
+
+    def create_network_graph(self, df: pd.DataFrame, source_col: str, target_col: str, title: str = "Network Graph") -> Optional[str]:
+        """Create a network graph visualization."""
+        try:
+            # Create network graph
+            G = nx.from_pandas_edgelist(df, source=source_col, target=target_col)
+            
+            # Calculate layout
+            pos = nx.spring_layout(G, seed=42, k=3, iterations=50)
+            
+            # Create figure
+            fig, ax = plt.subplots(figsize=(12, 8))
+            
+            # Draw network
+            nx.draw_networkx_nodes(G, pos, node_color='lightblue', 
+                                 node_size=1000, alpha=0.7, ax=ax)
+            nx.draw_networkx_edges(G, pos, alpha=0.5, edge_color='gray', ax=ax)
+            nx.draw_networkx_labels(G, pos, font_size=10, font_weight='bold', ax=ax)
+            
+            ax.set_title(title, fontsize=14, fontweight='bold')
+            ax.axis('off')
+            
+            return self.optimize_image_size(fig)
+            
+        except Exception as e:
+            logger.error(f"Failed to create network graph: {e}")
+            return None
+
+    def create_degree_histogram(self, df: pd.DataFrame, title: str = "Degree Distribution") -> Optional[str]:
+        """Create a degree histogram from network data."""
+        try:
+            # If we have network data, calculate degrees
+            network_cols = self.detect_network_columns(df)
+            if network_cols:
+                G = nx.from_pandas_edgelist(df, source=network_cols[0], target=network_cols[1])
+                degrees = [d for n, d in G.degree()]
+                
+                fig, ax = plt.subplots(figsize=(10, 6))
+                
+                # Create histogram
+                ax.hist(degrees, bins=max(1, len(set(degrees))), 
+                       color='green', alpha=0.7, edgecolor='black')
+                ax.set_xlabel('Degree')
+                ax.set_ylabel('Frequency')
+                ax.set_title(title, fontsize=12, fontweight='bold')
+                
+                return self.optimize_image_size(fig)
+            
+            # Fallback: if there's a degree column
+            elif any('degree' in col.lower() for col in df.columns):
+                degree_col = next(col for col in df.columns if 'degree' in col.lower())
+                
+                fig, ax = plt.subplots(figsize=(10, 6))
+                ax.hist(df[degree_col].dropna(), bins=20, color='green', alpha=0.7, edgecolor='black')
+                ax.set_xlabel(degree_col)
+                ax.set_ylabel('Frequency')
+                ax.set_title(title, fontsize=12, fontweight='bold')
+                
+                return self.optimize_image_size(fig)
+            
+            return None
+            
+        except Exception as e:
+            logger.error(f"Failed to create degree histogram: {e}")
+            return None
 
     def create_visualization(self, viz_request: Dict, context: Dict) -> Optional[str]:
-      """Generically create any type of plot requested by the LLM and return base64 PNG under 100kB."""
-      if not viz_request:
-          return None
-          
-      logger.info(f"Handling visualization request: {viz_request}")
+        """Generically create any type of plot requested and return base64 PNG under 100kB."""
+        if not viz_request:
+            return None
+            
+        logger.info(f"Handling visualization request: {viz_request}")
 
-      # --- Get a DataFrame from context ---
-      df = None
-      if context.get('duckdb_query_result'):
-          df = pd.DataFrame(context['duckdb_query_result']['data'])
-      elif context.get('file_data'):
-          for file_info in context['file_data'].values():
-              if file_info['type'] == 'dataframe':
-                  df = pd.DataFrame(file_info['data'])
-                  break
-      elif context.get('scraped_data'):
-          for url_data in context['scraped_data'].values():
-              if url_data.get('tables'):
-                  df = pd.DataFrame(url_data['tables'][0])
-                  break
+        # Get a DataFrame from context
+        df = self.get_primary_dataframe(context)
+        if df is None or df.empty:
+            logger.warning("No usable dataframe found for visualization.")
+            return None
 
-      if df is None or df.empty:
-          logger.warning("No usable dataframe found for visualization.")
-          return None
+        try:
+            viz_type = viz_request.get("type", "").lower()
+            
+            # Handle network graphs specially
+            if viz_type == "network":
+                source_col = viz_request.get("source_col")
+                target_col = viz_request.get("target_col")
+                title = viz_request.get("title", "Network Graph")
+                return self.create_network_graph(df, source_col, target_col, title)
+            
+            fig, ax = plt.subplots(figsize=(10, 6))
 
-      try:
-          viz_type = viz_request.get("type", "").lower()
-          fig, ax = plt.subplots(figsize=(10, 6))
+            # Enhanced plotting logic with better error handling
+            if viz_type == "histogram":
+                column = viz_request.get("column") or viz_request.get("x")
+                if column and column in df.columns:
+                    color = viz_request.get("color", "blue")
+                    ax.hist(df[column].dropna(), bins=20, color=color, alpha=0.7, edgecolor='black')
+                    ax.set_xlabel(column)
+                    ax.set_ylabel('Frequency')
+                else:
+                    # Try to create degree histogram if it's a network
+                    plt.close(fig)
+                    return self.create_degree_histogram(df, viz_request.get("title", "Histogram"))
 
-          # Enhanced plotting logic with better error handling
-          if viz_type == "histogram":
-              column = viz_request.get("column") or viz_request.get("x")
-              if column and column in df.columns:
-                  color = viz_request.get("color", "blue")
-                  ax.hist(df[column].dropna(), bins=20, color=color, alpha=0.7, edgecolor='black')
-                  ax.set_xlabel(column)
-                  ax.set_ylabel('Frequency')
-              else:
-                  logger.error(f"Histogram: Column '{column}' not found in dataframe")
-                  return None
+            elif viz_type == "scatter":
+                x_col, y_col = viz_request.get("x"), viz_request.get("y")
+                if x_col in df.columns and y_col in df.columns:
+                    color = viz_request.get("color", "blue")
+                    ax.scatter(df[x_col], df[y_col], color=color, alpha=0.6)
+                    ax.set_xlabel(x_col)
+                    ax.set_ylabel(y_col)
+                    
+                    if viz_request.get("regression"):
+                        # Add trend line
+                        z = np.polyfit(df[x_col].dropna(), df[y_col].dropna(), 1)
+                        p = np.poly1d(z)
+                        ax.plot(df[x_col], p(df[x_col]), "r--", alpha=0.8)
+                else:
+                    logger.error(f"Scatter plot: Missing columns {x_col}, {y_col}")
+                    plt.close(fig)
+                    return None
 
-          elif viz_type == "scatter":
-              x_col, y_col = viz_request.get("x"), viz_request.get("y")
-              if x_col in df.columns and y_col in df.columns:
-                  color = viz_request.get("color", "blue")
-                  ax.scatter(df[x_col], df[y_col], color=color, alpha=0.6)
-                  ax.set_xlabel(x_col)
-                  ax.set_ylabel(y_col)
-                  
-                  if viz_request.get("regression"):
-                      # Add trend line
-                      z = np.polyfit(df[x_col].dropna(), df[y_col].dropna(), 1)
-                      p = np.poly1d(z)
-                      ax.plot(df[x_col], p(df[x_col]), "r--", alpha=0.8)
-              else:
-                  logger.error(f"Scatter plot: Missing columns {x_col}, {y_col}")
-                  return None
+            elif viz_type == "bar":
+                x_col, y_col = viz_request.get("x"), viz_request.get("y")
+                if x_col in df.columns and y_col in df.columns:
+                    color = viz_request.get("bar_color") or viz_request.get("color", "blue")
+                    ax.bar(df[x_col], df[y_col], color=color, alpha=0.7)
+                    ax.set_xlabel(x_col)
+                    ax.set_ylabel(y_col)
+                    # Rotate x-axis labels if they're text and long
+                    if df[x_col].dtype == 'object':
+                        plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
+                else:
+                    logger.error(f"Bar chart: Missing columns {x_col}, {y_col}")
+                    plt.close(fig)
+                    return None
 
-          elif viz_type == "bar":
-              x_col, y_col = viz_request.get("x"), viz_request.get("y")
-              if x_col in df.columns and y_col in df.columns:
-                  color = viz_request.get("bar_color") or viz_request.get("color", "blue")
-                  ax.bar(df[x_col], df[y_col], color=color, alpha=0.7)
-                  ax.set_xlabel(x_col)
-                  ax.set_ylabel(y_col)
-                  # Rotate x-axis labels if they're text and long
-                  if df[x_col].dtype == 'object':
-                      plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
-              else:
-                  logger.error(f"Bar chart: Missing columns {x_col}, {y_col}")
-                  return None
+            elif viz_type == "line":
+                x_col, y_col = viz_request.get("x"), viz_request.get("y")
+                if x_col in df.columns and y_col in df.columns:
+                    color = viz_request.get("line_color") or viz_request.get("color", "blue")
+                    ax.plot(df[x_col], df[y_col], marker='o', color=color, linewidth=2)
+                    ax.set_xlabel(x_col)
+                    ax.set_ylabel(y_col)
+                    
+                    # Handle date formatting if x-axis is datetime-like
+                    if df[x_col].dtype == 'object':
+                        plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
+                else:
+                    logger.error(f"Line chart: Missing columns {x_col}, {y_col}")
+                    plt.close(fig)
+                    return None
 
-          elif viz_type == "line":
-              x_col, y_col = viz_request.get("x"), viz_request.get("y")
-              if x_col in df.columns and y_col in df.columns:
-                  color = viz_request.get("line_color") or viz_request.get("color", "blue")
-                  ax.plot(df[x_col], df[y_col], marker='o', color=color, linewidth=2)
-                  ax.set_xlabel(x_col)
-                  ax.set_ylabel(y_col)
-                  
-                  # Handle date formatting if x-axis is datetime-like
-                  if df[x_col].dtype == 'object':
-                      plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
-              else:
-                  logger.error(f"Line chart: Missing columns {x_col}, {y_col}")
-                  return None
+            elif viz_type == "pie":
+                labels_col, values_col = viz_request.get("labels"), viz_request.get("values")
+                if labels_col in df.columns and values_col in df.columns:
+                    ax.pie(df[values_col], labels=df[labels_col], autopct='%1.1f%%', startangle=90)
+                    ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle
+                else:
+                    logger.error(f"Pie chart: Missing columns {labels_col}, {values_col}")
+                    plt.close(fig)
+                    return None
 
-          elif viz_type == "pie":
-              labels_col, values_col = viz_request.get("labels"), viz_request.get("values")
-              if labels_col in df.columns and values_col in df.columns:
-                  ax.pie(df[values_col], labels=df[labels_col], autopct='%1.1f%%', startangle=90)
-                  ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle
-              else:
-                  logger.error(f"Pie chart: Missing columns {labels_col}, {values_col}")
-                  return None
+            elif viz_type == "box" or viz_type == "boxplot":
+                column = viz_request.get("column") or viz_request.get("y")
+                if column and column in df.columns:
+                    ax.boxplot(df[column].dropna())
+                    ax.set_ylabel(column)
+                else:
+                    logger.error(f"Box plot: Column '{column}' not found")
+                    plt.close(fig)
+                    return None
 
-          elif viz_type == "box" or viz_type == "boxplot":
-              column = viz_request.get("column") or viz_request.get("y")
-              if column and column in df.columns:
-                  ax.boxplot(df[column].dropna())
-                  ax.set_ylabel(column)
-              else:
-                  logger.error(f"Box plot: Column '{column}' not found")
-                  return None
+            else:
+                logger.error(f"Unsupported visualization type: {viz_type}")
+                plt.close(fig)
+                return None
 
-          else:
-              logger.error(f"Unsupported visualization type: {viz_type}")
-              return None
+            # Set title
+            title = viz_request.get("title", f"{viz_type.title()} Chart")
+            ax.set_title(title, fontsize=12, fontweight='bold')
+            
+            # Improve layout
+            plt.tight_layout()
 
-          # Set title
-          title = viz_request.get("title", f"{viz_type.title()} Chart")
-          ax.set_title(title, fontsize=12, fontweight='bold')
-          
-          # Improve layout
-          plt.tight_layout()
+            return self.optimize_image_size(fig)
 
-          # --- Save PNG and shrink until under 100kB ---
-          def encode_png(fig_obj, dpi_val, quality='high'):
-              buf = BytesIO()
-              if quality == 'high':
-                  fig_obj.savefig(buf, format='png', dpi=dpi_val, bbox_inches='tight')
-              else:
-                  fig_obj.savefig(buf, format='png', dpi=dpi_val, bbox_inches='tight', 
-                                facecolor='white', edgecolor='none')
-              buf.seek(0)
-              return buf.getvalue()
+        except Exception as e:
+            logger.error(f"Failed to create visualization: {e}")
+            logger.error(traceback.format_exc())
+            if 'fig' in locals():
+                plt.close(fig)
+            return None
 
-          # Start with high DPI and reduce until size is acceptable
-          dpi = 120
-          img_data = encode_png(fig, dpi)
-          
-          while len(img_data) > 100 * 1024 and dpi > 30:
-              dpi = int(dpi * 0.8)
-              img_data = encode_png(fig, dpi)
-              
-          # If still too large, try with lower quality
-          if len(img_data) > 100 * 1024:
-              dpi = 60
-              img_data = encode_png(fig, dpi, quality='low')
+    def optimize_image_size(self, fig) -> str:
+        """Optimize image size to be under 100kB and return base64 string."""
+        def encode_png(fig_obj, dpi_val, quality='high'):
+            buf = BytesIO()
+            if quality == 'high':
+                fig_obj.savefig(buf, format='png', dpi=dpi_val, bbox_inches='tight')
+            else:
+                fig_obj.savefig(buf, format='png', dpi=dpi_val, bbox_inches='tight', 
+                              facecolor='white', edgecolor='none')
+            buf.seek(0)
+            return buf.getvalue()
 
-          plt.close(fig)
-          
-          logger.info(f"Generated {viz_type} visualization with size {len(img_data)} bytes")
-          return base64.b64encode(img_data).decode('utf-8')
+        # Start with high DPI and reduce until size is acceptable
+        dpi = 120
+        img_data = encode_png(fig, dpi)
+        
+        while len(img_data) > 100 * 1024 and dpi > 30:
+            dpi = int(dpi * 0.8)
+            img_data = encode_png(fig, dpi)
+            
+        # If still too large, try with lower quality
+        if len(img_data) > 100 * 1024:
+            dpi = 60
+            img_data = encode_png(fig, dpi, quality='low')
 
-      except Exception as e:
-          logger.error(f"Failed to create visualization: {e}")
-          logger.error(traceback.format_exc())
-          plt.close(fig) if 'fig' in locals() else None
-          return None
+        plt.close(fig)
+        
+        logger.info(f"Generated visualization with size {len(img_data)} bytes")
+        return base64.b64encode(img_data).decode('utf-8')
 
     def build_analysis_prompt(self, questions: str, context: Dict[str, Any]) -> str:
         """Builds the complete prompt string to send to the LLM."""
@@ -603,15 +788,17 @@ class UniversalDataAnalyst:
         if not any(key in context for key in ['file_data', 'scraped_data', 'duckdb_query_result', 'internet_search_results']):
             prompt_parts.append("\n[DATA]: No data was provided or found. Answer the questions based on general knowledge.")
 
-
         prompt_parts.append("\n--- INSTRUCTIONS ---")
-        prompt_parts.append("1. Analyze all the provided data to answer the user's questions.")
-        prompt_parts.append("2. Perform all necessary calculations yourself, such as counting, date differences, and regression analysis, using the provided data.")
-        prompt_parts.append("3. If a user asks for a plot or visualization, do NOT generate the image data yourself. Instead, include a key named 'visualization_request' in your JSON response. The value should be another JSON object specifying the 'type' (e.g., 'scatter'), 'x' column, 'y' column, and an optional 'title'. The columns MUST exist in the provided data. Example: \"visualization_request\": {\"type\": \"scatter\", \"x\": \"year\", \"y\": \"days_of_delay\", \"title\": \"Year vs. Delay\"}}")
-        prompt_parts.append("4. Your final output MUST be a single, valid JSON object.")
-        prompt_parts.append("⚠️ Important: Always include a full visualization_request object with 'type', 'x', 'y', and 'title'. Never just return the string 'visualization_request'.")
+        prompt_parts.append("1. Analyze all the provided data to answer the user's questions completely and accurately.")
+        prompt_parts.append("2. Perform all necessary calculations yourself, such as counting, averaging, finding shortest paths, calculating network metrics, etc.")
+        prompt_parts.append("3. For network analysis questions:")
+        prompt_parts.append("   - Calculate edge count, node degrees, average degree, density, shortest paths")
+        prompt_parts.append("   - Use the actual data structure to determine network properties")
+        prompt_parts.append("4. For visualization requests, include the key names exactly as requested by the user (e.g., 'network_graph', 'degree_histogram').")
+        prompt_parts.append("5. Set visualization keys to null initially - the system will automatically generate the appropriate visualizations.")
+        prompt_parts.append("6. Your final output MUST be a single, valid JSON object with all requested keys.")
+        prompt_parts.append("7. Ensure numerical answers are precise and based on the actual data provided.")
 
-        
         return "\n".join(prompt_parts)
 
 
@@ -650,55 +837,6 @@ def create_app():
             'has_gemini_key': bool(cfg.gemini_api_key),
             'status': 'ready'
         })
-    def is_visualization_key(key: str) -> bool:
-        """Detect if a JSON key should contain a visualization."""
-        patterns = ["graph", "chart", "plot", "histogram", "heatmap", "visualization"]
-        return any(p in key.lower() for p in patterns)
-
-    def build_network_graph(df: pd.DataFrame):
-        try:
-            G = nx.from_pandas_edgelist(df, source=df.columns[0], target=df.columns[1])
-        except Exception:
-            return None
-        fig, ax = plt.subplots()
-        pos = nx.spring_layout(G)
-        nx.draw(G, pos, with_labels=True, node_color="skyblue",
-                edge_color="gray", node_size=800, ax=ax)
-        return encode_plot_to_base64(fig)
-
-    def build_histogram(df: pd.DataFrame):
-        fig, ax = plt.subplots()
-        df.iloc[:,0].hist(ax=ax, color="green")
-        ax.set_title("Histogram")
-        return encode_plot_to_base64(fig)
-
-    def build_scatter(df: pd.DataFrame):
-        fig, ax = plt.subplots()
-        if df.shape[1] >= 2:
-            ax.scatter(df.iloc[:,0], df.iloc[:,1], color="blue")
-            ax.set_title("Scatter Plot")
-        else:
-            df.iloc[:,0].plot(ax=ax)
-        return encode_plot_to_base64(fig)
-
-    def fill_visualizations(result: dict, df_map: dict):
-          """
-          Fill in missing visualization keys with auto-generated charts.
-          df_map: {filename: DataFrame}
-          """
-          for key, value in result.items():
-              if (value is None or value == "null") and is_visualization_key(key):
-                  try:
-                      df = next(iter(df_map.values()))  # use first dataframe for now
-                      if "network" in key or "graph" in key:
-                          result[key] = build_network_graph(df)
-                      elif "histogram" in key:
-                          result[key] = build_histogram(df)
-                      else:
-                          result[key] = build_scatter(df)
-                  except Exception:
-                      result[key] = None
-          return result
 
     @app.route('/api/', methods=['POST'])
     def analyze_data():
@@ -769,9 +907,7 @@ if __name__ == '__main__':
     ===============================
     🌐 Server running at: http://{config.host}:{config.port}
     🔧 Debug mode: {config.debug}
-    🔍 LLM Model: {config.model_name}
+    📝 LLM Model: {config.model_name}
     
     Press Ctrl+C to stop
     """)
-
-    app.run(host=config.host, port=config.port, debug=config.debug)
