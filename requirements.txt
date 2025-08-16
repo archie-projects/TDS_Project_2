@@ -19,6 +19,7 @@ cycler
 faster-whisper
 filelock
 Flask
+flask-cors
 flatbuffers
 fonttools
 fsspec
