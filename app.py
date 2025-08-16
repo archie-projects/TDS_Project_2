@@ -373,12 +373,9 @@ class UniversalDataAnalyst:
                               # Nested visualization request
                               processed_dict[k] = self.create_visualization(v["visualization_request"], context)
                           elif v is None or v == "visualization_request":
-                              # Null or placeholder - try to infer from key name
-                              viz_request = self.infer_visualization_from_key(k, context)
-                              if viz_request:
-                                  processed_dict[k] = self.create_visualization(viz_request, context)
-                              else:
-                                  processed_dict[k] = None
+                            # If Gemini didn't provide details, skip visualization
+                            processed_dict[k] = None
+
                           else:
                               processed_dict[k] = process_visuals(v, k)
                       else:
@@ -603,6 +600,8 @@ class UniversalDataAnalyst:
         prompt_parts.append("2. Perform all necessary calculations yourself, such as counting, date differences, and regression analysis, using the provided data.")
         prompt_parts.append("3. If a user asks for a plot or visualization, do NOT generate the image data yourself. Instead, include a key named 'visualization_request' in your JSON response. The value should be another JSON object specifying the 'type' (e.g., 'scatter'), 'x' column, 'y' column, and an optional 'title'. The columns MUST exist in the provided data. Example: \"visualization_request\": {\"type\": \"scatter\", \"x\": \"year\", \"y\": \"days_of_delay\", \"title\": \"Year vs. Delay\"}}")
         prompt_parts.append("4. Your final output MUST be a single, valid JSON object.")
+        prompt_parts.append("⚠️ Important: Always include a full visualization_request object with 'type', 'x', 'y', and 'title'. Never just return the string 'visualization_request'.")
+
         
         return "\n".join(prompt_parts)
 
