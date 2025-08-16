@@ -83,3 +83,4 @@ uritemplate
 urllib3
 userpath
 Werkzeug
+gunicorn
