@@ -16,6 +16,7 @@ contourpy
 cryptography
 ctranslate2
 cycler
+duckdb
 faster-whisper
 filelock
 Flask
@@ -32,6 +33,7 @@ googleapis-common-protos
 greenlet
 grpcio
 grpcio-status
+gunicorn
 h11
 httplib2
 huggingface-hub
@@ -42,10 +44,13 @@ Jinja2
 joblib
 kiwisolver
 MarkupSafe
+matplotlib
 mpmath
 numpy
 onnxruntime
+openpyxl
 packaging
+pandas
 pdfminer.six
 pdfplumber
 pillow
@@ -63,10 +68,11 @@ pyparsing
 pypdfium2
 pyreadline3
 python-dateutil
-pytz
-PyYAML
+python-docx
+requests
 rsa
 scipy
+seaborn
 setuptools
 six
 sniffio
@@ -74,6 +80,7 @@ soupsieve
 SQLAlchemy
 starlette
 sympy
+tavily
 threadpoolctl
 tokenizers
 tqdm
@@ -84,4 +91,4 @@ uritemplate
 urllib3
 userpath
 Werkzeug
-gunicorn
+PyYAML
