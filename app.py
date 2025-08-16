@@ -36,7 +36,7 @@ import seaborn as sns
 # Web scraping & Internet Search
 import requests
 from bs4 import BeautifulSoup
-# from tavily import TavilyClient # Uncomment to use Tavily for web searches
+from tavily import TavilyClient # Import Tavily
 
 # File processing
 import PyPDF2
@@ -83,10 +83,14 @@ class UniversalDataAnalyst:
     def __init__(self, config: Config):
         self.config = config
         self.gemini_model = self.setup_gemini()
-        # if self.config.tavily_api_key:
-        #     self.tavily_client = TavilyClient(api_key=self.config.tavily_api_key)
-        # else:
-        #     self.tavily_client = None
+        
+        # Initialize Tavily client if API key is present
+        if self.config.tavily_api_key:
+            self.tavily_client = TavilyClient(api_key=self.config.tavily_api_key)
+            logger.info("Tavily client initialized successfully.")
+        else:
+            self.tavily_client = None
+            logger.warning("TAVILY_API_KEY not found. Web search will be disabled.")
 
         # Initialize visualization settings
         plt.style.use('seaborn-v0_8')
@@ -155,23 +159,24 @@ class UniversalDataAnalyst:
             raise
 
     def search_internet(self, query: str) -> Optional[str]:
-        """
-        Performs a web search for a given query and returns summarized results.
-        NOTE: This is a placeholder for a real search engine API integration.
-        """
-        logger.info(f"Performing internet search for: {query}")
-        # if not self.tavily_client:
-        #     logger.warning("Tavily API key not configured. Skipping internet search.")
-        #     return None
-        try:
-            # response = self.tavily_client.search(query=query, search_depth="advanced")
-            # return json.dumps(response.get('results', []))
-            
-            # Placeholder response if Tavily client is not available
-            return json.dumps([{"title": "Search Placeholder", "content": f"A web search was performed for '{query}'. The top results would be summarized here to answer the question."}])
-        except Exception as e:
-            logger.error(f"Internet search failed: {e}")
+        """Performs a web search using Tavily and returns a summarized string of results."""
+        if not self.tavily_client:
+            logger.warning("Tavily client not initialized. Skipping web search.")
             return None
+        
+        try:
+            logger.info(f"Performing Tavily web search for: '{query}'")
+            # Using search_depth="advanced" for more comprehensive results
+            response = self.tavily_client.search(query=query, search_depth="advanced", max_results=5)
+            
+            # Format results into a clean string for the LLM to understand
+            results_str = "\n\n".join(
+                [f"Title: {res['title']}\nURL: {res['url']}\nContent: {res['content']}" for res in response.get('results', [])]
+            )
+            return results_str
+        except Exception as e:
+            logger.error(f"Tavily web search failed: {e}")
+            return "Web search failed to retrieve results."
 
     def generate_duckdb_query(self, user_prompt: str) -> Optional[str]:
         """Uses Gemini to generate a DuckDB query from a user prompt."""
@@ -348,9 +353,6 @@ class UniversalDataAnalyst:
               result = json.loads(cleaned_text)
           except json.JSONDecodeError:
               return {"analysis_text": cleaned_text}
-          
-
-
           
           def process_visuals(obj, parent_key=None):
               """Recursively find and replace visualization requests with base64 strings."""
@@ -554,64 +556,6 @@ class UniversalDataAnalyst:
           plt.close(fig) if 'fig' in locals() else None
           return None
 
-
-    def search_internet(self, query: str) -> str:
-      """Search the internet using Tavily API if available, else fall back to Wikipedia, ContextualWebSearch, then DuckDuckGo."""
-      # 1. Try Tavily API
-      if self.config.get("TAVILY_API_KEY"):
-          try:
-              resp = requests.post(
-                  "https://api.tavily.com/search",
-                  json={"query": query, "num_results": 5},
-                  headers={"Authorization": f"Bearer {self.config['TAVILY_API_KEY']}"}
-              )
-              data = resp.json()
-              if "results" in data and data["results"]:
-                  return "\n".join([r["content"] for r in data["results"] if "content" in r])
-          except Exception as e:
-              logger.warning(f"Tavily search failed: {e}")
-
-      # 2. Wikipedia API
-      try:
-          wiki_url = "https://en.wikipedia.org/api/rest_v1/page/summary/" + query.replace(" ", "_")
-          resp = requests.get(wiki_url, timeout=5)
-          if resp.status_code == 200:
-              summary = resp.json().get("extract")
-              if summary:
-                  return summary
-      except Exception as e:
-          logger.warning(f"Wikipedia search failed: {e}")
-
-      # 3. ContextualWebSearch API (requires free RapidAPI key in config)
-      if self.config.get("CONTEXTUAL_API_KEY"):
-          try:
-              url = "https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/WebSearchAPI"
-              headers = {
-                  "X-RapidAPI-Key": self.config["CONTEXTUAL_API_KEY"],
-                  "X-RapidAPI-Host": "contextualwebsearch-websearch-v1.p.rapidapi.com"
-              }
-              params = {"q": query, "pageNumber": 1, "pageSize": 5, "autoCorrect": "true"}
-              resp = requests.get(url, headers=headers, params=params, timeout=5)
-              results = resp.json().get("value", [])
-              if results:
-                  return "\n".join([r.get("title", "") + ": " + r.get("description", "") for r in results])
-          except Exception as e:
-              logger.warning(f"ContextualWebSearch failed: {e}")
-
-      # 4. DuckDuckGo HTML scraping
-      try:
-          resp = requests.post("https://duckduckgo.com/html/", data={"q": query}, timeout=5)
-          soup = BeautifulSoup(resp.text, "html.parser")
-          results = []
-          for a in soup.select(".result__title a"):
-              results.append(a.get_text(strip=True))
-          if results:
-              return "\n".join(results[:5])
-      except Exception as e:
-          logger.warning(f"DuckDuckGo scrape failed: {e}")
-
-      return "No search results found."
-
     def build_analysis_prompt(self, questions: str, context: Dict[str, Any]) -> str:
         """Builds the complete prompt string to send to the LLM."""
         prompt_parts = [
@@ -620,18 +564,7 @@ class UniversalDataAnalyst:
             f"\n--- USER QUESTIONS ---\n{questions}",
             "\n--- PROVIDED DATA CONTEXT ---"
         ]
-        # Add this to your build_analysis_prompt method, replace the visualization instruction:
-
-        prompt_parts.append("3. For visualization requests:")
-        prompt_parts.append("   - If a user asks for ANY kind of plot/chart/graph/histogram, include a 'visualization_request' object in your JSON response")
-        prompt_parts.append("   - For histograms: {\"type\": \"histogram\", \"column\": \"column_name\", \"color\": \"orange\", \"title\": \"Histogram Title\"}")
-        prompt_parts.append("   - For line charts: {\"type\": \"line\", \"x\": \"x_column\", \"y\": \"y_column\", \"line_color\": \"red\", \"title\": \"Line Chart Title\"}")
-        prompt_parts.append("   - For scatter plots: {\"type\": \"scatter\", \"x\": \"x_column\", \"y\": \"y_column\", \"color\": \"blue\", \"title\": \"Scatter Plot Title\"}")
-        prompt_parts.append("   - For bar charts: {\"type\": \"bar\", \"x\": \"category_column\", \"y\": \"value_column\", \"color\": \"green\", \"title\": \"Bar Chart Title\"}")
-        prompt_parts.append("   - For pie charts: {\"type\": \"pie\", \"labels\": \"label_column\", \"values\": \"value_column\", \"title\": \"Pie Chart Title\"}")
-        prompt_parts.append("   - IMPORTANT: All column names MUST exist in the provided data")
-        prompt_parts.append("   - IMPORTANT: If you need multiple visualizations, create separate keys in your JSON (e.g., 'temp_line_chart', 'precip_histogram') each with their own visualization_request object")
-                
+        
         if context.get('duckdb_query_result'):
             prompt_parts.append("\n[DUCKDB QUERY RESULT DATA]:")
             data = context['duckdb_query_result']
@@ -658,7 +591,7 @@ class UniversalDataAnalyst:
         
         if context.get('internet_search_results'):
             prompt_parts.append("\n[INTERNET SEARCH RESULTS]:")
-            prompt_parts.append(f"- The following information was found by searching the web for your query:")
+            prompt_parts.append(f"- The following information was found by searching the web. Use this to answer the question if no other data is available:")
             prompt_parts.append(context['internet_search_results'])
 
         if not any(key in context for key in ['file_data', 'scraped_data', 'duckdb_query_result', 'internet_search_results']):
@@ -769,6 +702,10 @@ if __name__ == '__main__':
         print("Please set your Gemini API key as an environment variable:", file=sys.stderr)
         print("export GEMINI_API_KEY='your-api-key-here'", file=sys.stderr)
         print("The application will run with LLM features disabled.\n", file=sys.stderr)
+        
+    if not config.tavily_api_key:
+        print("\n⚠️  WARNING: TAVILY_API_KEY not found!", file=sys.stderr)
+        print("Web search functionality will be disabled.", file=sys.stderr)
 
     print(f"""
     🤖 Universal Data Analyst Agent
