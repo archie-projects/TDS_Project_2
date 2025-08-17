@@ -74,7 +74,7 @@ class Config:
     """Application configuration"""
     gemini_api_key: Optional[str] = os.getenv('GEMINI_API_KEY')
     tavily_api_key: Optional[str] = os.getenv('TAVILY_API_KEY') # For general internet search
-    model_name: str = 'gemini-2.5-pro'
+    model_name: str = 'gemini-1.5-flash'
     max_file_size_mb: int = 50
     request_timeout_seconds: int = 180
     visualization_format: str = "png"
