@@ -499,9 +499,9 @@ class UniversalDataAnalyst:
                                                                   for chart_type in ["scatter", "bar", "line", "pie", "histogram", "network"]):
                         processed_dict[k] = self.create_visualization(v, context)
                     
-                    # Check for visualization request objects
+                    # Check for visualization request objects - FIXED: Don't return here, continue processing
                     elif k == "visualization_request" and isinstance(v, dict):
-                        return self.create_visualization(v, context)
+                        processed_dict[k] = self.create_visualization(v, context)
                     
                     # Check for null values in visualization keys
                     elif (v is None or v == "null" or v == "visualization_request") and self.is_visualization_key(k):
@@ -893,13 +893,13 @@ if __name__ == '__main__':
     config = app.config_object
 
     if not config.gemini_api_key:
-        print("\n⚠️  WARNING: GEMINI_API_KEY not found!", file=sys.stderr)
+        print("\nâš ï¸  WARNING: GEMINI_API_KEY not found!", file=sys.stderr)
         print("Please set your Gemini API key as an environment variable:", file=sys.stderr)
         print("export GEMINI_API_KEY='your-api-key-here'", file=sys.stderr)
         print("The application will run with LLM features disabled.\n", file=sys.stderr)
         
     if not config.tavily_api_key:
-        print("\n⚠️  WARNING: TAVILY_API_KEY not found!", file=sys.stderr)
+        print("\nâš ï¸  WARNING: TAVILY_API_KEY not found!", file=sys.stderr)
         print("Web search functionality will be disabled.", file=sys.stderr)
 
     print(f"""
