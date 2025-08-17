@@ -879,7 +879,14 @@ def create_app():
         except Exception as e:
             logger.error(f"API request failed: {traceback.format_exc()}")
             return jsonify({"error": f"An internal server error occurred: {e}"}), 500
+
+    # CORRECTED: This 'return' statement must be the last line INSIDE create_app().
+    return app
+
+# CORRECTED: The line below must be at the top level (no indentation).
 app = create_app()
+
+# CORRECTED: This block must be at the top level (no indentation).
 # --- Main Execution ---
 if __name__ == '__main__':
     
@@ -904,4 +911,3 @@ if __name__ == '__main__':
     
     Press Ctrl+C to stop
     """)
-
