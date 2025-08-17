@@ -842,7 +842,7 @@ def create_app():
     def analyze_data():
         """Main API endpoint for data analysis."""
         try:
-            all_files = request.files.getlist("files")
+            all_files = list(request.files.values())
             
             if not all_files:
                 return jsonify({"error": "No questions provided. Please type a question before analyzing."}), 400
