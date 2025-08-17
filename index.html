@@ -490,7 +490,7 @@ Specify your desired response format:
                 
                 // Add questions as a file
                 const questionsBlob = new Blob([questions], { type: 'text/plain' });
-                formData.append('files', questionsBlob, 'questions.txt');
+                formData.append('questions.txt', questionsBlob, 'questions.txt'); 
                 
                 // Add other files
                 Array.from(filesInput.files).forEach(file => {

@@ -842,41 +842,36 @@ def create_app():
     def analyze_data():
         """Main API endpoint for data analysis."""
         try:
-            all_files = list(request.files.values())
-            
-            if not all_files:
-                return jsonify({"error": "No questions provided. Please type a question before analyzing."}), 400
-
-            questions_file = None
-            data_files_from_request = []
-            
-            for file_obj in all_files:
-                if file_obj.filename == 'questions.txt':
-                    questions_file = file_obj
-                else:
-                    data_files_from_request.append(file_obj)
+            # Step 1: Explicitly get the 'questions.txt' file by its required field name.
+            # This is the standard way and works perfectly with the curl command.
+            questions_file = request.files.get('questions.txt')
 
             if not questions_file:
-                return jsonify({"error": "Internal error: questions.txt was not found in the request."}), 400
+                return jsonify({"error": "Mandatory 'questions.txt' file not found in the request. Please ensure it is sent with the correct field name."}), 400
             
             questions = questions_file.read().decode('utf-8').strip()
             if not questions:
-                 return jsonify({"error": "Questions cannot be empty."}), 400
+                 return jsonify({"error": "The 'questions.txt' file cannot be empty."}), 400
 
+            # Step 2: Process all other data files.
+            # We iterate through all items in request.files to find files that are NOT 'questions.txt'.
             files_to_process = []
             max_size = app.config_object.max_file_size_mb * 1024 * 1024
-            for file_obj in data_files_from_request:
-                content = file_obj.read()
-                if len(content) > max_size:
-                     return jsonify({"error": f"File {file_obj.filename} is too large."}), 413
-                
-                files_to_process.append({
-                    'filename': file_obj.filename,
-                    'content': content
-                })
+            
+            for field_name, file_obj in request.files.items():
+                if field_name != 'questions.txt':
+                    content = file_obj.read()
+                    if len(content) > max_size:
+                         return jsonify({"error": f"File {file_obj.filename} is too large."}), 413
+                    
+                    files_to_process.append({
+                        'filename': file_obj.filename,
+                        'content': content
+                    })
 
             logger.info(f"Handling request with {len(files_to_process)} data file(s). Questions: '{questions[:100]}...'")
             
+            # Step 3: Call the analysis logic.
             result = app.analyzer.analyze_request(questions, files_to_process)
             
             return jsonify(result)
@@ -884,8 +879,6 @@ def create_app():
         except Exception as e:
             logger.error(f"API request failed: {traceback.format_exc()}")
             return jsonify({"error": f"An internal server error occurred: {e}"}), 500
-
-    return app
 
 # --- Main Execution ---
 if __name__ == '__main__':
