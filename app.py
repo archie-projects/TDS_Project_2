@@ -879,10 +879,10 @@ def create_app():
         except Exception as e:
             logger.error(f"API request failed: {traceback.format_exc()}")
             return jsonify({"error": f"An internal server error occurred: {e}"}), 500
-
+app = create_app()
 # --- Main Execution ---
 if __name__ == '__main__':
-    app = create_app()
+    
     config = app.config_object
 
     if not config.gemini_api_key:
@@ -904,3 +904,4 @@ if __name__ == '__main__':
     
     Press Ctrl+C to stop
     """)
+
