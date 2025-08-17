@@ -790,7 +790,7 @@ class UniversalDataAnalyst:
 
         prompt_parts.append("\n--- INSTRUCTIONS ---")
         prompt_parts.append("1. Analyze all the provided data to answer the user's questions completely and accurately.")
-        prompt_parts.append("2. Perform all necessary calculations yourself, such as counting, averaging, finding shortest paths, calculating network metrics, etc.")
+        prompt_parts.append("2. Perform all necessary calculations yourself, such as counting, averaging, finding shortest paths, calculating network metrics, etc. and think step-by-step.")
         prompt_parts.append("3. For network analysis questions:")
         prompt_parts.append("   - Calculate edge count, node degrees, average degree, density, shortest paths")
         prompt_parts.append("   - Use the actual data structure to determine network properties")
@@ -798,6 +798,8 @@ class UniversalDataAnalyst:
         prompt_parts.append("5. Set visualization keys to null initially - the system will automatically generate the appropriate visualizations.")
         prompt_parts.append("6. Your final output MUST be a single, valid JSON object with all requested keys.")
         prompt_parts.append("7. Ensure numerical answers are precise and based on the actual data provided.")
+        prompt_parts.append("8. Be clear confident in your answers, but do not make assumptions beyond the provided data.")
+        prompt_parts.append("Be clear, concise and think 2 to 3 times and then respond ")
 
         return "\n".join(prompt_parts)
 
